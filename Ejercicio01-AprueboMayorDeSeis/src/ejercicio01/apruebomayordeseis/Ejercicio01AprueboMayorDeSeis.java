@@ -6,7 +6,7 @@ package ejercicio01.apruebomayordeseis;
 
 /**
  *
- * @author F4121
+ * @author PabloLopez
  */
 public class Ejercicio01AprueboMayorDeSeis {
 
@@ -15,14 +15,15 @@ public class Ejercicio01AprueboMayorDeSeis {
      */
     public static void main(String[] args) {
         //Variables
+        String nombre = "Pablo";
         int nota= 7;
         System.out.println("--Examenes--");
-        System.out.println("--Nombre del Alumno: Pablo");
-        System.out.println("--Nota del Alumno " + nota);
+        System.out.println("--Nombre del Alumno: " + nombre);
+        System.out.println("--Nota del Alumno: " + nota);
         if (nota >= 6){
             System.out.println("--Aprobado--");
         }else {
-        System.out.println("--Nombre del Alumno: Pablo");
+        System.out.println("--Nombre del Alumno: " + nombre);
         System.out.println("--Desaprobado--");
         
     }
