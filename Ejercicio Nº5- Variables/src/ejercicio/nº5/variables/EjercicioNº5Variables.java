@@ -65,14 +65,14 @@ public class EjercicioNº5Variables {
         cociente2= Y / M;
         resto2= Y % M;
         //Procesos Matematicos conbinados
-            //doble de cada variable= 
+            //doble de cada variable 
         doble1= X * Z;
         doble2= Y * Z;
         doble3= N * Z;
         doble4= M * Z;
-            //suma de todas las variables=
+            //suma de todas las variables
         sumatotal= X + Y + N + M;
-            //producto de todas las variables=
+            //producto de todas las variables
         productototales= X * Y * N * M;
         //Valores Matematicos en pantalla
         System.out.println("suma de X + Y = " + suma1);
@@ -95,9 +95,9 @@ public class EjercicioNº5Variables {
         System.out.println("Variable Y = 50 el doble es " + doble2);
         System.out.println("Variable N = 5.5 el doble es " + doble3);
         System.out.println("Variable M = 10.5 el doble es " + doble4);
-            //suma de todas las variables=
+            //suma de todas las variables
         System.out.println("Suma total= 10 + 50 + 5.5 + 10.5 = " + sumatotal);
-            //producto de todas las variables=
+            //producto de todas las variables
         System.out.println("Productos total= 10 * 50 * 5.5 * 10.5 = " + productototales);
                        
     }
