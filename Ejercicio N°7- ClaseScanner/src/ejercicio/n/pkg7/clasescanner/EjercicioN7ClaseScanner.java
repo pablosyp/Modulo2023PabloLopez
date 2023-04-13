@@ -29,7 +29,7 @@ public class EjercicioN7ClaseScanner {
         nombre = lector.nextLine();
         System.out.print("Ingresar su Apellido: ");
         apellido = lector.nextLine();
-        System.out.print("Ingrese el año de su nacimiento: ");
+        System.out.print("Ingrese el ano de su nacimiento: ");
         nac = lector.nextInt();
         //Operacion
         resta= fecha - nac;
