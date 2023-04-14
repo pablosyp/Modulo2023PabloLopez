@@ -30,7 +30,7 @@ public class LiquidacionVacaciones {
         System.out.println("***03 - Gerencia***");
         System.out.println("**************************");
         System.out.println("**************************");
-        System.out.print("Ingrese un nimero de Area :");
+        System.out.print("Ingrese un numero de Area :");
         area= entrada.nextInt();
         
         //Dto atencion al cliente
