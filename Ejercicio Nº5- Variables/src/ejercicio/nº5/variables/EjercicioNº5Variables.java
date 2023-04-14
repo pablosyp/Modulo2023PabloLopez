@@ -90,15 +90,14 @@ public class EjercicioNº5Variables {
         System.out.println("resto de Y % M = " + resto2);
         //Valores Matematicos en pantalla conbinados
             //doble de cada variable
-        //System.out.println("Variable X = " + X); System.out.println("el doble es " + doble1);
-        System.out.println("Variable X = 10 el doble es " + doble1);
-        System.out.println("Variable Y = 50 el doble es " + doble2);
-        System.out.println("Variable N = 5.5 el doble es " + doble3);
-        System.out.println("Variable M = 10.5 el doble es " + doble4);
+        System.out.println("Variable X = " + X + " el doble es " + doble1);
+        System.out.println("Variable Y = " + Y + " el doble es " + doble2);
+        System.out.println("Variable N = " + N + " el doble es " + doble3);
+        System.out.println("Variable M = " + M + " el doble es " + doble4);
             //suma de todas las variables
-        System.out.println("Suma total= 10 + 50 + 5.5 + 10.5 = " + sumatotal);
+        System.out.println("Suma total= X + Y + N + M = " + sumatotal);
             //producto de todas las variables
-        System.out.println("Productos total= 10 * 50 * 5.5 * 10.5 = " + productototales);
+        System.out.println("Productos total= X * Y * N * M = " + productototales);
                        
     }
     

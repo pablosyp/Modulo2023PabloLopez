@@ -30,13 +30,6 @@ public class EjercicioN8ClaseScannerIRALaPLAYA {
         }else {
         System.out.println("--Abrigarce--");
            }
-        
-        //if (grados >= 30);{
-          //  System.out.println("--Ir a la playa--");
-        //}else if (grados <30 && grados >= 25){
-        //   System.out.println("--Ir a caminar--");
-        //}else if (grados <25 && grados >= 10){
-        //   System.out.println("--Abrigarce--");
         }
     }
 

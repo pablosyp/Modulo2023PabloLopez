@@ -15,7 +15,7 @@ public class Ejercicio01SoyMayorDeEdad {
      */
     public static void main(String[] args) {
         //Variables
-        int edad= 19;
+        int edad= 46;
         System.out.println("--Bienvenido al BAR MOON--");
         System.out.println("--Antes de ingresar necesito saber su edad--");
         System.out.println("--Su edad es de " + edad);
