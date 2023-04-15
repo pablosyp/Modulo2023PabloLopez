@@ -12,7 +12,15 @@ public class EjercicioN9TicketDeRestaurante {
 // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         String MOZO ="";
-        int consumo=0, pago=0;
+        int consumo= 0; 
+        int pago= 0;
+        int tarjeta =0;
+        int pago1;
+        int pago2;
+        int pago3;
+        
+                
+        String TD ="";
         
         System.out.println("==============================");
         System.out.println("RESTAURANTE CFT No 36");
@@ -24,14 +32,25 @@ public class EjercicioN9TicketDeRestaurante {
         System.out.println("==============================");
         System.out.print("SUBTOTAL: ");
         consumo= entrada.nextInt();
-        System.out.print("FORMA DE PAGO: ");
-        consumo= entrada.nextInt();
-        System.out.print("NUMERO DE TARJETA: ");
-        pago= entrada.nextInt();
-        System.out.print("CUOTAS: ");
-        consumo= entrada.nextInt();
-        System.out.print("DESCUENTO: ");
-        consumo= entrada.nextInt();
+        System.out.print("FORMA DE PAGO: 1-EF / 2-TD / 3-TC ");
+        tarjeta= entrada.nextInt();
+        //Procesos
+        pago1= consumo - 30/100;
+        //TD= consumo - 10 / 100;
+        //TC= consumo + 10 / 100;
+        
+        if (tarjeta ==1){
+            System.out.println("NUMERO TARJETA XXXXXXX ");
+            System.out.println("DESCUENTO: 30%");
+            System.out.println(" ");
+            System.out.println("TOTAL: " + pago1);
+        }
+        //System.out.print("NUMERO DE TARJETA: ");
+        //pago= entrada.nextInt();
+        //System.out.print("CUOTAS: ");
+        //consumo= entrada.nextInt();
+        //System.out.print("DESCUENTO: ");
+        //consumo= entrada.nextInt();
         
         
         

@@ -20,9 +20,7 @@ public class EjercicioEnClase20230414 {
         
         int num1= 0;
         int num2= 0;
-        
 
-        
         //Crear objetos scanner
         Scanner lector = new Scanner(System.in);
         //Seleccion de Operacion
@@ -36,8 +34,8 @@ public class EjercicioEnClase20230414 {
         System.out.println("***SELECCIONE 1er NUMERO***");
         num1= lector.nextInt();
         System.out.println("***SELECCIONE 2do NUMERO***");
-        num2= lector.nextInt();
-        
+        num2= lector.nextInt();     
+        //Procesos
         suma= num1 + num2;
         resta= num1 - num2;
         multi= num1 * num2;
