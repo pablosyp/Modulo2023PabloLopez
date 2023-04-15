@@ -6,10 +6,10 @@ package ejercicio.n.pkg9.ticket.de.restaurante;
 
 import java.util.Scanner;
 
-public class EjercicioN9TicketDeRestaurante {
+public class Lopez1405scanner {
 
     public static void main(String[] args) {
-        // TODO code application logic here
+         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         String MOZO ="";
         String fecha= "30/04/2020 11:46:47 AM";
