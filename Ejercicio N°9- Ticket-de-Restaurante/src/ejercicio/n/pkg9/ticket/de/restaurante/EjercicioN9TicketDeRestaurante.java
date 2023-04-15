@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class EjercicioN9TicketDeRestaurante {
 
     public static void main(String[] args) {
-        // TODO code application logic here
+// TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         String MOZO ="";
         int consumo=0, pago=0;
