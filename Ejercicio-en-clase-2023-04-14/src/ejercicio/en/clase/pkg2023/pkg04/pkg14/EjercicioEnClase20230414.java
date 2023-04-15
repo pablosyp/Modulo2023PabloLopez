@@ -14,8 +14,7 @@ public class EjercicioEnClase20230414 {
         int resta;
         int multi;
         int division;
-        
-        //Variables Operacion
+
         int oper= 0;
         
         int num1= 0;
