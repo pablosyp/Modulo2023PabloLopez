@@ -17,11 +17,6 @@ public class SwitchVocales1904 {
         Scanner leer = new Scanner(System.in);
         
         System.out.println("-------Escriba una letra-------");
-        //System.out.println("---------------A----------------");
-        //System.out.println("---------------E----------------");
-        //System.out.println("---------------I----------------");
-        //System.out.println("---------------O----------------");
-        //System.out.println("---------------U----------------");
         
         letra = leer.nextLine();
         
