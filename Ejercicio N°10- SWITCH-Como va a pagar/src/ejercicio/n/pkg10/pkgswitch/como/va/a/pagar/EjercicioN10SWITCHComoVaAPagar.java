@@ -36,15 +36,15 @@ public class EjercicioN10SWITCHComoVaAPagar {
             case 2:
                 System.out.print("NUMERO DE TARJETA : " );
                 numero= entrada.nextInt();
+                System.out.print("Seleccionar cuotas 1, 2 o 3 : " );
+                cuotas= entrada.nextInt();
                 System.out.println(" Tarjeta Credito 20% recargo ");
                 break;
             case 3:
                 System.out.print("NUMERO DE TARJETA : " );
                 numero= entrada.nextInt();
-                System.out.print("Seleccionar cuotas 1, 2 o 3 : " );
-                cuotas= entrada.nextInt();
                 System.out.println(" Tarjeta Debito 10% recargo ");
-                
+                break;
                 default:
                     System.out.println(" Seleccione correctamente ");
                     break;
