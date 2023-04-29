@@ -16,13 +16,14 @@ public class MetodosSSL2604 {
         String usuario="pablo";
         int contador=0;
         int serie1= 1;
-        int serie2= 2;
+        int serie2= 3;
       
         Scanner leer = new Scanner(System.in);
         Scanner leernumeros = new Scanner(System.in);
         Scanner leernom = new Scanner(System.in);
         
         //Pedir informacion
+        System.out.println("-----Metodo length -----");
         System.out.print("Ingrese su nombre : ");
         nombre = leer.next();
         
@@ -41,6 +42,8 @@ public class MetodosSSL2604 {
         System.out.println("Usted ingreso la palabra " + apellido);
         System.out.println("La cantidad de caracteres que tiene es " +cantidaddecaracteres);
         
+        System.out.println("-----Metodo Subtring-----");
+        
         System.out.print("Ingrese el desde donde se debe cortar el string : ");
         desde = leernumeros.nextInt();
         System.out.print("Ingrese el hasta donde se debe cortar el string : ");
@@ -52,7 +55,7 @@ public class MetodosSSL2604 {
         System.out.println("La nueva cadema es: " + apellidocortado);
         
         //Funcion equals
-
+        System.out.println("-----Funcion equals-----");
         while(contador <=2){
         System.out.print("Ingrese tu nombre de Usuario : ");
         usuario= leernom.nextLine();
@@ -64,11 +67,12 @@ public class MetodosSSL2604 {
                 break;
         }}
         //Ciclos/bucles  - WHILE
-        
+        System.out.println("-----Ciclos/bucles  - WHILE-----");
         do{
-            System.out.println(serie1 + serie2 );
+            if (serie1%2==1)
+            System.out.println( + serie1);
             serie1++;
-        }while (serie1 <8);
+            }while (serie1 <=9);
         
             
         
