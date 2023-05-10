@@ -10,7 +10,7 @@ public class EjercicioN13ServicioAutomotores {
 
     public static void main(String[] args) {
         // TODO code application logic here
-        String servicio[][]=new String[4][4];
+        String servicio[]=new String[4];
         
         String nom="";
         String tel="";
@@ -18,11 +18,12 @@ public class EjercicioN13ServicioAutomotores {
         String marca="";
         int n;
         int cant=0;
+        String servicios="";
         
-        servicio [0][0]="alineacion";
-        servicio [1][0]="balanceo";
-        servicio [0][1]="aceite";
-        servicio [1][1]="cubierta";
+        servicio [0]="alineacion";
+        servicio [1]="balanceo";
+        servicio [2]="aceite";
+        servicio [3]="cubierta";
         
         Scanner leer = new Scanner(System.in);
          
@@ -40,7 +41,7 @@ public class EjercicioN13ServicioAutomotores {
                 fila = leer.nextInt();
                 if (fila ==1){
                     cant+=1;
-                    System.out.println ("\nSu servicio adquirido es : "+ servicio [0][0]+ "\n");
+                    System.out.println ("\nSu servicio adquirido es : "+ servicio [0]+ "\n");
                 }
                 System.out.print("Cantidad ruedas a alinear: " );
                 columna = leer.nextInt();
@@ -48,7 +49,7 @@ public class EjercicioN13ServicioAutomotores {
                 fila = leer.nextInt();
                 if (fila ==1){
                     cant+=1;
-                    System.out.println ("\nSu servicio adquirido es : "+ servicio [1][0]+ "\n");
+                    System.out.println ("\nSu servicio adquirido es : "+ servicio [1]+ "\n");
                 }
                 System.out.print("Cantidad de balanceos: " );
                 columna = leer.nextInt();
@@ -56,13 +57,13 @@ public class EjercicioN13ServicioAutomotores {
                 fila = leer.nextInt();
                 if (fila ==1){
                     cant+=1;
-                    System.out.println ("\nSu servicio adquirido es : "+ servicio [0][1]+ "\n");
+                    System.out.println ("\nSu servicio adquirido es : "+ servicio [2]+ "\n");
                 }
                 System.out.print("Cambio de cubiertas 1=si / 0=no: " );
                 fila = leer.nextInt();
                 if (fila ==1){
                     cant+=1;
-                    System.out.println ("\nSu servicio adquirido es : "+ servicio [1][1]+ "\n");
+                    System.out.println ("\nSu servicio adquirido es : "+ servicio [3]+ "\n");
                 }
                 System.out.print("Cantidad de cubiertas a cambiar : " );
                 columna = leer.nextInt();
@@ -82,7 +83,7 @@ public class EjercicioN13ServicioAutomotores {
         System.out.println("==================================");
         System.out.println("Cantidad de servicios: " + cant );
         
-        System.out.println("Cantidad de servicios: " + servicio);
+        System.out.println("Los servicios son: " + servicios);
         System.out.println("==================================");
         
     }
