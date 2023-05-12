@@ -1,29 +1,27 @@
 
-package ejercicio.n.pkg14.consesionaria;
+package ejercicio.n.pkg14;
 
-import java.util.*;
+import java.util.Date;
+import java.util.Scanner;
 
-public class EjercicioN14Consesionaria {
+public class EjercicioN14 {
 
     public static void main(String[] args) {
-        // // Variables
+                // // Variables
      String nombrevendedor = "";
      String nombrecliente = "";
      String marca = "";
-     //String modelo = "";
+     String modelo = "";
      String gama = "";
      String usado = "";
      String dominio = "";
+     String Logan = "";
+     String Twingo = "";
+     String Kangoo = "";
+     
      int dni;
      int tel;
      int importe;
-     //modelos
-     int Logan;
-     int Twingo;
-     int Kangoo;
-     int modelologan;
-     int modelotwingo;
-     int modelokangoo;
      
      int opcion;
      int numero;
@@ -38,7 +36,7 @@ public class EjercicioN14Consesionaria {
      int cuota120;
      int cuota85;
      int cuota240;
-     int leer;
+     
     
         Scanner leernombrevendedor = new Scanner(System.in);
         Scanner leernombrecliente = new Scanner(System.in);
@@ -64,12 +62,21 @@ public class EjercicioN14Consesionaria {
         Scanner leercuota85 = new Scanner(System.in);
         Scanner leercuota240 = new Scanner(System.in);
     
-        System.out.println("=================================");
-        System.out.println("          CONCESIONARIA          ");
-        System.out.println("         RENAULT JOSECAR         ");
-        System.out.println(" Venta de 0KM - Planes de Ahorro ");        
-        System.out.println("=================================");
+        Date fecha = new Date ();
         
+        System.out.println("=================================================");
+        System.out.println("                   CONCESIONARIA                 ");
+        System.out.println("                  RENAULT JOSECAR                ");
+        System.out.println("         Venta de 0KM - Planes de Ahorro         ");        
+        System.out.println("=================================================");
+        System.out.println("                                                 ");
+        System.out.println("                  MODELOS AUTOMOVILES            ");
+        System.out.println(" Modelos  |   Logan   |    Twingo  |    Kangoo   ");
+        System.out.println("Gama Alta | 7.000.000 |  3.000.000 |  6.500.000 |");            
+        System.out.println("Gama Media| 6.000.000 |  3.500.000 |  7.000.000 |");
+        System.out.println("Gama Baja | 5.000.000 |  4.000.000 |  7.500.000 |");
+        System.out.println("-------------------------------------------------");
+                
         System.out.println("Ingrese el Nombre del Vendedor: ");
 	nombrevendedor = leernombrevendedor.next();
         
@@ -85,34 +92,16 @@ public class EjercicioN14Consesionaria {
         System.out.println("Ingrese la Marca del Automotor: ");
 	marca = leermarca.next();
         
-        String modelo[]=new String[3];
-       
-        modelo [0]="Logan";
-        modelo [1]="Twingo";
-        modelo [2]="Kangoo";
-        
-        Scanner leerlogan = new Scanner (System.in);
-        Scanner leertwingo = new Scanner (System.in);
-        Scanner leerkangoo = new Scanner (System.in);
-        
         System.out.println("Ingrese el Modelo del Automotor: ");
-        System.out.println("1 = Logan / 0 = Siguiente modelo ");
-                Logan = leerlogan.nextInt();
-            
-        System.out.println("2=Twingo / 0=Siguiente modelo ");
-                Twingo = leertwingo.nextInt();
-            
-        System.out.println("3=Kangoo / 0=Siguiente modelo");
-                Kangoo = leerkangoo.nextInt();
-           
-
+	modelo = leermodelo.next();
+        
         System.out.println("Ingrese la Gama del Automotor: ");
 	gama = leergama.next();
         
         System.out.println("------Ingrese el Precio Total------");
 	importe = leerimporte.nextInt();
         
-        System.out.println("Entrega Vehiculo Usado: " );
+        System.out.println("Entrega Vehiculo Usado SI/No: " );
 	usado = leerusado.next();
         
         System.out.println("Dominio del Vehiculo Usado: " );
@@ -178,6 +167,8 @@ public class EjercicioN14Consesionaria {
         System.out.println("*********PRESUPUESTO*************");
         System.out.println("=================================");
         System.out.println("Atendido por el Vendedor: " + nombrevendedor);
+        System.out.println(fecha);
+        System.out.println("Validez: 5 dias Habiles a partir de la fecha ");
         System.out.println("=================================");
         System.out.println("-------DATOS DEL COMPRADOR------ ");   
         System.out.println("Nombre: " + nombrecliente);
@@ -186,7 +177,7 @@ public class EjercicioN14Consesionaria {
         System.out.println("=================================");
         System.out.println("-------DATOS DEL AUTOMOTOR------ ");
         System.out.println("MARCA: " + marca);
-        System.out.println("MODELO: " + modelo[] );
+        System.out.println("MODELO: " + modelo);
         System.out.println("GAMA: " + gama);
         System.out.println("PRECIO: " + importe);
         System.out.println("=================================");
