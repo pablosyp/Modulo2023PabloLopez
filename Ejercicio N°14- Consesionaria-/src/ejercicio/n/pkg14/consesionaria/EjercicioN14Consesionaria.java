@@ -98,13 +98,13 @@ public class EjercicioN14Consesionaria {
         System.out.println("Ingrese el Modelo del Automotor: ");
         System.out.println("1 = Logan / 0 = Siguiente modelo ");
                 Logan = leerlogan.nextInt();
-            
-        System.out.println("2 = Twingo / 0 = Siguiente modelo ");
+                if (Logan ==1){}
+        System.out.println("1 = Twingo / 0 = Siguiente modelo ");
                 Twingo = leertwingo.nextInt();
-            
-        System.out.println("3 = Kangoo / 0 = Siguiente modelo");
+                if (Twingo ==1){}
+        System.out.println("1 = Kangoo / 0 = Siguiente modelo");
                 Kangoo = leerkangoo.nextInt();
-           
+                if (Kangoo ==1){}
 
         System.out.println("Ingrese la Gama del Automotor: ");
 	gama = leergama.next();
