@@ -99,10 +99,10 @@ public class EjercicioN14Consesionaria {
         System.out.println("1 = Logan / 0 = Siguiente modelo ");
                 Logan = leerlogan.nextInt();
             
-        System.out.println("2=Twingo / 0=Siguiente modelo ");
+        System.out.println("2 = Twingo / 0 = Siguiente modelo ");
                 Twingo = leertwingo.nextInt();
             
-        System.out.println("3=Kangoo / 0=Siguiente modelo");
+        System.out.println("3 = Kangoo / 0 = Siguiente modelo");
                 Kangoo = leerkangoo.nextInt();
            
 
@@ -186,7 +186,7 @@ public class EjercicioN14Consesionaria {
         System.out.println("=================================");
         System.out.println("-------DATOS DEL AUTOMOTOR------ ");
         System.out.println("MARCA: " + marca);
-        System.out.println("MODELO: " + modelo[] );
+        System.out.println("MODELO: " + modelo );
         System.out.println("GAMA: " + gama);
         System.out.println("PRECIO: " + importe);
         System.out.println("=================================");
