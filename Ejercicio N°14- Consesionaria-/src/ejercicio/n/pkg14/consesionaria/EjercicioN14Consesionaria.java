@@ -6,118 +6,167 @@ import java.util.*;
 public class EjercicioN14Consesionaria {
 
     public static void main(String[] args) {
-        // // Variables
+     //Variables 
      String nombrevendedor = "";
      String nombrecliente = "";
-     String marca = "";
-     //String modelo = "";
+     //String marca = "";
+     int dni;
+     int telefono;
+     int importe;
+
      String gama = "";
      String usado = "";
      String dominio = "";
-     int dni;
-     int tel;
-     int importe;
-     //modelos
-     int Logan;
-     int Twingo;
-     int Kangoo;
-     int modelologan;
-     int modelotwingo;
-     int modelokangoo;
      
+     String marca ="Renault";
+     String modelo = "";
      int opcion;
-     int numero;
      int imptotalefect;
      int imptotal70;
      int imptotal80;
      int imptotal100;
-     int importefinal;
      int importefinal70;
      int importefinal80;
      int importefinal100;
      int cuota120;
      int cuota85;
      int cuota240;
-     int leer;
-    
-        Scanner leernombrevendedor = new Scanner(System.in);
-        Scanner leernombrecliente = new Scanner(System.in);
-        Scanner leerdni = new Scanner(System.in);
-        Scanner leertel = new Scanner(System.in);
-        Scanner leermarca = new Scanner(System.in);
-        Scanner leermodelo = new Scanner(System.in);
-        Scanner leergama = new Scanner(System.in);
-        Scanner leerimporte = new Scanner(System.in);
-        Scanner leerusado = new Scanner(System.in);
-        Scanner leerdominio = new Scanner(System.in);
+     
+
+        //creamos metodo para ingreso de datos
+        Scanner leerdato = new Scanner(System.in);
+        //creamos la matriz de modelos {id_modelo,nombre de modelo}
+        String [][] modelos = {{"1","Logan"},{"2","Twingo"},{"3","Kangoo"}};
+
+        String [][] gamas = {{"1","Baja"},{"2","Media"},{"3","Alta"}};
         
-        Scanner leeropcion = new Scanner(System.in);
-        Scanner leerimptotalefect = new Scanner(System.in);
-        Scanner leerimptotal70 = new Scanner(System.in);
-        Scanner leerimptotal80 = new Scanner(System.in);
-        Scanner leerimptotal100 = new Scanner(System.in);
-        Scanner leerimportefinal = new Scanner(System.in);
-        Scanner leerimportefinal70 = new Scanner(System.in);
-        Scanner leerimportefinal80 = new Scanner(System.in);
-        Scanner leerimportefinal100 = new Scanner(System.in);
-        Scanner leercuota120 = new Scanner(System.in);
-        Scanner leercuota85 = new Scanner(System.in);
-        Scanner leercuota240 = new Scanner(System.in);
-    
-        System.out.println("=================================");
-        System.out.println("          CONCESIONARIA          ");
-        System.out.println("         RENAULT JOSECAR         ");
-        System.out.println(" Venta de 0KM - Planes de Ahorro ");        
-        System.out.println("=================================");
+        String [][] valLogan = {{"1","5000000"},{"2","6000000"},{"3","7000000"}};
+        String [][] valTwingo = {{"1","3000000"},{"2","3500000"},{"3","4000000"}};
+        String [][] valKangoo = {{"1","6500000"},{"2","7000000"},{"3","7500000"}};
+
+        System.out.println("=================================================");
+        System.out.println("                   CONCESIONARIA                 ");
+        System.out.println("                  RENAULT JOSECAR                ");
+        System.out.println("         Venta de 0KM - Planes de Ahorro         ");        
+        System.out.println("=================================================");
+        System.out.println("                                                 ");
+        System.out.println("                  MODELOS AUTOMOVILES            ");
+        System.out.println(" Modelos  |   Logan   |    Twingo  |    Kangoo   ");    
+        System.out.println("Gama Alta | 7.000.000 |  4.000.000 |  7.500.000 |");            
+        System.out.println("Gama Media| 6.000.000 |  3.500.000 |  7.000.000 |");
+        System.out.println("Gama Baja | 5.000.000 |  3.000.000 |  6.500.000 |");
+        System.out.println("-------------------------------------------------");
         
         System.out.println("Ingrese el Nombre del Vendedor: ");
-	nombrevendedor = leernombrevendedor.next();
+	nombrevendedor = leerdato.next();
         
         System.out.println("Ingrese el Nombre del Cliente: ");
-	nombrecliente = leernombrecliente.next();
+	nombrecliente = leerdato.next();
         
         System.out.println("Ingrese el DNI: ");
-	dni = leerdni.nextInt();
+	dni = leerdato.nextInt();
         
         System.out.println("Ingrese el Telefono: ");
-	tel = leertel.nextInt();
+	telefono = leerdato.nextInt();
+        System.out.println("-------------------------------------------------");
+        System.out.println("Marca de su proximo automovil: " + marca);
+        System.out.println("-------------------------------------------------");
+        System.out.println("------------- Lista de modelos ------------------");
+        //listamos los modelos
+        for (int x=0; x < modelos.length; x++) {
+             
+            for (int y=0; y < modelos[x].length; y++) {
+            System.out.print (modelos[x][y]);
+            System.out.print (" - ");
+            }
+            System.out.print ("\n");
+        }
         
-        System.out.println("Ingrese la Marca del Automotor: ");
-	marca = leermarca.next();
+        System.out.println("-------------------------------------------------");
         
-        String modelo[]=new String[3];
-       
-        modelo [0]="Logan";
-        modelo [1]="Twingo";
-        modelo [2]="Kangoo";
+        System.out.println("Ingrese la Modelo del Automotor: ");
+	modelo = leerdato.next();
         
-        Scanner leerlogan = new Scanner (System.in);
-        Scanner leertwingo = new Scanner (System.in);
-        Scanner leerkangoo = new Scanner (System.in);
-        
-        System.out.println("Ingrese el Modelo del Automotor: ");
-        System.out.println("1 = Logan / 0 = Siguiente modelo ");
-                Logan = leerlogan.nextInt();
-                if (Logan ==1){}
-        System.out.println("1 = Twingo / 0 = Siguiente modelo ");
-                Twingo = leertwingo.nextInt();
-                if (Twingo ==1){}
-        System.out.println("1 = Kangoo / 0 = Siguiente modelo");
-                Kangoo = leerkangoo.nextInt();
-                if (Kangoo ==1){}
+        //listamos la gama
+        System.out.println("------------- Lista de Gama ------------------");
+        for (int x=0; x < gamas.length; x++) {
+             
+            for (int y=0; y < gamas[x].length; y++) {
+            System.out.print (gamas[x][y]);
+            System.out.print (" - ");
+            }
+            System.out.print ("\n");
+        }
+        System.out.println("-------------------------------------------------");
 
+        
         System.out.println("Ingrese la Gama del Automotor: ");
-	gama = leergama.next();
+	gama = leerdato.next();
         
-        System.out.println("------Ingrese el Precio Total------");
-	importe = leerimporte.nextInt();
+        //Logan-BMA
+        /*
+	if ((gamaA == 1) && (modelo == 1)){
+            System.out.println (""+ valor [0] );
+        }
+        if ((gamaA == 2) && (modelo == 1)){
+            System.out.println (""+ valor [1] );
+        }
+        if ((gamaA == 3) && (modelo == 1)){
+            System.out.println (""+ valor [2] );
+        }
+        //Twingo-BMA
+        if ((gamaA == 1) && (modelo == 2)){
+            System.out.println (""+ valor [3] );
+        }
+        if ((gamaA == 2) && (modelo == 2)){
+            System.out.println (""+ valor [4] );
+        }
+        if ((gamaA == 3) && (modelo == 2)){
+            System.out.println (""+ valor [5] );
+        }
+        //Kangoo-BMA
+        if ((gamaA == 1) && (modelo == 3)){
+            System.out.println (""+ valor [6] );
+        }
+        if ((gamaA == 2) && (modelo == 3)){
+            System.out.println (""+ valor [7] );
+        }
+        if ((gamaA == 3) && (modelo == 3)){
+            System.out.println (""+ valor [8] );
+        }
+        */
+        System.out.println("------------- Lista de Precios ------------------");
+        for (int x=0; x < valLogan.length; x++) {
+             
+            for (int y=0; y < valLogan[x].length; y++) {
+            System.out.print (valLogan[x][y]);
+            System.out.print (" - ");
+            }
+            System.out.print ("\n");
+        }
+         for (int x=0; x < valTwingo.length; x++) {
+             
+            for (int y=0; y < valTwingo[x].length; y++) {
+            System.out.print (valTwingo[x][y]);
+            System.out.print (" - ");
+            }
+            System.out.print ("\n");
+        }
+          for (int x=0; x < valKangoo.length; x++) {
+             
+            for (int y=0; y < valKangoo[x].length; y++) {
+            System.out.print (valKangoo[x][y]);
+            System.out.print (" - ");
+            }
+            System.out.print ("\n");
+        }
+        System.out.println("-------------------------------------------------");
+        System.out.println("------Ingrese el Precio de Lista------");
+	importe = leerdato.nextInt();
         
-        System.out.println("Entrega Vehiculo Usado: " );
-	usado = leerusado.next();
-        
-        System.out.println("Dominio del Vehiculo Usado: " );
-	dominio = leerdominio.next();
-        
+        System.out.println("Entrega Vehiculo Usado: 1/SI  2/NO" );
+	usado = leerdato.next();
+
         System.out.println("-----------------------------------");
         System.out.println("---------Opciones de Pago:---------");
         System.out.println("-----------------------------------");
@@ -127,10 +176,8 @@ public class EjercicioN14Consesionaria {
         System.out.println("-4- 100% Financiado");
         System.out.println("---------------------------------");
         System.out.println("Ingrese una opion de Pago");
-	opcion = leeropcion.nextInt();
-    
-        
-        
+	opcion = leerdato.nextInt();
+
        //logica del switch- con tarjeta pedir numero
         switch (opcion){
             case 1:
@@ -182,7 +229,7 @@ public class EjercicioN14Consesionaria {
         System.out.println("-------DATOS DEL COMPRADOR------ ");   
         System.out.println("Nombre: " + nombrecliente);
         System.out.println("DNI: " + dni);
-        System.out.println("Telefono: " + tel);
+        System.out.println("Telefono: " + telefono);
         System.out.println("=================================");
         System.out.println("-------DATOS DEL AUTOMOTOR------ ");
         System.out.println("MARCA: " + marca);
@@ -197,7 +244,7 @@ public class EjercicioN14Consesionaria {
         imptotalefect = importe;
         System.out.println("El Total a pagar es:" + imptotalefect); 
         break;
-            
+        
             case 2:
         System.out.println("Con 70% Finaniado y 30% en efectivo");         
         imptotal70 = +importe *70 / 100;
@@ -228,6 +275,7 @@ public class EjercicioN14Consesionaria {
                System.out.println("Elija del 1 al 4 la opcion deseada");
            break;
         }
+        
         System.out.println("=================================");
 	System.out.println("Entrega Vehiculo Usado: " + usado);
 	System.out.println("Dominio del Vehiculo Usado: " + dominio);
@@ -237,8 +285,6 @@ public class EjercicioN14Consesionaria {
         
         
         
-        
     }
     
 }
-

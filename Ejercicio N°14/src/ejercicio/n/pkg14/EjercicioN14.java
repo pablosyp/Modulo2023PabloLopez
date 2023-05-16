@@ -71,10 +71,10 @@ public class EjercicioN14 {
         System.out.println("=================================================");
         System.out.println("                                                 ");
         System.out.println("                  MODELOS AUTOMOVILES            ");
-        System.out.println(" Modelos  |   Logan   |    Twingo  |    Kangoo   ");
-        System.out.println("Gama Alta | 7.000.000 |  3.000.000 |  6.500.000 |");            
+        System.out.println(" Modelos  |   Logan   |    Twingo  |    Kangoo   ");    
+        System.out.println("Gama Alta | 7.000.000 |  4.000.000 |  7.500.000 |");            
         System.out.println("Gama Media| 6.000.000 |  3.500.000 |  7.000.000 |");
-        System.out.println("Gama Baja | 5.000.000 |  4.000.000 |  7.500.000 |");
+        System.out.println("Gama Baja | 5.000.000 |  3.000.000 |  6.500.000 |");
         System.out.println("-------------------------------------------------");
                 
         System.out.println("Ingrese el Nombre del Vendedor: ");
