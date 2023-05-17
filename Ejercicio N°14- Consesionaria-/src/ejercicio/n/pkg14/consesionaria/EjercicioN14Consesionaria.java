@@ -12,6 +12,7 @@ public class EjercicioN14Consesionaria {
      int dni;
      int telefono;
      int importe;
+     //int data2;
      
      String usado = "";
      String dominio = "";
@@ -170,39 +171,28 @@ public class EjercicioN14Consesionaria {
             }
             System.out.print ("\n");
         
-        /*
-        System.out.println("------------- Lista de Precios ------------------");
-        for (int x=0; x < valLogan.length; x++) {
-             
-            for (int y=0; y < valLogan[x].length; y++) {
-            System.out.print ("" + valLogan[x][y]);
-            System.out.print (" - ");
-            }
-            System.out.print ("\n");
-        }
-        System.out.println("-------------------------------------------------");
-         for (int x=0; x < valTwingo.length; x++) {
-             
-            for (int y=0; y < valTwingo[x].length; y++) {
-            System.out.print ("" + valTwingo[x][y]);
-            System.out.print (" - ");
-            }
-            System.out.print ("\n");
-        }
-        System.out.println("-------------------------------------------------");
-          for (int x=0; x < valKangoo.length; x++) {
-             
-            for (int y=0; y < valKangoo[x].length; y++) {
-            System.out.print ("" + valKangoo[x][y]);
-            System.out.print (" - ");
-            }
-            System.out.print ("\n");
-        }
-        */
         System.out.println("-------------------------------------------------");
         System.out.println("------Ingrese el Precio de Lista------");
 	importe = leerdato.nextInt();
+        /*
+        data = leerdato.next();
 
+        switch (data){
+            case "1":
+               importe = 5000000;
+            break;
+            case "2":
+               importe = 6000000;
+            break;
+            case "3":
+               importe = 7000000;
+            break;
+            default:
+            System.out.println ("El dato ingresado no es valida!");   
+            modelo = "0";
+            break;    
+        }
+        */
         System.out.println("Entrega Vehiculo Usado: 1-SI // 2-NO" );
 	data = leerdato.next();
         switch (data){
