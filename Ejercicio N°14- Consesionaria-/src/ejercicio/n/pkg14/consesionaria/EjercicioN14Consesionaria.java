@@ -9,17 +9,18 @@ public class EjercicioN14Consesionaria {
      //Variables 
      String nombrevendedor = "";
      String nombrecliente = "";
-     //String marca = "";
      int dni;
      int telefono;
      int importe;
-
-     String gama = "";
+     
      String usado = "";
      String dominio = "";
      
      String marca ="Renault";
      String modelo = "";
+     String gama = "";
+     String data = "";
+
      int opcion;
      int imptotalefect;
      int imptotal70;
@@ -40,9 +41,13 @@ public class EjercicioN14Consesionaria {
 
         String [][] gamas = {{"1","Baja"},{"2","Media"},{"3","Alta"}};
         
-        String [][] valLogan = {{"1","5000000"},{"2","6000000"},{"3","7000000"}};
-        String [][] valTwingo = {{"1","3000000"},{"2","3500000"},{"3","4000000"}};
-        String [][] valKangoo = {{"1","6500000"},{"2","7000000"},{"3","7500000"}};
+        int valLogan []= {5000000,6000000,7000000};
+        int valTwingo []= {3000000,3500000,4000000};
+        int valKangoo []= {6500000,7000000,7500000};
+        
+        //String [][] valLogan = {{"1","Logan","Baja","5000000"},{"2","Logan","Media","6000000"},{"3","Logan","Alta","7000000"}};
+        //String [][] valTwingo = {{"4","Twingo","Baja","3000000"},{"5","Twingo","Media","3500000"},{"6","Twingo","Alta","4000000"}};
+        //String [][] valKangoo = {{"7","Kangoo","Baja","6500000"},{"8","Kangoo","Media","7000000"},{"9","Kangoo","Alta","7500000"}};
 
         System.out.println("=================================================");
         System.out.println("                   CONCESIONARIA                 ");
@@ -84,9 +89,27 @@ public class EjercicioN14Consesionaria {
         
         System.out.println("-------------------------------------------------");
         
-        System.out.println("Ingrese la Modelo del Automotor: ");
-	modelo = leerdato.next();
-        
+        System.out.print("Seleccione el modelo: ");
+        data = leerdato.next();
+
+        switch (data){
+            case "1":
+               modelo = "Logan";
+            break;
+            case "2":
+               modelo = "Twingo";
+            break;
+            case "3":
+               modelo = "Kangoo";
+            break;
+            default:
+            System.out.println ("El dato ingresado no es valida!");   
+            modelo = "0";
+            break;    
+        }
+            System.out.println("El modelo seleccionado es: " +modelo);
+        System.out.println("-------------------------------------------------");
+
         //listamos la gama
         System.out.println("------------- Lista de Gama ------------------");
         for (int x=0; x < gamas.length; x++) {
@@ -98,74 +121,100 @@ public class EjercicioN14Consesionaria {
             System.out.print ("\n");
         }
         System.out.println("-------------------------------------------------");
+        
+        System.out.print("Seleccione la Gama: ");
+        data = leerdato.next();
 
+        switch (data){
+            case "1":
+               gama = "Baja";
+            break;
+            case "2":
+               gama = "Media";
+            break;
+            case "3":
+               gama = "Alta";
+            break;
+            default:
+            System.out.println ("El dato ingresado no es valida!");   
+            gama = "0";
+            break;    
+        }
+            System.out.println("La Gama seleccionada es: " +gama);
+        System.out.println("-------------------------------------------------");
         
-        System.out.println("Ingrese la Gama del Automotor: ");
-	gama = leerdato.next();
+        System.out.println("------------- Lista de Precios ------------------");
+        System.out.println("Logan--------------------------------------------");
+        System.out.println("Baja------Media-----Alta-------------------------");
+            for (int y=0; y < valLogan.length; y++) {
+            System.out.print ("" + valLogan[y]);
+            System.out.print (" - ");
+            }
+            System.out.print ("\n");
         
-        //Logan-BMA
+        System.out.println("-------------------------------------------------");
+        System.out.println("Twingo--------------------------------------------");
+        System.out.println("Baja------Media-----Alta-------------------------");
+            for (int y=0; y < valTwingo.length; y++) {
+            System.out.print ("" + valTwingo[y]);
+            System.out.print (" - ");
+            }
+            System.out.print ("\n");
+        
+        System.out.println("-------------------------------------------------");
+        System.out.println("Kangoo--------------------------------------------");
+        System.out.println("Baja------Media-----Alta-------------------------");
+            for (int y=0; y < valKangoo.length; y++) {
+            System.out.print ("" + valKangoo[y]);
+            System.out.print (" - ");
+            }
+            System.out.print ("\n");
+        
         /*
-	if ((gamaA == 1) && (modelo == 1)){
-            System.out.println (""+ valor [0] );
-        }
-        if ((gamaA == 2) && (modelo == 1)){
-            System.out.println (""+ valor [1] );
-        }
-        if ((gamaA == 3) && (modelo == 1)){
-            System.out.println (""+ valor [2] );
-        }
-        //Twingo-BMA
-        if ((gamaA == 1) && (modelo == 2)){
-            System.out.println (""+ valor [3] );
-        }
-        if ((gamaA == 2) && (modelo == 2)){
-            System.out.println (""+ valor [4] );
-        }
-        if ((gamaA == 3) && (modelo == 2)){
-            System.out.println (""+ valor [5] );
-        }
-        //Kangoo-BMA
-        if ((gamaA == 1) && (modelo == 3)){
-            System.out.println (""+ valor [6] );
-        }
-        if ((gamaA == 2) && (modelo == 3)){
-            System.out.println (""+ valor [7] );
-        }
-        if ((gamaA == 3) && (modelo == 3)){
-            System.out.println (""+ valor [8] );
-        }
-        */
         System.out.println("------------- Lista de Precios ------------------");
         for (int x=0; x < valLogan.length; x++) {
              
             for (int y=0; y < valLogan[x].length; y++) {
-            System.out.print (valLogan[x][y]);
-            System.out.print (" - ");
-            }
-            System.out.print ("\n");
-        }
-         for (int x=0; x < valTwingo.length; x++) {
-             
-            for (int y=0; y < valTwingo[x].length; y++) {
-            System.out.print (valTwingo[x][y]);
-            System.out.print (" - ");
-            }
-            System.out.print ("\n");
-        }
-          for (int x=0; x < valKangoo.length; x++) {
-             
-            for (int y=0; y < valKangoo[x].length; y++) {
-            System.out.print (valKangoo[x][y]);
+            System.out.print ("" + valLogan[x][y]);
             System.out.print (" - ");
             }
             System.out.print ("\n");
         }
         System.out.println("-------------------------------------------------");
+         for (int x=0; x < valTwingo.length; x++) {
+             
+            for (int y=0; y < valTwingo[x].length; y++) {
+            System.out.print ("" + valTwingo[x][y]);
+            System.out.print (" - ");
+            }
+            System.out.print ("\n");
+        }
+        System.out.println("-------------------------------------------------");
+          for (int x=0; x < valKangoo.length; x++) {
+             
+            for (int y=0; y < valKangoo[x].length; y++) {
+            System.out.print ("" + valKangoo[x][y]);
+            System.out.print (" - ");
+            }
+            System.out.print ("\n");
+        }
+        */
+        System.out.println("-------------------------------------------------");
         System.out.println("------Ingrese el Precio de Lista------");
 	importe = leerdato.nextInt();
-        
-        System.out.println("Entrega Vehiculo Usado: 1/SI  2/NO" );
-	usado = leerdato.next();
+
+        System.out.println("Entrega Vehiculo Usado: 1-SI // 2-NO" );
+	data = leerdato.next();
+        switch (data){
+            case "1":
+               usado = "SI";
+               System.out.println("Ingrese el Dominio del Vehiculo Usado: " );
+               dominio = leerdato.next();
+            break;
+            case "2":
+               usado = "NO";
+            break;   
+        }
 
         System.out.println("-----------------------------------");
         System.out.println("---------Opciones de Pago:---------");
@@ -226,7 +275,7 @@ public class EjercicioN14Consesionaria {
         System.out.println("=================================");
         System.out.println("Atendido por el Vendedor: " + nombrevendedor);
         System.out.println("=================================");
-        System.out.println("-------DATOS DEL COMPRADOR------ ");   
+        System.out.println("--------DATOS DEL CLIENTE------- ");   
         System.out.println("Nombre: " + nombrecliente);
         System.out.println("DNI: " + dni);
         System.out.println("Telefono: " + telefono);
