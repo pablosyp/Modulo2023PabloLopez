@@ -11,9 +11,8 @@ public class EjercicioN14Consesionaria {
      String nombrecliente = "";
      int dni;
      int telefono;
-     int importe;
-     //int data2;
-     
+     int importe =0;
+
      String usado = "";
      String dominio = "";
      
@@ -45,10 +44,6 @@ public class EjercicioN14Consesionaria {
         int valLogan []= {5000000,6000000,7000000};
         int valTwingo []= {3000000,3500000,4000000};
         int valKangoo []= {6500000,7000000,7500000};
-        
-        //String [][] valLogan = {{"1","Logan","Baja","5000000"},{"2","Logan","Media","6000000"},{"3","Logan","Alta","7000000"}};
-        //String [][] valTwingo = {{"4","Twingo","Baja","3000000"},{"5","Twingo","Media","3500000"},{"6","Twingo","Alta","4000000"}};
-        //String [][] valKangoo = {{"7","Kangoo","Baja","6500000"},{"8","Kangoo","Media","7000000"},{"9","Kangoo","Alta","7500000"}};
 
         System.out.println("=================================================");
         System.out.println("                   CONCESIONARIA                 ");
@@ -112,7 +107,7 @@ public class EjercicioN14Consesionaria {
         System.out.println("-------------------------------------------------");
 
         //listamos la gama
-        System.out.println("------------- Lista de Gama ------------------");
+        System.out.println("------------- Lista de Gama ---------------------");
         for (int x=0; x < gamas.length; x++) {
              
             for (int y=0; y < gamas[x].length; y++) {
@@ -144,37 +139,39 @@ public class EjercicioN14Consesionaria {
             System.out.println("La Gama seleccionada es: " +gama);
         System.out.println("-------------------------------------------------");
         
+        //lista de precios
         System.out.println("------------- Lista de Precios ------------------");
-        System.out.println("Logan--------------------------------------------");
-        System.out.println("Baja------Media-----Alta-------------------------");
+        if (modelo.equals("Logan")){
+        System.out.println("Logan----Seleccione un numero :------------------");
+        System.out.println("1-Baja----2-Media---3-Alta-----------------------");
             for (int y=0; y < valLogan.length; y++) {
             System.out.print ("" + valLogan[y]);
             System.out.print (" - ");
             }
             System.out.print ("\n");
-        
+        }
+        if (modelo.equals("Twingo")){
         System.out.println("-------------------------------------------------");
-        System.out.println("Twingo--------------------------------------------");
-        System.out.println("Baja------Media-----Alta-------------------------");
+        System.out.println("Twingo----Seleccione un numero :-----------------");
+        System.out.println("4-Baja----5-Media---6-Alta-----------------------");
             for (int y=0; y < valTwingo.length; y++) {
             System.out.print ("" + valTwingo[y]);
             System.out.print (" - ");
             }
             System.out.print ("\n");
-        
+        }
+        if (modelo.equals("Kangoo")){
         System.out.println("-------------------------------------------------");
-        System.out.println("Kangoo--------------------------------------------");
-        System.out.println("Baja------Media-----Alta-------------------------");
+        System.out.println("Kangoo----Seleccione un numero :-----------------");
+        System.out.println("7-Baja----8-Media---9-Alta-----------------------");
             for (int y=0; y < valKangoo.length; y++) {
             System.out.print ("" + valKangoo[y]);
             System.out.print (" - ");
             }
             System.out.print ("\n");
-        
+        }
         System.out.println("-------------------------------------------------");
         System.out.println("------Ingrese el Precio de Lista------");
-	importe = leerdato.nextInt();
-        /*
         data = leerdato.next();
 
         switch (data){
@@ -187,12 +184,27 @@ public class EjercicioN14Consesionaria {
             case "3":
                importe = 7000000;
             break;
-            default:
-            System.out.println ("El dato ingresado no es valida!");   
-            modelo = "0";
-            break;    
+            case "4":
+               importe = 3000000;
+            break;
+            case "5":
+               importe = 3500000;
+            break;
+            case "6":
+               importe = 4000000;
+            break;
+            case "7":
+               importe = 6500000;
+            break;
+            case "8":
+               importe = 7000000;
+            break;
+            case "9":
+               importe = 7500000;
+            break;   
         }
-        */
+        
+        //Entrega de usado
         System.out.println("Entrega Vehiculo Usado: 1-SI // 2-NO" );
 	data = leerdato.next();
         switch (data){
@@ -205,7 +217,7 @@ public class EjercicioN14Consesionaria {
                usado = "NO";
             break;   
         }
-
+        //Frma de pago
         System.out.println("-----------------------------------");
         System.out.println("---------Opciones de Pago:---------");
         System.out.println("-----------------------------------");
@@ -256,6 +268,7 @@ public class EjercicioN14Consesionaria {
                System.out.println("Elija del 1 al 4 la opcion deseada");
            break;
         }
+        //Ticket
         System.out.println("=================================");
         System.out.println("          CONCESIONARIA          ");
         System.out.println("         RENAULT JOSECAR         ");
