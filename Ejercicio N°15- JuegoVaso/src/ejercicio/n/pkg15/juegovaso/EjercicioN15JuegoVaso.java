@@ -104,20 +104,20 @@ public class EjercicioN15JuegoVaso {
         } else {
             JOptionPane.showMessageDialog(null,"MUY MAL","Perdieron",JOptionPane.INFORMATION_MESSAGE,Mal);
             } 
-        //System.out.println("Totales: ");
-        //JOptionPane.showMessageDialog(null,"Totales: ");
+
         JOptionPane.showMessageDialog(null," Puntos "+"- " + jugador1 + " - "+ punto1 +" -");
         JOptionPane.showMessageDialog(null," Puntos "+"- " + jugador2 + " - "+ punto2 +" -");
-        //System.out.println(jugador1 + ": " + punto1 + " puntos");
-        //System.out.println(jugador2 + ": " + punto2 + " puntos");
+
         
         if(punto1<punto2){
                JOptionPane.showMessageDialog(null,"El ganador es : " + jugador1);
-               //System.out.println("El ganador es : " + jugador2);
 
-               }else{
+               }else if(punto1>punto2){
                JOptionPane.showMessageDialog(null,"El ganador es : " + jugador2);
-               //System.out.println ("El ganador es : " + jugador1);
+
+               }else if(punto1==punto2){
+               JOptionPane.showMessageDialog(null,"Hay empate !!! ");
+
                
     }
 }
