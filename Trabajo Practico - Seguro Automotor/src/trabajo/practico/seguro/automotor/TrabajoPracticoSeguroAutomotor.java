@@ -22,9 +22,8 @@ public class TrabajoPracticoSeguroAutomotor {
         String mail = JOptionPane.showInputDialog(null,"Mail ","Poliza",JOptionPane.QUESTION_MESSAGE);
         //Combobox
         Object [] modelo ={"Renault","Fiat","Ford"};
-        JComboBox comboBox = new JComboBox(modelo); 
-        //comboBox.setSelectedIndex(1);       
-        JOptionPane.showMessageDialog(null, comboBox, "Seleccione el Modelo",JOptionPane.QUESTION_MESSAGE);
+        JComboBox comboBoxmod = new JComboBox(modelo);    
+        JOptionPane.showMessageDialog(null, comboBoxmod, "Seleccione el Modelo",JOptionPane.QUESTION_MESSAGE);
 
         //Dominio
         String dominio = JOptionPane.showInputDialog(null,"Ingrese Dominio :","Poliza",JOptionPane.QUESTION_MESSAGE);
@@ -46,6 +45,10 @@ public class TrabajoPracticoSeguroAutomotor {
         }else if (resultado >= 20){
             JOptionPane.showMessageDialog(null,"No se Asegura el Auto");
         
+        //Tipo de cobertura
+        Object [][] cobertura ={{"RC","1000"},{"TC","2000"},{"TR","3000"}};
+        JComboBox comboBoxcob = new JComboBox(cobertura);    
+        JOptionPane.showMessageDialog(null, comboBoxcob, "Seleccione la Cobertura",JOptionPane.QUESTION_MESSAGE);
         
     }
     
