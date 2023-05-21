@@ -116,9 +116,8 @@ public class EjercicioN15JuegoVaso {
                JOptionPane.showMessageDialog(null,"El ganador es : " + jugador2);
 
                }else if(punto1==punto2){
-               JOptionPane.showMessageDialog(null,"Hay empate !!! ");
+               JOptionPane.showMessageDialog(null,"Hay Empate !!! ");
 
-               
     }
 }
 }           
