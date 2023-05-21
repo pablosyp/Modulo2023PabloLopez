@@ -5,33 +5,30 @@
 package trabajo.practico.seguro.automotor;
 
 import javax.swing.ImageIcon;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 
 public class TrabajoPracticoSeguroAutomotor {
 
-    public static void main(String[] args) {
-        //Variables
-        /*String nombre="";
-        String apellido="";
-        String telefono;
-        String mail="";
-        */       
+    public static void main(String[] args) {    
         int fecha=2023;
         //Logo
         ImageIcon Icon = new ImageIcon("src/Imagenes/logo.png");
         JOptionPane.showMessageDialog(null,Icon);
         //Solicitud de datos
-        /*String nombre = JOptionPane.showInputDialog(null,"Nombre del Cliente ","Poliza",JOptionPane.QUESTION_MESSAGE);
+        String nombre = JOptionPane.showInputDialog(null,"Nombre del Cliente ","Poliza",JOptionPane.QUESTION_MESSAGE);
         String apellido = JOptionPane.showInputDialog(null,"Apellido del Cliente ","Poliza",JOptionPane.QUESTION_MESSAGE);
         String telefono = JOptionPane.showInputDialog(null,"Telefono ","Poliza",JOptionPane.QUESTION_MESSAGE);
         String mail = JOptionPane.showInputDialog(null,"Mail ","Poliza",JOptionPane.QUESTION_MESSAGE);
-        
-        //Modelo
-        String modelo = JOptionPane.showInputDialog(null,"Ingrese Modelo :","Poliza",JOptionPane.QUESTION_MESSAGE);
+        //Combobox
+        Object [] modelo ={"Renault","Fiat","Ford"};
+        JComboBox comboBox = new JComboBox(modelo); 
+        //comboBox.setSelectedIndex(1);       
+        JOptionPane.showMessageDialog(null, comboBox, "Seleccione el Modelo",JOptionPane.QUESTION_MESSAGE);
 
         //Dominio
         String dominio = JOptionPane.showInputDialog(null,"Ingrese Dominio :","Poliza",JOptionPane.QUESTION_MESSAGE);
-*/
+
         //Año de Antiguedad
         int antig = Integer.parseInt(JOptionPane.showInputDialog(null,"Ingrese Año de Antiguedad ","Poliza",JOptionPane.QUESTION_MESSAGE));
         int resultado = (fecha - antig);
