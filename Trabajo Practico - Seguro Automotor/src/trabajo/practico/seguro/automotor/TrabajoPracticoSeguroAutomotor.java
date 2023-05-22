@@ -119,6 +119,10 @@ public class TrabajoPracticoSeguroAutomotor {
             }
         }
     }
+            System.out.println("--------------------------------------------");
+            System.out.println("---------------Presupuesto------------------");
+            System.out.println("------------Seguros Segurola----------------");
+            System.out.println("--------------------------------------------");
             System.out.println("NOMBRE :" + nombre);
             System.out.println("APELLIDO :" + apellido);
             System.out.println("TELEFONO :" + telefono);
@@ -126,14 +130,22 @@ public class TrabajoPracticoSeguroAutomotor {
             System.out.println("MARCA :" + modelo[0]);
             System.out.println("DOMINIO :" + dominio);
             System.out.println("ANTIGUEDAD DEL VEHICULO :" + antig);
+            System.out.println("--------------------------------------------");
             System.out.println("VALOR DE LA CUOTA :" + resultado);
             System.out.println("TIPO DE COBERTURA :" + cobertura);
             System.out.println("ADICIONALES :" + coberAD );
             total = resultado + cobertura + coberAD;
+            System.out.println("--------------------------------------------");
             System.out.println("VALOR DE LA PRIMA TOTAL :" + total );
+            System.out.println("--------------------------------------------");
             
-            //JOptionPane.showInternalMessageDialog(null,"NOMBRE : +nombre, \n APELLIDO : +apellido, \n TELEFONO : +telefono","Icon2",);
-            //"NOMBRE : " +nombre","\n" APELLIDO : +apellido"," \n" TELEFONO : +telefono \n MAIL : +mail \n MARCA : +modelo[0] \n DOMINIO : +dominio \n ANTIGUEDAD DEL VEHICULO : +antig \n VALOR DE LA CUOTA : +resultado \n TIPO DE COBERTURA : +cobertura \n ADICIONALES : +coberAD \n VALOR DE LA PRIMA TOTAL : +total","Poliza","Icon2");
-
+            JOptionPane.showOptionDialog(null,
+            "NOMBRE DEL CLIENTE :"+nombre+"\n APELLIDO DEL CLIENTE :"+apellido+"\n TELEFONO :"+telefono+"\n MAIL :"+mail+
+                    "\n MARCA :"+modelo[0]+"\n DOMINIO :"+dominio+"\n ANTIGUEDAD DEL VEHICULO :"+antig+"\n VALOR DE LA CUOTA :"+resultado+
+                    "\n TIPO DE COBERTURA :"+cobertura+"\n ADICIONALES :"+coberAD+ "\n VALOR DE LA PRIMA TOTAL :"+total,
+            "Poliza",
+            JOptionPane.YES_NO_CANCEL_OPTION,
+            JOptionPane.QUESTION_MESSAGE,Icon2,
+            new Object[]{"FIN"},"");
     }
 }
