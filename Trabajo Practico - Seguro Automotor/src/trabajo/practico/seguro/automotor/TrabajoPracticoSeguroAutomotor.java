@@ -146,6 +146,6 @@ public class TrabajoPracticoSeguroAutomotor {
             "Poliza",
             JOptionPane.YES_NO_CANCEL_OPTION,
             JOptionPane.QUESTION_MESSAGE,Icon2,
-            new Object[]{"FIN"},"");
+            new Object[]{"IMPRIMIR POLIZA"},"");
     }
 }
