@@ -25,7 +25,10 @@ public class TrabajoPracticoSeguroAutomotor {
         int coberAD=0;
         
         int total;
-
+        
+        String seleccion;
+        String modelo;
+        
         //Logo
         ImageIcon Icon = new ImageIcon("src/Imagenes/logo33.png");
         ImageIcon Icon2 = new ImageIcon("src/Imagenes/logo2.png");
@@ -37,9 +40,24 @@ public class TrabajoPracticoSeguroAutomotor {
         String telefono = JOptionPane.showInputDialog(null,"Telefono ","Poliza",JOptionPane.QUESTION_MESSAGE);
         String mail = JOptionPane.showInputDialog(null,"Mail ","Poliza",JOptionPane.QUESTION_MESSAGE);
         //Combobox
-        Object [] modelo ={"Renault","Fiat","Ford"};
-        JComboBox comboBoxmod = new JComboBox(modelo);    
-        JOptionPane.showMessageDialog(null, comboBoxmod, "Seleccione el Modelo ",JOptionPane.QUESTION_MESSAGE);
+        Object [] marca ={"Renault","Fiat","Ford","Citroen","VW"};
+        JComboBox comboBoxmod = new JComboBox(marca);    
+        JOptionPane.showMessageDialog(null, comboBoxmod, "Seleccione el Marca ",JOptionPane.QUESTION_MESSAGE);
+        //Modelos
+        String [] Renault = {"Sandero","Logan","Captur","Kicks","Twingo"};
+        String [] Fiat = {"Uno","Mobi","Pulse","Argo","Cronos"};
+        String [] Ford = {"Fiesta","Focus","Mondeo","KA","Falcon"};
+        String [] Citroen = {"Picasso","Cactus","Aircros","C3","C4"};
+        String [] VW = {"Polo","Nivus","Virtus","Taos","Vento"};
+        
+        seleccion = (String) JOptionPane.showInputDialog(null,"Seleccione un modelo :",JOptionPane.QUESTION_MESSAGE);
+        
+        System.out.println("Ud. Selecciono : " +seleccion);
+        
+        if(seleccion.equalsIgnoreCase("Renault")){
+            modelo = (String) JOptionPane.showInputDialog(null,"Sellecione el modelo :" +seleccion , "MODELOS:",JOptionPane.QUESTION_MESSAGE);
+            System.out.println("Seleccione del modelo :");
+        }
 
         //Dominio
         String dominio = JOptionPane.showInputDialog(null,"Ingrese Dominio ","Poliza",JOptionPane.QUESTION_MESSAGE);
@@ -127,7 +145,7 @@ public class TrabajoPracticoSeguroAutomotor {
             System.out.println("APELLIDO :" + apellido);
             System.out.println("TELEFONO :" + telefono);
             System.out.println("MAIL :" + mail);
-            System.out.println("MARCA :" + modelo[0]);
+            System.out.println("MARCA :" + marca[0]);
             System.out.println("DOMINIO :" + dominio);
             System.out.println("ANTIGUEDAD DEL VEHICULO :" + antig);
             System.out.println("--------------------------------------------");
@@ -141,7 +159,7 @@ public class TrabajoPracticoSeguroAutomotor {
             
             JOptionPane.showOptionDialog(null,
             "NOMBRE DEL CLIENTE :"+nombre+"\n APELLIDO DEL CLIENTE :"+apellido+"\n TELEFONO :"+telefono+"\n MAIL :"+mail+
-                    "\n MARCA :"+modelo[0]+"\n DOMINIO :"+dominio+"\n ANTIGUEDAD DEL VEHICULO :"+antig+"\n VALOR DE LA CUOTA :"+resultado+
+                    "\n MARCA :"+marca[0]+"\n DOMINIO :"+dominio+"\n ANTIGUEDAD DEL VEHICULO :"+antig+"\n VALOR DE LA CUOTA :"+resultado+
                     "\n TIPO DE COBERTURA :"+cobertura+"\n ADICIONALES :"+coberAD+ "\n VALOR DE LA PRIMA TOTAL :"+total,
             "Poliza",
             JOptionPane.YES_NO_CANCEL_OPTION,
