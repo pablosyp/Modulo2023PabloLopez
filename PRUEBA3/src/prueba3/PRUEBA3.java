@@ -4,6 +4,7 @@
  */
 package prueba3;
 
+import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 
@@ -41,19 +42,22 @@ public class PRUEBA3 {
         //Cobertura Adicional
         int coberAD=0;
         //String cobertura="";
+        ImageIcon Icon = new ImageIcon("src/Imagenes/logo.png");
         
         int resp1 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Coberturas Adicionales");
             if(JOptionPane.OK_OPTION == resp1){
-                String [] coberturaAD1 ={"A:Ganizo","B:Llantas Deportivas","C:Asistencia Mecanica","D:Localizador GPS"};
-                JComboBox comboBoxcobAD1 = new JComboBox(coberturaAD1);    
-                JOptionPane.showMessageDialog(null, comboBoxcobAD1, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE);
-                coberAD+=300;         
+                String [] coberturaAD1 ={"","Ganizo","Llantas Deportivas","Asistencia Mecanica","Localizador GPS"};
+                //JComboBox comboBoxcobAD1 = new JComboBox(coberturaAD1);    
+                String cob = (String) JOptionPane.showInputDialog(null,"Seleccione la Cobertura Adicional","Poliza",JOptionPane.QUESTION_MESSAGE,Icon,coberturaAD1,coberturaAD1);
+                coberAD+=300;
                     int resp2 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Otra Coberturas Adicionales");
                         if(JOptionPane.OK_OPTION == resp2){
-                        String [] coberturaAD2 ={"A:Ganizo","B:Llantas Deportivas","C:Asistencia Mecanica","D:Localizador GPS"};
-                        JComboBox comboBoxcobAD2 = new JComboBox(coberturaAD2);    
-                        JOptionPane.showMessageDialog(null, comboBoxcobAD2, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE);
-                        //coberAD1+=300;                
+                        //String [] coberturaAD2 ={"A:Ganizo","B:Llantas Deportivas","C:Asistencia Mecanica","D:Localizador GPS"};
+                        
+                        String cob = (String) JOptionPane.showInputDialog(null,"Seleccione la Cobertura Adicional","Poliza",JOptionPane.QUESTION_MESSAGE,Icon,coberturaAD1,coberturaAD1);
+
+                        //JComboBox comboBoxcobAD2 = new JComboBox(coberturaAD2);    
+                        //JOptionPane.showMessageDialog(null, comboBoxcobAD2, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE); 
                             int resp3 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Otra Coberturas Adicionales");
                                 if(JOptionPane.OK_OPTION == resp3){
                                 String [] coberturaAD3 ={"A:Ganizo","B:Llantas Deportivas","C:Asistencia Mecanica","D:Localizador GPS"};
@@ -65,7 +69,6 @@ public class PRUEBA3 {
                                         Object [] coberturaAD4 ={"A:Ganizo","B:Llantas Deportivas","C:Asistencia Mecanica","D:Localizador GPS"};
                                         JComboBox comboBoxcobAD4 = new JComboBox(coberturaAD4);    
                                         JOptionPane.showMessageDialog(null, comboBoxcobAD4, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE);
-                                        //coberAD1+=300;
                                         }
             } else {
                 System.out.print("");
@@ -74,7 +77,7 @@ public class PRUEBA3 {
 
     }
                         System.out.println("Suma" + coberAD );
+                        
             }
-
     }
 }
