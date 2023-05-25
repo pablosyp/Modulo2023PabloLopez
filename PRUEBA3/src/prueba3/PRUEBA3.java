@@ -11,7 +11,11 @@ public class PRUEBA3 {
 
     public static void main(String[] args) {
         String seleccion;
-        String modelo;
+        String modelos="";
+        
+        String [] marcas ={"Renault","Fiat","Ford","Citroen","VW"};
+        //JComboBox comboBoxmod = new JComboBox(marca);    
+        //JOptionPane.showMessageDialog(null, comboBoxmod, "Seleccione la Marca ",JOptionPane.QUESTION_MESSAGE,null,marca,marca[0]);
         
         String [] Renault = {"Sandero","Logan","Captur","Kicks","Twingo"};
         String [] Fiat = {"Uno","Mobi","Pulse","Argo","Cronos"};
@@ -19,16 +23,22 @@ public class PRUEBA3 {
         String [] Citroen = {"Picasso","Cactus","Aircros","C3","C4"};
         String [] VW = {"Polo","Nivus","Virtus","Taos","Vento"};
         
-        seleccion = (String) JOptionPane.showInputDialog(null,"Seleccione un modelo :",JOptionPane.QUESTION_MESSAGE);
+        seleccion = (String) JOptionPane.showInputDialog(null,"Seleccione una Marca :","Vehiculos :",JOptionPane.QUESTION_MESSAGE,null,marcas,marcas);
         
         System.out.println("Ud. Selecciono : " +seleccion);
         
         if(seleccion.equalsIgnoreCase("Renault")){
-            modelo = (String) JOptionPane.showInputDialog(null,"Sellecione el modelo :" +seleccion , "MODELOS:",JOptionPane.QUESTION_MESSAGE);
-            System.out.println("Seleccione del modelo :");
+            modelos = (String) JOptionPane.showInputDialog(null,"Selecione el modelo :" +seleccion , "Modelos :",JOptionPane.QUESTION_MESSAGE,null,Renault,Renault);
+            System.out.println("Selecciono Renault :" +modelos);
+            //modelos = "Renault";
+        }else if(seleccion.equalsIgnoreCase("Fiat")){
+            modelos = (String) JOptionPane.showInputDialog(null,"Selecione el modelo :" +seleccion , "Modelos :",JOptionPane.QUESTION_MESSAGE,null,Fiat,Fiat);
+            System.out.println("Selecciono Fiat :" +modelos);
+            //modelos = "Fiat";
         }
         
-        
+            System.out.println("MARCA :" + marcas[0]);
+            System.out.println("MODELO :" + modelos);
         
         
         
