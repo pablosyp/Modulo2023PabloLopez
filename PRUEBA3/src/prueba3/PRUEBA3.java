@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 public class PRUEBA3 {
 
     public static void main(String[] args) {
-        String seleccion;
+        String marca;
         String modelos="";
         
         String [] marcas ={"Renault","Fiat","Ford","Citroen","VW"};
@@ -23,44 +23,40 @@ public class PRUEBA3 {
         String [] Citroen = {"Picasso","Cactus","Aircros","C3","C4"};
         String [] VW = {"Polo","Nivus","Virtus","Taos","Vento"};
         
-        seleccion = (String) JOptionPane.showInputDialog(null,"Seleccione una Marca :","Vehiculos :",JOptionPane.QUESTION_MESSAGE,null,marcas,marcas);
+        marca = (String) JOptionPane.showInputDialog(null,"Seleccione una Marca :","Vehiculos :",JOptionPane.QUESTION_MESSAGE,null,marcas,marcas);
         
-        System.out.println("Ud. Selecciono : " +seleccion);
+        System.out.println("Ud. Selecciono : " +marca);
         
-        if(seleccion.equalsIgnoreCase("Renault")){
-            modelos = (String) JOptionPane.showInputDialog(null,"Selecione el modelo :" +seleccion , "Modelos :",JOptionPane.QUESTION_MESSAGE,null,Renault,Renault);
+        if(marca.equalsIgnoreCase("Renault")){
+            modelos = (String) JOptionPane.showInputDialog(null,"Selecione el modelo :" +marca , "Modelos :",JOptionPane.QUESTION_MESSAGE,null,Renault,Renault);
             System.out.println("Selecciono Renault :" +modelos);
-            //modelos = "Renault";
-        }else if(seleccion.equalsIgnoreCase("Fiat")){
-            modelos = (String) JOptionPane.showInputDialog(null,"Selecione el modelo :" +seleccion , "Modelos :",JOptionPane.QUESTION_MESSAGE,null,Fiat,Fiat);
+        }else if(marca.equalsIgnoreCase("Fiat")){
+            modelos = (String) JOptionPane.showInputDialog(null,"Selecione el modelo :" +marca , "Modelos :",JOptionPane.QUESTION_MESSAGE,null,Fiat,Fiat);
             System.out.println("Selecciono Fiat :" +modelos);
-            //modelos = "Fiat";
         }
         
-            System.out.println("MARCA :" + marcas[0]);
+            System.out.println("MARCA :" + marca);
             System.out.println("MODELO :" + modelos);
         
-        
-        
-        /*
         //Cobertura Adicional
         int coberAD=0;
+        //String cobertura="";
         
         int resp1 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Coberturas Adicionales");
             if(JOptionPane.OK_OPTION == resp1){
-                Object [] coberturaAD1 ={"A:Ganizo","B:Llantas Deportivas","C:Asistencia Mecanica","D:Localizador GPS"};
+                String [] coberturaAD1 ={"A:Ganizo","B:Llantas Deportivas","C:Asistencia Mecanica","D:Localizador GPS"};
                 JComboBox comboBoxcobAD1 = new JComboBox(coberturaAD1);    
                 JOptionPane.showMessageDialog(null, comboBoxcobAD1, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE);
                 coberAD+=300;         
                     int resp2 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Otra Coberturas Adicionales");
                         if(JOptionPane.OK_OPTION == resp2){
-                        Object [] coberturaAD2 ={"A:Ganizo","B:Llantas Deportivas","C:Asistencia Mecanica","D:Localizador GPS"};
+                        String [] coberturaAD2 ={"A:Ganizo","B:Llantas Deportivas","C:Asistencia Mecanica","D:Localizador GPS"};
                         JComboBox comboBoxcobAD2 = new JComboBox(coberturaAD2);    
                         JOptionPane.showMessageDialog(null, comboBoxcobAD2, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE);
                         //coberAD1+=300;                
                             int resp3 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Otra Coberturas Adicionales");
                                 if(JOptionPane.OK_OPTION == resp3){
-                                Object [] coberturaAD3 ={"A:Ganizo","B:Llantas Deportivas","C:Asistencia Mecanica","D:Localizador GPS"};
+                                String [] coberturaAD3 ={"A:Ganizo","B:Llantas Deportivas","C:Asistencia Mecanica","D:Localizador GPS"};
                                 JComboBox comboBoxcobAD3 = new JComboBox(coberturaAD3);    
                                 JOptionPane.showMessageDialog(null, comboBoxcobAD3, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE);
                                 coberAD+=300;
@@ -79,6 +75,6 @@ public class PRUEBA3 {
     }
                         System.out.println("Suma" + coberAD );
             }
-*/
+
     }
 }
