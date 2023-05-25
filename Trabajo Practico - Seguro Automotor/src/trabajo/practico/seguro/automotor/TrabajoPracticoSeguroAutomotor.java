@@ -122,9 +122,8 @@ public class TrabajoPracticoSeguroAutomotor {
             
             default:      
         }
-        
         //Cobertura Adicional
-      
+ 
         int resp1 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Coberturas Adicionales ?");
             if(JOptionPane.OK_OPTION == resp1){
                 String [] coberturaAD1 ={"Ganizo","Llantas Deportivas","Asistencia Mecanica","Localizador GPS"};

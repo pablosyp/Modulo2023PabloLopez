@@ -14,7 +14,10 @@ public class PRUEBA3 {
         String marca;
         String modelos="";
         
+        int total;
+        
         String [] marcas ={"Renault","Fiat","Ford","Citroen","VW"};
+        ImageIcon Icon = new ImageIcon("src/Imagenes/Logo.png");
         //JComboBox comboBoxmod = new JComboBox(marca);    
         //JOptionPane.showMessageDialog(null, comboBoxmod, "Seleccione la Marca ",JOptionPane.QUESTION_MESSAGE,null,marca,marca[0]);
         
@@ -41,43 +44,57 @@ public class PRUEBA3 {
         
         //Cobertura Adicional
         int coberAD=0;
+        String coberADT1="";
+        
         //String cobertura="";
-        ImageIcon Icon = new ImageIcon("src/Imagenes/logo.png");
         
         int resp1 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Coberturas Adicionales");
             if(JOptionPane.OK_OPTION == resp1){
-                String [] coberturaAD1 ={"","Ganizo","Llantas Deportivas","Asistencia Mecanica","Localizador GPS"};
-                //JComboBox comboBoxcobAD1 = new JComboBox(coberturaAD1);    
-                String cob = (String) JOptionPane.showInputDialog(null,"Seleccione la Cobertura Adicional","Poliza",JOptionPane.QUESTION_MESSAGE,Icon,coberturaAD1,coberturaAD1);
+                String [] coberturaAD1 ={"Ganizo"};  
+                int resp11 =JOptionPane.showConfirmDialog(null,"Seleccione la Cobertura Adicional : Ganizo");
+                if(JOptionPane.OK_OPTION == resp11){
                 coberAD+=300;
+                coberADT1 = "Ganizo";
+                System.out.println("Cobertura Tipo :" + coberADT1 );}}
+                
+                
                     int resp2 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Otra Coberturas Adicionales");
                         if(JOptionPane.OK_OPTION == resp2){
-                        //String [] coberturaAD2 ={"A:Ganizo","B:Llantas Deportivas","C:Asistencia Mecanica","D:Localizador GPS"};
+                        String [] coberturaAD2 ={"Llantas Deportivas"};
+                        int resp22 =JOptionPane.showConfirmDialog(null,"Seleccione la Cobertura Adicional : Llantas Deportivas");
+                        if(JOptionPane.OK_OPTION == resp22){
+                        coberADT1 = "Llantas Deportivas";
+                        System.out.println("Cobertura Tipo :" + coberADT1);}}
                         
-                        String cob = (String) JOptionPane.showInputDialog(null,"Seleccione la Cobertura Adicional","Poliza",JOptionPane.QUESTION_MESSAGE,Icon,coberturaAD1,coberturaAD1);
-
-                        //JComboBox comboBoxcobAD2 = new JComboBox(coberturaAD2);    
-                        //JOptionPane.showMessageDialog(null, comboBoxcobAD2, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE); 
+                        
                             int resp3 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Otra Coberturas Adicionales");
                                 if(JOptionPane.OK_OPTION == resp3){
-                                String [] coberturaAD3 ={"A:Ganizo","B:Llantas Deportivas","C:Asistencia Mecanica","D:Localizador GPS"};
-                                JComboBox comboBoxcobAD3 = new JComboBox(coberturaAD3);    
-                                JOptionPane.showMessageDialog(null, comboBoxcobAD3, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE);
+                                String [] coberturaAD3 ={"Asistencia Mecanica"};
+                                int resp33 =JOptionPane.showConfirmDialog(null,"Seleccione la Cobertura Adicional : Asistencia Mecanica");
+                                if(JOptionPane.OK_OPTION == resp33){
                                 coberAD+=300;
+                                coberADT1 = "Asistencia Mecanica";
+                                System.out.println("Cobertura Tipo :" + coberADT1);}}
+                                
+                                
+                                
                                     int resp4 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Otra Coberturas Adicionales");
                                         if(JOptionPane.OK_OPTION == resp4){
-                                        Object [] coberturaAD4 ={"A:Ganizo","B:Llantas Deportivas","C:Asistencia Mecanica","D:Localizador GPS"};
-                                        JComboBox comboBoxcobAD4 = new JComboBox(coberturaAD4);    
-                                        JOptionPane.showMessageDialog(null, comboBoxcobAD4, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE);
-                                        }
-            } else {
-                System.out.print("");
-            }
-
-
-    }
-                        System.out.println("Suma" + coberAD );
-                        
-            }
+                                        String [] coberturaAD4 ={"Localizador GPS"};
+                                        int resp44 =JOptionPane.showConfirmDialog(null,"Seleccione la Cobertura Adicional : Localizador GPS");
+                                        if(JOptionPane.OK_OPTION == resp44){
+                                        coberADT1 = "Localizador GPS";
+                                        System.out.println("Cobertura Tipo :" + coberADT1);}}
+                                        
+                                        total = coberAD;
+                                        System.out.println("VALOR DE LA PRIMA TOTAL :" + total );
+                                        
+                                        JOptionPane.showOptionDialog(null,
+                                        "\n TIPO DE ADICIONALES :"+coberADT1+ "\n VALOR DE LA PRIMA TOTAL :"+total,
+                                        "Poliza",
+                                        JOptionPane.YES_NO_CANCEL_OPTION,
+                                        JOptionPane.QUESTION_MESSAGE,Icon,
+                                        new Object[]{"IMPRIMIR POLIZA"},"");
     }
 }
+
