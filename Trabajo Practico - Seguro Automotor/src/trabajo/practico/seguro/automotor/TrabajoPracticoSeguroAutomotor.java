@@ -94,6 +94,7 @@ public class TrabajoPracticoSeguroAutomotor {
                     resultado = importeD;
         }else if (resultado >= 20){
             JOptionPane.showMessageDialog(null,"No se Asegura su Auto");
+            System.exit(0);
         }
         
         //Tipo de cobertura
@@ -186,4 +187,5 @@ public class TrabajoPracticoSeguroAutomotor {
             JOptionPane.QUESTION_MESSAGE,Icon2,
             new Object[]{"IMPRIMIR POLIZA"},"");
     }
+        
 }

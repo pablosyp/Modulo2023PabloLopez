@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 public class PRUEBA3 {
 
     public static void main(String[] args) {
+        /*
         String marca;
         String modelos="";
         
@@ -41,19 +42,19 @@ public class PRUEBA3 {
         
             System.out.println("MARCA :" + marca);
             System.out.println("MODELO :" + modelos);
-        
+        */
         //Cobertura Adicional
-        int coberAD=0;
+        ImageIcon Icon = new ImageIcon("src/Imagenes/Logo.png");
+        String cobertura="";
         String coberADT1="";
         
-        //String cobertura="";
         
         int resp1 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Coberturas Adicionales");
             if(JOptionPane.OK_OPTION == resp1){
                 String [] coberturaAD1 ={"Ganizo"};  
                 int resp11 =JOptionPane.showConfirmDialog(null,"Seleccione la Cobertura Adicional : Ganizo");
                 if(JOptionPane.OK_OPTION == resp11){
-                coberAD+=300;
+                //coberAD+=300;
                 coberADT1 = "Ganizo";
                 System.out.println("Cobertura Tipo :" + coberADT1 );}}
                 
@@ -72,12 +73,12 @@ public class PRUEBA3 {
                                 String [] coberturaAD3 ={"Asistencia Mecanica"};
                                 int resp33 =JOptionPane.showConfirmDialog(null,"Seleccione la Cobertura Adicional : Asistencia Mecanica");
                                 if(JOptionPane.OK_OPTION == resp33){
-                                coberAD+=300;
+                                //coberAD+=300;
                                 coberADT1 = "Asistencia Mecanica";
                                 System.out.println("Cobertura Tipo :" + coberADT1);}}
                                 
                                 
-                                
+                                 
                                     int resp4 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Otra Coberturas Adicionales");
                                         if(JOptionPane.OK_OPTION == resp4){
                                         String [] coberturaAD4 ={"Localizador GPS"};
@@ -86,15 +87,16 @@ public class PRUEBA3 {
                                         coberADT1 = "Localizador GPS";
                                         System.out.println("Cobertura Tipo :" + coberADT1);}}
                                         
-                                        total = coberAD;
-                                        System.out.println("VALOR DE LA PRIMA TOTAL :" + total );
+                                        //total = coberAD;
+                                        //System.out.println("VALOR DE LA PRIMA TOTAL :" + total );
                                         
                                         JOptionPane.showOptionDialog(null,
-                                        "\n TIPO DE ADICIONALES :"+coberADT1+ "\n VALOR DE LA PRIMA TOTAL :"+total,
+                                        "\n MARCA :"+coberADT1+"\n TIPO DE ADICIONALES :"+coberADT1+ "\n VALOR DE LA PRIMA TOTAL :"+coberADT1,
                                         "Poliza",
                                         JOptionPane.YES_NO_CANCEL_OPTION,
                                         JOptionPane.QUESTION_MESSAGE,Icon,
                                         new Object[]{"IMPRIMIR POLIZA"},"");
+
     }
 }
 
