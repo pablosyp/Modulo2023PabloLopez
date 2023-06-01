@@ -5,7 +5,6 @@
 package trabajo.practico.seguro.automotor;
 
 import javax.swing.ImageIcon;
-import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 
 public class TrabajoPracticoSeguroAutomotor {
@@ -23,6 +22,7 @@ public class TrabajoPracticoSeguroAutomotor {
         int RT = 3000;
         
         int coberAD=0;
+        int contador=0;
         String coberturaT="";
         
         int total;
@@ -93,30 +93,30 @@ public class TrabajoPracticoSeguroAutomotor {
             JOptionPane.showMessageDialog(null,"Pagara un Extra de $2000");
                     resultado = importeD;
         }else if (resultado >= 20){
-            JOptionPane.showMessageDialog(null,"No se Asegura su Auto");
+            JOptionPane.showMessageDialog(null,"Disculpas, su Auto no puede ser asegurado");
             System.exit(0);
         }
         
         //Tipo de cobertura
         int cobertura = JOptionPane.showOptionDialog(null,
-            "Seleccione la cobertura : \n Responsabilidad Civil: RC"+"\n Terceros Completo: TC"+"\n Riezgo Total: RT",
+            "Seleccione la cobertura : ",
             "Poliza",
             JOptionPane.YES_NO_CANCEL_OPTION,
             JOptionPane.QUESTION_MESSAGE,Icon2,
-            new Object[]{"RC","TC","RT"},"RC");
+            new Object[]{"Responsabilidad Civil","Terceros Completo","Riezgo Total"},"");
 
         switch(cobertura){
-            case 0: JOptionPane.showMessageDialog(null,"Selecciono : Responsabilidad Civil");
+            case 0: JOptionPane.showMessageDialog(null,"Ud. Selecciono : Responsabilidad Civil");
             cobertura = RC;
             coberturaT ="Responsabilidad Civil";
             break;
             
-            case 1: JOptionPane.showMessageDialog(null,"Selecciono : Terceros Completo");
+            case 1: JOptionPane.showMessageDialog(null,"Ud. Selecciono : Terceros Completo");
             cobertura = TC;
             coberturaT ="Terceros Completo";
             break;
             
-            case 2: JOptionPane.showMessageDialog(null,"Selecciono : Riezgo Total");
+            case 2: JOptionPane.showMessageDialog(null,"Ud. Selecciono : Riezgo Total");
             cobertura = RT;
             coberturaT ="Riezgo Total";
             break;
@@ -124,34 +124,73 @@ public class TrabajoPracticoSeguroAutomotor {
             default:      
         }
         //Cobertura Adicional
- 
-        int resp1 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Coberturas Adicionales ?");
-            if(JOptionPane.OK_OPTION == resp1){
-                String [] coberturaAD1 ={"Ganizo","Llantas Deportivas","Asistencia Mecanica","Localizador GPS"};
-                JComboBox comboBoxcobAD1 = new JComboBox(coberturaAD1);    
-                JOptionPane.showMessageDialog(null, comboBoxcobAD1, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE);
-                coberAD+=300;
-                    int resp2 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Otra Coberturas Adicionales ?");
-                        if(JOptionPane.OK_OPTION == resp2){
-                        String [] coberturaAD2 ={"Ganizo","Llantas Deportivas","Asistencia Mecanica","Localizador GPS"};
-                        JComboBox comboBoxcobAD2 = new JComboBox(coberturaAD2);    
-                        JOptionPane.showMessageDialog(null, comboBoxcobAD2, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE);
-                            int resp3 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Otra Coberturas Adicionales ?");
-                                if(JOptionPane.OK_OPTION == resp3){
-                                String [] coberturaAD3 ={"Ganizo","Llantas Deportivas","Asistencia Mecanica","Localizador GPS"};
-                                JComboBox comboBoxcobAD3 = new JComboBox(coberturaAD3);    
-                                JOptionPane.showMessageDialog(null, comboBoxcobAD3, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE);
-                                coberAD+=300;
-                                    int resp4 =JOptionPane.showConfirmDialog(null, "Desea seleccionar Otra Coberturas Adicionales ?");
-                                        if(JOptionPane.OK_OPTION == resp4){
-                                        String [] coberturaAD4 ={"Ganizo","Llantas Deportivas","Asistencia Mecanica","Localizador GPS"};
-                                        JComboBox comboBoxcobAD4 = new JComboBox(coberturaAD4);    
-                                        JOptionPane.showMessageDialog(null, comboBoxcobAD4, "Seleccione la Cobertura Adicional",JOptionPane.QUESTION_MESSAGE);
-                                        }
-            } else {
-                System.out.print("");
+
+ int coberAD1 = JOptionPane.showOptionDialog(null,
+            "Seleccione cobertura Adicional : ",
+            "Poliza",
+            JOptionPane.YES_NO_CANCEL_OPTION,
+            JOptionPane.QUESTION_MESSAGE,Icon2,
+            new Object[]{"Granizo","NO"},"");
+
+        switch(coberAD1){
+            case 0: JOptionPane.showMessageDialog(null,"Selecciono : Granizo");
+            //coberturaAD1 ="Granizo";
+            contador+=1;
+            break;
+            default:  
             }
+        int coberAD2 = JOptionPane.showOptionDialog(null,
+            "Seleccione la cobertura Adicional : ",
+            "Poliza",
+            JOptionPane.YES_NO_CANCEL_OPTION,
+            JOptionPane.QUESTION_MESSAGE,Icon2,
+            new Object[]{"Llantas Deportivas","NO"},"");
+            
+            switch(coberAD2){
+            case 0: JOptionPane.showMessageDialog(null,"Selecciono : Llantas Deportivas");
+            //coberturaAD2 ="Llantas Deportivas";
+            contador+=1;
+            break;
+            }
+        int coberAD3 = JOptionPane.showOptionDialog(null,
+            "Seleccione la cobertura Adicional : ",
+            "Poliza",
+            JOptionPane.YES_NO_CANCEL_OPTION,
+            JOptionPane.QUESTION_MESSAGE,Icon2,
+            new Object[]{"Asistencia Mecanica","NO"},"");
+            
+            switch(coberAD3){
+            case 0: JOptionPane.showMessageDialog(null,"Selecciono : Llantas Deportivas");
+            //coberturaAD3 ="Asistencia Mecanica";
+            contador+=1;
+            break;
+            }
+        int coberAD4 = JOptionPane.showOptionDialog(null,
+            "Seleccione la cobertura Adicional : ",
+            "Poliza",
+            JOptionPane.YES_NO_CANCEL_OPTION,
+            JOptionPane.QUESTION_MESSAGE,Icon2,
+            new Object[]{"Localizador GPS","NO"},"");
+            
+            switch(coberAD4){
+            case 0: JOptionPane.showMessageDialog(null,"Selecciono : Localizador GPS");
+            //coberturaAD4 ="Localizador GPS";
+            contador+=1;
+            break;
+
+
         }
+            //JOptionPane.showMessageDialog(null," Suma de adicionales "+" - "+ contador +" -");
+            
+            if(contador <2){
+               JOptionPane.showMessageDialog(null,"Suma de adicional : " + 300);
+               coberAD = 300;
+               }else if(contador == 2 ){
+               JOptionPane.showMessageDialog(null,"Suma de adicional : " + 300);
+               coberAD = 300;
+               }else if(contador >2){
+               JOptionPane.showMessageDialog(null,"Suma de adicional : " + 600);
+               coberAD = 600;
     }
             
             System.out.println("--------------------------------------------");
