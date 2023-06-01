@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 public class PRUEBA3 {
 
     public static void main(String[] args) {
+        /*
         ImageIcon Icon2 = new ImageIcon("src/Imagenes/Logo.png");
         String cobertura="";
         String coberturaAD="";
@@ -89,18 +90,26 @@ public class PRUEBA3 {
                JOptionPane.showMessageDialog(null,"Suma de adicional : " + 600);
                coberAD = 600;
     }
+*/
+            Scanner sc =new Scanner(System.in);
+            String resp1;
             do{
-            if (coberturaAD1 == "Granizo"")
-            System.out.println( + serie1);
-            serie1++;
-            }while (serie1 <=9);
+            System.out.print("Eliga la opcion: ");
+            String nota=sc.nextLine();
+            System.out.print("Ingrese si o no ? ");
+            resp1 = sc.nextLine();
+            
+            }while (resp1 == "si");
     
+            
+            /*
             JOptionPane.showOptionDialog(null,
             "\n Valor cobertura :"+coberAD+"\n VALOR DE LA PRIMA TOTAL :"+coberturaAD1+"\n VALOR DE LA PRIMA TOTAL :"+coberturaAD2+"\n VALOR DE LA PRIMA TOTAL :"+coberturaAD3+"\n VALOR DE LA PRIMA TOTAL :"+coberturaAD4,
             "Poliza",
             JOptionPane.YES_NO_CANCEL_OPTION,
             JOptionPane.PLAIN_MESSAGE, Icon2,
             new Object[]{"IMPRIMIR POLIZA"},"");
+*/
     }
 }
 
