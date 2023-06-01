@@ -4,6 +4,7 @@
  */
 package trabajo.practico.seguro.automotor;
 
+import java.util.Date;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -29,7 +30,7 @@ public class TrabajoPracticoSeguroAutomotor {
         
         String marca;
         String modelos="";
-        
+        Date fechaA = new Date ();
         //Logo
         ImageIcon Icon = new ImageIcon("src/Imagenes/logo33.png");
         ImageIcon Icon2 = new ImageIcon("src/Imagenes/logo2.png");
@@ -139,7 +140,7 @@ public class TrabajoPracticoSeguroAutomotor {
             default:  
             }
         int coberAD2 = JOptionPane.showOptionDialog(null,
-            "Seleccione la cobertura Adicional : ",
+            "Seleccione cobertura Adicional : ",
             "Poliza",
             JOptionPane.YES_NO_CANCEL_OPTION,
             JOptionPane.QUESTION_MESSAGE,Icon2,
@@ -151,7 +152,7 @@ public class TrabajoPracticoSeguroAutomotor {
             break;
             }
         int coberAD3 = JOptionPane.showOptionDialog(null,
-            "Seleccione la cobertura Adicional : ",
+            "Seleccione cobertura Adicional : ",
             "Poliza",
             JOptionPane.YES_NO_CANCEL_OPTION,
             JOptionPane.QUESTION_MESSAGE,Icon2,
@@ -163,7 +164,7 @@ public class TrabajoPracticoSeguroAutomotor {
             break;
             }
         int coberAD4 = JOptionPane.showOptionDialog(null,
-            "Seleccione la cobertura Adicional : ",
+            "Seleccione cobertura Adicional : ",
             "Poliza",
             JOptionPane.YES_NO_CANCEL_OPTION,
             JOptionPane.QUESTION_MESSAGE,Icon2,
@@ -213,7 +214,7 @@ public class TrabajoPracticoSeguroAutomotor {
             JOptionPane.showOptionDialog(null,
             "NOMBRE DEL CLIENTE :"+nombre+"\n APELLIDO DEL CLIENTE :"+apellido+"\n TELEFONO :"+telefono+"\n MAIL :"+mail+
                     "\n MARCA :"+marca+"\n MODELO :"+modelos+"\n DOMINIO :"+dominio+"\n ANTIGUEDAD DEL VEHICULO :"+antig+"\n VALOR DE LA CUOTA :"+resultado+
-                    "\n TIPO DE COBERTURA :"+coberturaT+"\n VALOR DE COBERTURA :"+cobertura+"\n ADICIONALES :"+coberAD+ "\n VALOR DE LA PRIMA TOTAL :"+total,
+                    "\n TIPO DE COBERTURA :"+coberturaT+"\n VALOR DE COBERTURA :"+cobertura+"\n ADICIONALES :"+coberAD+ "\n VALOR DE LA PRIMA TOTAL :"+total+"\n FECHA : "+fechaA,
             "Poliza",
             JOptionPane.YES_NO_CANCEL_OPTION,
             JOptionPane.QUESTION_MESSAGE,Icon2,
