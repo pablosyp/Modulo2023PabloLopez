@@ -58,7 +58,7 @@ public class PRUEBA3 {
             new Object[]{"Asistencia Mecanica","NO"},"");
             
             switch(coberAD3){
-            case 0: JOptionPane.showMessageDialog(null,"Selecciono : Llantas Deportivas");
+            case 0: JOptionPane.showMessageDialog(null,"Selecciono : Asistencia Mecanica");
             coberturaAD3 ="Asistencia Mecanica";
             contador+=1;
             break;
@@ -94,7 +94,11 @@ public class PRUEBA3 {
             Scanner sc =new Scanner(System.in);
             String resp1;
             do{
-            System.out.print("Eliga la opcion: ");
+            System.out.println("Eliga la opcion: ");
+            System.out.println("1 = Granizo ");
+            System.out.println("2 = Llantas Deportivas");
+            System.out.println("3 = ");
+            System.out.println("Eliga la opcion: ");
             String nota=sc.nextLine();
             System.out.print("Ingrese si o no ? ");
             resp1 = sc.nextLine();

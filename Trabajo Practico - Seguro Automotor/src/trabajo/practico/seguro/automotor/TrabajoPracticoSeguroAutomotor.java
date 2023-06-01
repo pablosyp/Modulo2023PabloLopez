@@ -158,7 +158,7 @@ public class TrabajoPracticoSeguroAutomotor {
             new Object[]{"Asistencia Mecanica","NO"},"");
             
             switch(coberAD3){
-            case 0: JOptionPane.showMessageDialog(null,"Selecciono : Llantas Deportivas");
+            case 0: JOptionPane.showMessageDialog(null,"Selecciono : Asistencia Mecanica");
             contador+=1;
             break;
             }
