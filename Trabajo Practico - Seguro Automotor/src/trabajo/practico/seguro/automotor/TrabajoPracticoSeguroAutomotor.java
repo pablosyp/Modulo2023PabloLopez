@@ -134,7 +134,6 @@ public class TrabajoPracticoSeguroAutomotor {
 
         switch(coberAD1){
             case 0: JOptionPane.showMessageDialog(null,"Selecciono : Granizo");
-            //coberturaAD1 ="Granizo";
             contador+=1;
             break;
             default:  
@@ -148,7 +147,6 @@ public class TrabajoPracticoSeguroAutomotor {
             
             switch(coberAD2){
             case 0: JOptionPane.showMessageDialog(null,"Selecciono : Llantas Deportivas");
-            //coberturaAD2 ="Llantas Deportivas";
             contador+=1;
             break;
             }
@@ -161,7 +159,6 @@ public class TrabajoPracticoSeguroAutomotor {
             
             switch(coberAD3){
             case 0: JOptionPane.showMessageDialog(null,"Selecciono : Llantas Deportivas");
-            //coberturaAD3 ="Asistencia Mecanica";
             contador+=1;
             break;
             }
@@ -174,13 +171,9 @@ public class TrabajoPracticoSeguroAutomotor {
             
             switch(coberAD4){
             case 0: JOptionPane.showMessageDialog(null,"Selecciono : Localizador GPS");
-            //coberturaAD4 ="Localizador GPS";
             contador+=1;
             break;
-
-
         }
-            //JOptionPane.showMessageDialog(null," Suma de adicionales "+" - "+ contador +" -");
             
             if(contador <2){
                JOptionPane.showMessageDialog(null,"Suma de adicional : " + 300);
