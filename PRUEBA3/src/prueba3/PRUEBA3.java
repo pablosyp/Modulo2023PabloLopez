@@ -4,7 +4,6 @@
  */
 package prueba3;
 
-import java.util.Scanner;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -13,96 +12,68 @@ public class PRUEBA3 {
     public static void main(String[] args) {
         
         ImageIcon Icon2 = new ImageIcon("src/Imagenes/Logo.png");
-        String cobertura="";
-        String coberturaAD="";
-        String coberADD []= {"Granizo","Llantas Deportivas","Asistencia Mecanica","Localizador GPS"};
-        String coberturaAD1="Granizo";
-        String coberturaAD2="Llantas Deportivas";
-        String coberturaAD3="Asistencia Mecanica";
-        String coberturaAD4="Localizador GPS";
         int contador=0;
         int coberAD=0;
 
-            Scanner sc =new Scanner(System.in);
-            int opciones;
-            do{
-                System.out.println("Eliga la opcion: ");
-                JOptionPane.showOptionDialog(null,
-                "Seleccione cobertura Adicional : ",
-                "Poliza",
-                JOptionPane.YES_NO_CANCEL_OPTION,
-                JOptionPane.QUESTION_MESSAGE,Icon2,
-                new Object[]{"Granizo","NO"},"");
-            
-            JOptionPane.showOptionDialog(null,
-            "Seleccione la cobertura Adicional : ",
-            "Poliza",
-            JOptionPane.YES_NO_CANCEL_OPTION,
-            JOptionPane.QUESTION_MESSAGE,Icon2,
-            new Object[]{"Llantas Deportivas","NO"},"");
-            
-            //System.out.println("1 = Granizo ");
-            //System.out.println("2 = Llantas Deportivas");
-            System.out.println("3 = Asistencia Mecanica");
-            System.out.println("4 = Localizador GPS");
-            System.out.println("5 = No selecciono cobertura adicionales");
-            System.out.print("Ingrese la opcion :");
-            opciones = sc.nextInt();
-            
-            }while (opciones <= 4);
-            
-            switch(opciones){
-            case 0: JOptionPane.showMessageDialog(null,"Selecciono : Granizo");
-            coberADD = [0];
+         //Cobertura Adicional
+        //String [] cobAD = {"Granizo","Llantas Deportivas","Asistencia Mecanica","Localizador GPS"};
+        String [] cobAD1 = {"Granizo"};
+        String [] cobAD2 = {"Llantas Deportivas"};
+        String [] cobAD3 = {"Asistencia Mecanica"};
+        String [] cobAD4 = {"Localizador GPS"};
+        
+        String option1 = (String) JOptionPane.showInputDialog(null,"Seleccione Cobertura Adicional ","Poliza",JOptionPane.QUESTION_MESSAGE,Icon2,cobAD1,cobAD1[0]);
+        
+        JOptionPane.showMessageDialog(null,"Selecciono :" +option1);
+        if (option1 == "Granizo"){
             contador+=1;
-            break;
-            default:  
-            }
-            switch(opciones){
-            case 1: JOptionPane.showMessageDialog(null,"Selecciono : Llantas Deportivas");
-            coberturaAD1 ="Llantas Deportivas";
-            contador+=1;
-            break;
-            default:  
-            }
-            switch(opciones){
-            case 2: JOptionPane.showMessageDialog(null,"Selecciono : Asistencia Mecanica");
-            coberturaAD1 ="Asistencia Mecanica";
-            contador+=1;
-            break;
-            default:  
-            }
-            switch(opciones){
-            case 3: JOptionPane.showMessageDialog(null,"Selecciono : Localizador GPS");
-            coberturaAD1 ="Localizador GPS";
-            contador+=1;
-            break;
-            default:  
-            }
-                //JOptionPane.showMessageDialog(null," Suma de adicionales "+" - "+ contador +" -");
+        }else contador+=0;
             
-            if(contador <2){
+        String option2 = (String) JOptionPane.showInputDialog(null,"Seleccione Cobertura Adicional ","Poliza",JOptionPane.QUESTION_MESSAGE,Icon2,cobAD2,cobAD2[0]);
+        
+        JOptionPane.showMessageDialog(null,"Selecciono :" +option2);
+        if (option2 == "Llantas Deportivas"){
+            contador+=1;
+        }else contador+=0;
+        
+        String option3 = (String) JOptionPane.showInputDialog(null,"Seleccione Cobertura Adicional ","Poliza",JOptionPane.QUESTION_MESSAGE,Icon2,cobAD3,cobAD3[0]);
+        
+        JOptionPane.showMessageDialog(null,"Selecciono :" +option3);
+        if (option3 == "Asistencia Mecanica"){
+            contador+=1;
+        }else contador+=0;
+        
+        String option4 = (String) JOptionPane.showInputDialog(null,"Seleccione Cobertura Adicional ","Poliza",JOptionPane.QUESTION_MESSAGE,Icon2,cobAD4,cobAD4[0]);
+        
+        JOptionPane.showMessageDialog(null,"Selecciono :" +option4);
+        if (option4 == "Localizador GPS"){
+            contador+=1;
+        }else contador+=0;
+        
+        if(contador <1){
+               JOptionPane.showMessageDialog(null,"Suma de adicional : " + 000);
+               coberAD = 000;
+               }else if(contador ==1 ){
                JOptionPane.showMessageDialog(null,"Suma de adicional : " + 300);
                coberAD = 300;
-               }else if(contador == 2 ){
+               }else if(contador ==2 ){
                JOptionPane.showMessageDialog(null,"Suma de adicional : " + 300);
                coberAD = 300;
-               }else if(contador >3){
+               }else if(contador >=3){
                JOptionPane.showMessageDialog(null,"Suma de adicional : " + 600);
                coberAD = 600;
-}
-            
-            JOptionPane.showOptionDialog(null,
-            "\n Valor cobertura :"+coberAD+"\n VALOR DE LA PRIMA TOTAL :"+coberturaAD1+"\n VALOR DE LA PRIMA TOTAL :"+coberturaAD2+"\n VALOR DE LA PRIMA TOTAL :"+coberturaAD3+"\n VALOR DE LA PRIMA TOTAL :"+coberturaAD4,
-            "Poliza",
-            JOptionPane.YES_NO_CANCEL_OPTION,
-            JOptionPane.PLAIN_MESSAGE, Icon2,
-            new Object[]{"IMPRIMIR POLIZA"},"");
+               }
+        
+        System.out.println("TIPO DE COBERTURA :" );
+        
 
-            
-    
     }
-}
+    }
+
+
+
+
+
 
 
 

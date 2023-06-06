@@ -31,7 +31,6 @@ public class PRUEBA4TPSAMARINA {
         String marca;
         String modelos = "";
         
-
         //Logo
         ImageIcon Icon = new ImageIcon("src/imagenes/logo33.png");
         ImageIcon Icon1 = new ImageIcon("src/imagenes/ticket.png");
@@ -52,16 +51,12 @@ public class PRUEBA4TPSAMARINA {
         
         JOptionPane.showMessageDialog(null,Icon,"Seguros Segurola",JOptionPane.PLAIN_MESSAGE);
         
-
         //Solicitud de datos
-        
-        
-        
-        
-        String nombre = JOptionPane.showInputDialog(null,"Nombre del Cliente","Poliza",JOptionPane.QUESTION_MESSAGE);
-        String apellido = JOptionPane.showInputDialog(null,"Apellido del Cliente ","Poliza",JOptionPane.QUESTION_MESSAGE);
-        String telefono = JOptionPane.showInputDialog(null,"Telefono ","Poliza",JOptionPane.QUESTION_MESSAGE);
-        String mail = JOptionPane.showInputDialog(null,"Mail ","Poliza",JOptionPane.QUESTION_MESSAGE);
+
+        String nombre = (String) JOptionPane.showInputDialog(null,"Nombre del Cliente","Poliza",JOptionPane.QUESTION_MESSAGE,Icon3,null,null);
+        String apellido = (String) JOptionPane.showInputDialog(null,"Apellido del Cliente ","Poliza",JOptionPane.QUESTION_MESSAGE,Icon3,null,null);
+        String telefono = (String) JOptionPane.showInputDialog(null,"Telefono ","Poliza",JOptionPane.QUESTION_MESSAGE,Icon4,null,null);
+        String mail = (String) JOptionPane.showInputDialog(null,"Mail ","Poliza",JOptionPane.QUESTION_MESSAGE,Icon5,null,null);
        
         //Marcas
         String [] marcas ={"Renault","Fiat","Ford","Citroen","VW"};

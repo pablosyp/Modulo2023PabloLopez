@@ -32,20 +32,33 @@ public class TrabajoPracticoSeguroAutomotor {
         String modelos="";
         Date fechaA = new Date ();
         //Logo
-        ImageIcon Icon = new ImageIcon("src/Imagenes/logo33.png");
-        ImageIcon Icon2 = new ImageIcon("src/Imagenes/logo2.png");
+        ImageIcon Icon = new ImageIcon("src/imagenes/logo33.png");
+        ImageIcon Icon1 = new ImageIcon("src/imagenes/ticket.png");
+        ImageIcon Icon2 = new ImageIcon("src/imagenes/Logo2.png");
+        
+        ImageIcon Icon3 = new ImageIcon("src/imagenes/nombre.png");
+        ImageIcon Icon4 = new ImageIcon("src/imagenes/celular.png");
+        ImageIcon Icon5 = new ImageIcon("src/imagenes/mail.png");
+        ImageIcon Icon6 = new ImageIcon("src/imagenes/logo.png");
+        
+        ImageIcon Icon7 = new ImageIcon("src/imagenes/logocitroen.png");
+        ImageIcon Icon8 = new ImageIcon("src/imagenes/logoford.png");
+        ImageIcon Icon9 = new ImageIcon("src/imagenes/logorenault.png");
+        ImageIcon Icon10 = new ImageIcon("src/imagenes/logofiat.png");
+        ImageIcon Icon11 = new ImageIcon("src/imagenes/logovw.png");
         
         JOptionPane.showMessageDialog(null,Icon);
         //Solicitud de datos
-        String nombre = JOptionPane.showInputDialog(null,"Nombre del Cliente ","Poliza",JOptionPane.QUESTION_MESSAGE);
-        String apellido = JOptionPane.showInputDialog(null,"Apellido del Cliente ","Poliza",JOptionPane.QUESTION_MESSAGE);
-        String telefono = JOptionPane.showInputDialog(null,"Telefono ","Poliza",JOptionPane.QUESTION_MESSAGE);
-        String mail = JOptionPane.showInputDialog(null,"Mail ","Poliza",JOptionPane.QUESTION_MESSAGE);
+        String nombre = (String) JOptionPane.showInputDialog(null,"Nombre del Cliente","Poliza",JOptionPane.QUESTION_MESSAGE,Icon3,null,null);
+        String apellido = (String) JOptionPane.showInputDialog(null,"Apellido del Cliente ","Poliza",JOptionPane.QUESTION_MESSAGE,Icon3,null,null);
+        String telefono = (String) JOptionPane.showInputDialog(null,"Telefono ","Poliza",JOptionPane.QUESTION_MESSAGE,Icon4,null,null);
+        String mail = (String) JOptionPane.showInputDialog(null,"Mail ","Poliza",JOptionPane.QUESTION_MESSAGE,Icon5,null,null);
+       
         
         //Marcas
         String [] marcas ={"Renault","Fiat","Ford","Citroen","VW"};
 
-        marca = (String) JOptionPane.showInputDialog(null,"Seleccione una Marca :","Vehiculos :",JOptionPane.QUESTION_MESSAGE,null,marcas,marcas[0]);
+        marca = (String) JOptionPane.showInputDialog(null,"Seleccione una Marca :","Vehiculos :",JOptionPane.QUESTION_MESSAGE,Icon6,marcas,marcas[0]);
         
         //Modelos
         String [] Renault = {"Sandero","Logan","Captur","Kicks","Twingo"};
@@ -56,19 +69,19 @@ public class TrabajoPracticoSeguroAutomotor {
         
         
         if(marca.equalsIgnoreCase("Renault")){
-            modelos = (String) JOptionPane.showInputDialog(null,"Selecione el modelo :" +marca , "Modelos :",JOptionPane.QUESTION_MESSAGE,null,Renault,Renault);
+            modelos = (String) JOptionPane.showInputDialog(null,"Selecione el modelo :" +marca , "Modelos :",JOptionPane.QUESTION_MESSAGE,Icon9,Renault,Renault);
             
         }else if(marca.equalsIgnoreCase("Fiat")){
-            modelos = (String) JOptionPane.showInputDialog(null,"Selecione el modelo :" +marca , "Modelos :",JOptionPane.QUESTION_MESSAGE,null,Fiat,Fiat);
+            modelos = (String) JOptionPane.showInputDialog(null,"Selecione el modelo :" +marca , "Modelos :",JOptionPane.QUESTION_MESSAGE,Icon10,Fiat,Fiat);
             
         }else if(marca.equalsIgnoreCase("Ford")){
-            modelos = (String) JOptionPane.showInputDialog(null,"Selecione el modelo :" +marca , "Modelos :",JOptionPane.QUESTION_MESSAGE,null,Ford,Ford);
+            modelos = (String) JOptionPane.showInputDialog(null,"Selecione el modelo :" +marca , "Modelos :",JOptionPane.QUESTION_MESSAGE,Icon8,Ford,Ford);
             
         }else if(marca.equalsIgnoreCase("Citroen")){
-            modelos = (String) JOptionPane.showInputDialog(null,"Selecione el modelo :" +marca , "Modelos :",JOptionPane.QUESTION_MESSAGE,null,Citroen,Citroen);
+            modelos = (String) JOptionPane.showInputDialog(null,"Selecione el modelo :" +marca , "Modelos :",JOptionPane.QUESTION_MESSAGE,Icon7,Citroen,Citroen);
             
         }else if(marca.equalsIgnoreCase("VW")){
-            modelos = (String) JOptionPane.showInputDialog(null,"Selecione el modelo :" +marca , "Modelos :",JOptionPane.QUESTION_MESSAGE,null,VW,VW);
+            modelos = (String) JOptionPane.showInputDialog(null,"Selecione el modelo :" +marca , "Modelos :",JOptionPane.QUESTION_MESSAGE,Icon11,VW,VW);
             
         }
 
@@ -131,7 +144,7 @@ public class TrabajoPracticoSeguroAutomotor {
             "Poliza",
             JOptionPane.YES_NO_CANCEL_OPTION,
             JOptionPane.QUESTION_MESSAGE,Icon2,
-            new Object[]{"Granizo","NO"},"");
+            new Object[]{"Granizo","CANCELAR SELECCION"},"");
 
         switch(coberAD1){
             case 0: JOptionPane.showMessageDialog(null,"Selecciono : Granizo");
@@ -144,7 +157,7 @@ public class TrabajoPracticoSeguroAutomotor {
             "Poliza",
             JOptionPane.YES_NO_CANCEL_OPTION,
             JOptionPane.QUESTION_MESSAGE,Icon2,
-            new Object[]{"Llantas Deportivas","NO"},"");
+            new Object[]{"Llantas Deportivas","CANCELAR SELECCION"},"");
             
             switch(coberAD2){
             case 0: JOptionPane.showMessageDialog(null,"Selecciono : Llantas Deportivas");
@@ -156,7 +169,7 @@ public class TrabajoPracticoSeguroAutomotor {
             "Poliza",
             JOptionPane.YES_NO_CANCEL_OPTION,
             JOptionPane.QUESTION_MESSAGE,Icon2,
-            new Object[]{"Asistencia Mecanica","NO"},"");
+            new Object[]{"Asistencia Mecanica","CANCELAR SELECCION"},"");
             
             switch(coberAD3){
             case 0: JOptionPane.showMessageDialog(null,"Selecciono : Asistencia Mecanica");
@@ -168,7 +181,7 @@ public class TrabajoPracticoSeguroAutomotor {
             "Poliza",
             JOptionPane.YES_NO_CANCEL_OPTION,
             JOptionPane.QUESTION_MESSAGE,Icon2,
-            new Object[]{"Localizador GPS","NO"},"");
+            new Object[]{"Localizador GPS","CANCELAR SELECCION"},"");
             
             switch(coberAD4){
             case 0: JOptionPane.showMessageDialog(null,"Selecciono : Localizador GPS");
@@ -176,16 +189,20 @@ public class TrabajoPracticoSeguroAutomotor {
             break;
         }
             
-            if(contador <2){
+            if(contador <1){
+               JOptionPane.showMessageDialog(null,"Suma de adicional : " + 000);
+               coberAD = 000;
+               }else if(contador ==1 ){
                JOptionPane.showMessageDialog(null,"Suma de adicional : " + 300);
                coberAD = 300;
-               }else if(contador == 2 ){
+               }else if(contador ==2 ){
                JOptionPane.showMessageDialog(null,"Suma de adicional : " + 300);
                coberAD = 300;
-               }else if(contador >2){
+               }else if(contador >=3){
                JOptionPane.showMessageDialog(null,"Suma de adicional : " + 600);
                coberAD = 600;
-    }
+               }
+    
             
             System.out.println("--------------------------------------------");
             System.out.println("---------------Presupuesto------------------");
@@ -217,7 +234,7 @@ public class TrabajoPracticoSeguroAutomotor {
                     "\n TIPO DE COBERTURA :"+coberturaT+"\n VALOR DE COBERTURA :"+cobertura+"\n ADICIONALES :"+coberAD+ "\n VALOR DE LA PRIMA TOTAL :"+total+"\n FECHA : "+fechaA,
             "Poliza",
             JOptionPane.YES_NO_CANCEL_OPTION,
-            JOptionPane.QUESTION_MESSAGE,Icon2,
+            JOptionPane.QUESTION_MESSAGE,Icon1,
             new Object[]{"IMPRIMIR POLIZA"},"");
     }
         
