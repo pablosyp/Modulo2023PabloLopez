@@ -39,12 +39,6 @@ public class Joption1905 {
             default:
                  
         }
-        /*
-        if (seleccion == 0){
-            JOptionPane.showMessageDialog(null,"Seleciono a Juan");
-            
-        }
-        */
     }
 }
 

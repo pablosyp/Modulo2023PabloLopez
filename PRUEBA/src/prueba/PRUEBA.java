@@ -9,34 +9,7 @@ public class PRUEBA {
     public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);
     Random rand = new Random();
-        
-        
-        /*
-        Ejercicio 13
-        Crear un programa para un totem en una  empresa de servicio automotores, 
-        el cual el cliente debe completar y finalizado imprime un ticket de espera. 
-        Para lo cual debe solicitar:
-            -Nombre del cliente
-            -DNI
-            -Teléfono
-            -Dominio del vehículo
-        
-        -Debe seleccionar la marca de su vehículo 
-        (traída de un vector de marcas)
-        
-        -Debe seleccionar el servicio que desea hacer 
-        (traído de un vector de servicios)
-                - Alineación
-                - Balanceo (indicar cantidad)
-                - Cambio de aceite 
-                - Cambio de cubiertas (indicar cantidad)
-        
-        - Debe cargar un vector con los servicios que se seleccionaron 
-        para mostrarlos luego en el ticket
-        
-        - Finalizado la carga debe imprimir un ticket para que el cliente 
-        lo tenga con un numero aleatorio de espera
-        */
+
     
         //creamos vectoriales necesarias con la info para el tipito
         String [] marcas = new String [5];
