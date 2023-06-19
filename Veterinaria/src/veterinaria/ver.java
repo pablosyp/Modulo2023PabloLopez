@@ -9,6 +9,7 @@ public class ver {
     Perro animal = new Perro();
     ImageIcon animales =new ImageIcon ("srv/imagenes/animales.png");
     
+    
     JOptionPane.showMessageDialog (null,
             ""+ animal.getNombre() +
             ""+ animal.getRaza() +

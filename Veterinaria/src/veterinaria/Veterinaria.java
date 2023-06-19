@@ -8,7 +8,7 @@ public class Veterinaria {
         Perro animal = new Perro();
         ver mostrar = new ver ();
         animal.ladrar();
-        mostrar.
+        mostrar
         
         
         
