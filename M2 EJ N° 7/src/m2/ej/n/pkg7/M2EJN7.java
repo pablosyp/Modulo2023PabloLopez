@@ -12,15 +12,13 @@ public class M2EJN7 {
 
     public static void main(String[] args) {
         ImageIcon Icon = new ImageIcon("src/Imagenes/lavarropas1.png");
-        //String [] prog = {" 1 - Normal"," 2 - Lana"," 3 - Ropa Sucia"," 4 - Economico"," 5 - Ropa de Bebe"};
-        //String [] cent = {" 1 - 500 REVOLUCIONES"," 2 - 1000 REVOLUCIONES"," 3 - Desactivado"};
         
         JOptionPane.showMessageDialog(null, 
                 "Bienvenido a su nuevo Lava Vintage",
                 "DREAN",
                 JOptionPane.INFORMATION_MESSAGE,
                 Icon);
-        //Llenado de agua / Carga
+
         int Carga = JOptionPane.showOptionDialog(null,
                "Por favor seleccione la carga:",
                "Llenado de agua",
