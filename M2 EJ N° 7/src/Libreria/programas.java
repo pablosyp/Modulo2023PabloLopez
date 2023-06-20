@@ -44,7 +44,7 @@ public class programas {
     }
     public void ciclofinalizado(){
         SA();
-                      System.out.println("Tu ropa esta lista para usar");
+                      System.out.println("Su ropa esta lista");
                       System.out.println("Puede abrir la puerta");
                 }
 
