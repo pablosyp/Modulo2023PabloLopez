@@ -4,18 +4,14 @@ package veterinaria;
 public class Veterinaria {
 
     public static void main(String[] args) {
-        
+
         Perro animal = new Perro();
-        ver mostrar = new ver ();
+        ver mirar = new ver();
+        
         animal.ladrar();
-        mostrar
-        
-        
-        
-        
-        
-        
-        
+        mirar.ver();
+        mirar.veradoptado();
+
     }
     
 }

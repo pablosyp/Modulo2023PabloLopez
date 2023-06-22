@@ -2,38 +2,35 @@
 package veterinaria;
 
 public class Perro {
-    private String nombre="TOMY";
+    private String nombre="tomy";
     private String raza="Chiguagua";
     private int edad=10;
+        
+    public void setNombre (String valor){
+        this.nombre=valor;
     
-    public void ladrar(){
-        System.out.println("Guau");
     }
-    public String getNombre() {
+    public String getNombre (){
         return nombre;
     }
-
-    public String getRaza() {
+     public void setRaza (String valor2){
+        this.raza=valor2;
+    
+    }
+    public String getRaza (){
         return raza;
     }
-
-    public int getEdad() {
+      public void setedad (int valor3){
+        this.edad =valor3;
+    
+    }
+    public int getedad(){
         return edad;
     }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    
+    public void ladrar(){
+        System.out.println("GUAU");
+    
     }
-
-    public void setRaza(String raza) {
-        this.raza = raza;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-    
-    
-    
-    
 }
+
