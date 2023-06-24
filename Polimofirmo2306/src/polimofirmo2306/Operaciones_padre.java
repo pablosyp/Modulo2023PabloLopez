@@ -19,7 +19,7 @@ public abstract class Operaciones_padre {
     }
     public void pedir_datos(){
         String v1 = (String) JOptionPane.showInputDialog(null,
-                "Ingreses el primer valor",
+                "Ingrese el primer valor",
                 "Calculin suma y resta",
                 JOptionPane.QUESTION_MESSAGE,
                 intro,
@@ -27,7 +27,7 @@ public abstract class Operaciones_padre {
                 "");
         
         String v2 = (String) JOptionPane.showInputDialog(null,
-                "Ingreses el segundo valor",
+                "Ingrese el segundo valor",
                 "Calculin suma y resta",
                 JOptionPane.QUESTION_MESSAGE,
                 intro,
