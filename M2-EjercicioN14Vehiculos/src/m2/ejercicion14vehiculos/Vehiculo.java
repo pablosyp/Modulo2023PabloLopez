@@ -1,12 +1,10 @@
 
 package m2.ejercicion14vehiculos;
 
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public abstract class Vehiculo {
     protected String vehi,Coche,Moto,Bus;
-    ImageIcon intro = new ImageIcon("srv/imagen/intro.png");
     
     public void intro(){
         
@@ -14,7 +12,7 @@ public abstract class Vehiculo {
         JOptionPane.showMessageDialog(null,
                 "Vamos a estacionar",
                 "",
-                JOptionPane.INFORMATION_MESSAGE,intro);
+                JOptionPane.INFORMATION_MESSAGE,null);
                 
     }
     public void pedir_datos1(){
