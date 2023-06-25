@@ -12,18 +12,16 @@ public class Motos {
         this.tipos=tipos;
     }
     public void getMotos(){
-        String marcas =(String) JOptionPane.showInputDialog(null, "Marca", "Motos", JOptionPane.QUESTION_MESSAGE, null, null, null);
+        String marcas =(String) JOptionPane.showInputDialog(null, "Marca", "marcas", JOptionPane.QUESTION_MESSAGE, null, null, null);
         
-        String tipos =(String) JOptionPane.showInputDialog(null, "Tipos", "motos", JOptionPane.QUESTION_MESSAGE, null, null, null);
+        String tipos =(String) JOptionPane.showInputDialog(null, "Tipos", "tipos", JOptionPane.QUESTION_MESSAGE, null, null, null);
     
-    }
-    public void getImpresion(){
-    JOptionPane.showOptionDialog(null,
-            "Marca seleccionada :"+Motos.this.marcas+"\n Tipo de Moto :"+Motos.this.tipos,
-            "Consesionario",
-            JOptionPane.YES_NO_CANCEL_OPTION,
-            JOptionPane.QUESTION_MESSAGE,null,
-            new Object[]{"Impresion de datos"},"");
+        JOptionPane.showMessageDialog(null, 
+                "Marca seleccionada :"+marcas+"\n Tipo de Auto :"+tipos,
+                "Consesionario",
+                JOptionPane.INFORMATION_MESSAGE,
+                null);
     }
 }
+
 

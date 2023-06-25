@@ -18,13 +18,14 @@ public class Vehiculos {
             new Object[]{"Autos","Motos"},"");
         
         switch(rodados){
-            case 0: A.getAutos(); A.getImpresion();
+            case 0: A.getAutos();
             break;
             
-            case 1: M.getMotos(); M.getImpresion();
+            case 1: M.getMotos();
             break;
   
         }
+        
         
 }
 }
