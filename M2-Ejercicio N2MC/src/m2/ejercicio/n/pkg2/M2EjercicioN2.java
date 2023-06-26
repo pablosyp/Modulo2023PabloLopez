@@ -20,7 +20,7 @@ public class M2EjercicioN2 {
     
         Auto A = new Auto();
 
-        A.getDatosVehiculo();
+        A.DatosVehiculo();
         marcaA = A.dato1;
         modeloA = A.dato2;
         

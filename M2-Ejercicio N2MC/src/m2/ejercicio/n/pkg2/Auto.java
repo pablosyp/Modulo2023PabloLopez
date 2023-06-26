@@ -1,19 +1,22 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package m2.ejercicio.n.pkg2;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class Auto {
+    ImageIcon Icon = new ImageIcon("src/imagenes/fitito.png");
     
-    public String dato1,dato2,dato3;
-    
-    public void Motos(String dato1, String dato2, String dato3){
-            this.dato1=dato1;
-            this.dato2=dato2;
-            this.dato3=dato3;
-            
-        }
-    public void getDatosVehiculo(){
+    String dato1 = "";
+    String dato2 = "";
+    String dato3 = "";
+   
+    int kilometraje = 0;
+
+    public void DatosVehiculo(){
     dato1 = JOptionPane.showInputDialog(null, "Ingrese la Marca " +dato1, "", JOptionPane.QUESTION_MESSAGE);
     dato2 = JOptionPane.showInputDialog(null, "Ingrese el Modelo " +dato2, "", JOptionPane.QUESTION_MESSAGE);
     }
