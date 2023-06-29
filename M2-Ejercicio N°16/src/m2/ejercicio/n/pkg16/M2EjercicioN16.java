@@ -14,11 +14,11 @@ public class M2EjercicioN16 extends JFrame{
         
     //crear la etiqueta
         //mensaje de etiquetas
-        etiq = new JLabel("Datos EJ: 16"                          );
-        etiq1 = new JLabel("Nombre: Pablo Lopez"                  );
-        etiq2 = new JLabel("Fecha de nacimiento: xx-xx-xx"        );
+        etiq = new JLabel("Datos EJ: 16");
+        etiq1 = new JLabel("Nombre: Pablo Lopez");
+        etiq2 = new JLabel("Fecha de nacimiento: xx-xx-xx");
         etiq3 = new JLabel("Correo electronico: pablo@outlook.com");
-        etiq4 = new JLabel("Telefono: 777-7777"                   );
+        etiq4 = new JLabel("Telefono: 777-7777");
         //ubicacion x , y , ancho , alto
         etiq.setBounds(0,10,300,50);
         etiq.setHorizontalAlignment(JLabel.CENTER);
