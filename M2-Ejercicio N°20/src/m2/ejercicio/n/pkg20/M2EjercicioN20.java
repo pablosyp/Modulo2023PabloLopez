@@ -59,10 +59,11 @@ public class M2EjercicioN20 extends JFrame implements ActionListener{
             int num1 = Integer.parseInt(textbox1.getText());
             int num2 = Integer.parseInt(textbox2.getText());
             int num3 = Integer.parseInt(textbox3.getText());
+            int subtotal= 0;
             int total= 0;
             
-            total= (num1 + num2) + num3;
-            
+            subtotal= (num1 + num2) + num3;
+            total=subtotal /3;
             respuesta.setText("La nota total es : " +total);       
             
         }
