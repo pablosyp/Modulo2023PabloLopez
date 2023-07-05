@@ -6,8 +6,6 @@ public class Autos {
     private String marca="";
     private String tipo="";
     
-
-    //CONSTRUCTOR
     public Autos(String marca, String tipo){
         this.marca=marca;
         this.tipo=tipo;
@@ -28,8 +26,5 @@ public class Autos {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-
-    
-    
- }
+}
 

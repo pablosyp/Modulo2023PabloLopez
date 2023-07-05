@@ -15,8 +15,8 @@ public class Vehiculos {
         String [] vehi ={"Autos","Motos"};
         ImageIcon Icon = new ImageIcon("src/Imagenes/icon1.png");
         
-        //JOptionPane.showInputDialog(null,"Seleccione el vehiculo :","Rodados :",JOptionPane.QUESTION_MESSAGE,Icon,vehi,vehi[0]);
-    Autos Form1 = new Autos("", "");
+    
+        Autos Form1 = new Autos("", "");
         Form1.setMarca("Ford");
         Form1.setTipo("Full");
         
