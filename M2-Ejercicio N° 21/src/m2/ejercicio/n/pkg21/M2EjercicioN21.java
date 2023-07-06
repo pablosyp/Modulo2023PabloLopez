@@ -1,5 +1,5 @@
 
-package m2.ejercicio.n.pkg20;
+package m2.ejercicio.n.pkg21;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,13 +9,13 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-public class M2EjercicioN20 extends JFrame implements ActionListener{
+public class M2EjercicioN21 extends JFrame implements ActionListener{
 
     private JButton promedio;
     private JLabel exam1,exam2,exam3,respuesta,datoNA,datoG,datoD;
     private JTextField textbox1,textbox2,textbox3,textboxNA,textboxG,textboxD;
     
-    public M2EjercicioN20(){
+    public M2EjercicioN21(){
     setLayout(null);
          //Crear etiquetas
         datoNA =new JLabel("Nombre y Apellido :");
@@ -99,7 +99,7 @@ public class M2EjercicioN20 extends JFrame implements ActionListener{
         }
                 
     public static void main(String[] args) {
-        M2EjercicioN20 form1 = new M2EjercicioN20();
+        M2EjercicioN21 form1 = new M2EjercicioN21();
         form1.setBounds(600, 200,400,500);
         form1.setVisible(true);
         form1.setResizable(false);
