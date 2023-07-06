@@ -95,7 +95,7 @@ public class M2EjercicioN20 extends JFrame implements ActionListener{
             respuesta.setText("Deshaprobado : " +total); 
             }  
              
-        JOptionPane.showMessageDialog(null,"\n Nombre y Apellido :" +textboxNA.getText()+ "\n Grado :" +textboxG.getText()+ "\n Division :" +textboxD.getText()+ "\n Total :" +total, "",JOptionPane.INFORMATION_MESSAGE,null);
+        JOptionPane.showMessageDialog(null,"\n Nombre y Apellido :" +textboxNA.getText()+ "\n Grado :" +textboxG.getText()+ "\n Division :" +textboxD.getText()+ "\n Promedio :" +total, "",JOptionPane.INFORMATION_MESSAGE,null);
         }
                 
     public static void main(String[] args) {
