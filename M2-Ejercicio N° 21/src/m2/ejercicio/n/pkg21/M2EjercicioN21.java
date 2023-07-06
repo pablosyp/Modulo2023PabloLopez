@@ -1,6 +1,8 @@
 
 package m2.ejercicio.n.pkg21;
 
+import java.awt.Color;
+import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -16,66 +18,84 @@ public class M2EjercicioN21 extends JFrame implements ActionListener{
     private JTextField textbox1,textbox2,textbox3,textboxNA,textboxG,textboxD;
     
     public M2EjercicioN21(){
-    setLayout(null);
+    //setLayout(null);
          //Crear etiquetas
         datoNA =new JLabel("Nombre y Apellido :");
         datoNA.setBounds(10,20,300,30);
-        add(datoNA);
+        //add(datoNA);
          
         datoG =new JLabel("Grado :");
         datoG.setBounds(10,60,300,30);
-        add(datoG);
+        //add(datoG);
         
         datoD =new JLabel("Division :");
         datoD.setBounds(10,100,300,30);
-        add(datoD);
+        //add(datoD);
         
         exam1 =new JLabel("Examen 1 :");
         exam1.setBounds(10,140,300,30);
-        add(exam1);
+        //dd(exam1);
          
         exam2 =new JLabel("Examen 2 :");
         exam2.setBounds(10,180,300,30);
-        add(exam2);
+        //add(exam2);
         
         exam3 =new JLabel("Examen 3 :");
         exam3.setBounds(10,220,300,30);
-        add(exam3);
+        //add(exam3);
         
         respuesta =new JLabel("");
         respuesta.setBounds(150,330,300,30);
-        add(respuesta);
+        //add(respuesta);
         
         //input box
         textboxNA =new JTextField();
         textboxNA.setBounds(120,27,150,20);
-        add(textboxNA);
+        //add(textboxNA);
          
         textboxG =new JTextField();
         textboxG.setBounds(120,67,150,20);
-        add(textboxG);
+        //add(textboxG);
         
         textboxD =new JTextField();
         textboxD.setBounds(120,107,150,20);
-        add(textboxD);
+        //add(textboxD);
         
         textbox1 =new JTextField();
         textbox1.setBounds(120,147,150,20);
-        add(textbox1);
+        //add(textbox1);
          
         textbox2 =new JTextField();
         textbox2.setBounds(120,187,150,20);
-        add(textbox2);
+        //add(textbox2);
         
         textbox3 =new JTextField();
         textbox3.setBounds(120,227,150,20);
-        add(textbox3);
+        //add(textbox3);
         
         //crear botones
         promedio =new JButton("Promedio");
         promedio.setBounds(150,280,90,30);
-        add(promedio);
+        //add(promedio);
         promedio.addActionListener(this);   //vincula el boton con la accion
+        
+        Container panel = getContentPane();
+            panel.setLayout(null);
+            panel.add(datoNA);
+            panel.add(datoG);
+            panel.add(datoD);
+            panel.add(exam1);
+            panel.add(exam2);
+            panel.add(exam3);
+            panel.add(textbox1);
+            panel.add(textbox2);
+            panel.add(textbox3);
+            panel.add(respuesta);
+            panel.add(textboxNA);
+            panel.add(textboxG);
+            panel.add(textboxD);
+            panel.add(promedio);
+            panel.setBackground(Color.ORANGE);
         
     }
         public void actionPerformed (ActionEvent e){
@@ -94,7 +114,7 @@ public class M2EjercicioN21 extends JFrame implements ActionListener{
             } else if (total < 5){  
             respuesta.setText("Deshaprobado : " +total); 
             }  
-             
+  
         JOptionPane.showMessageDialog(null,"\n Nombre y Apellido :" +textboxNA.getText()+ "\n Grado :" +textboxG.getText()+ "\n Division :" +textboxD.getText()+ "\n Promedio :" +total, "",JOptionPane.INFORMATION_MESSAGE,null);
         }
                 
