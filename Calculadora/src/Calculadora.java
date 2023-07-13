@@ -318,7 +318,7 @@ public class Calculadora extends javax.swing.JFrame {
         } else if (operador == "/"){
             this.display.setText(Float.toString(this.primernumero / this.segundonumero));
         } else if (operador == "%"){
-            this.display.setText(Float.toString(this.primernumero * this.segundonumero /100));
+            this.display.setText(Float.toString((this.primernumero * this.segundonumero) /100));
         }    
         
     }//GEN-LAST:event_igualActionPerformed
