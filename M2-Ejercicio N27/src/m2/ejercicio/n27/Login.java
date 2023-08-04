@@ -238,8 +238,6 @@ public class Login extends javax.swing.JFrame {
             {
                 Menu menuf = new Menu();
                 menuf.setVisible(true);
-                Cambio cambiof = new Cambio();
-                cambiof.setVisible(true);
                 System.out.println("Acceso concedido bienvenido");
             }
             else
