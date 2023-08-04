@@ -82,7 +82,6 @@ public class Menu extends javax.swing.JFrame {
 
         resultado.setBackground(new java.awt.Color(255, 255, 255));
         resultado.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        resultado.setText("Valores");
         resultado.setOpaque(true);
 
         jButton1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 24)); // NOI18N
@@ -99,9 +98,8 @@ public class Menu extends javax.swing.JFrame {
         jLabel4.setText("BANCO PEPE  COOPERATIVA LIMITADA");
         jLabel4.setOpaque(true);
 
-        jLabel6.setBackground(new java.awt.Color(255, 255, 51));
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/b3.png"))); // NOI18N
-        jLabel6.setOpaque(true);
 
         javax.swing.GroupLayout fondoLayout = new javax.swing.GroupLayout(fondo);
         fondo.setLayout(fondoLayout);
