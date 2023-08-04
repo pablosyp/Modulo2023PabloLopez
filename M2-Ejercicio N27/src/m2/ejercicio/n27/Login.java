@@ -21,8 +21,7 @@ public class Login extends javax.swing.JFrame {
     Border panel_border = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.DARK_GRAY);
     Border title_border = BorderFactory.createMatteBorder(0, 0, 3, 0, Color.DARK_GRAY);
     Border text_border = BorderFactory.createMatteBorder(0, 0, 2, 0, Color.YELLOW);
-    //private Object jTextField_usuarionombre;
-    //private Object jLabel_titulo;
+
     
     public Login() {
         initComponents();
