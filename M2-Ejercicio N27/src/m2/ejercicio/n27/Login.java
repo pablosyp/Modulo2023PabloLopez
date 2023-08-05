@@ -90,6 +90,11 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setText("Contraseña:");
 
         jPasswordField1.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -237,6 +242,7 @@ public class Login extends javax.swing.JFrame {
             {
                 Menu menuf = new Menu();
                 menuf.setVisible(true);
+                this.setVisible(false);
                 System.out.println("Acceso concedido bienvenido");
             }
             else
@@ -250,6 +256,10 @@ public class Login extends javax.swing.JFrame {
     private void jTextField_usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_usernameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_usernameActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     /**
      * @param args the command line arguments
