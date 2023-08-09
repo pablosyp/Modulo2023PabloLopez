@@ -106,7 +106,7 @@ public class login0408v2 extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-        //String password = String.valueOf(jPasswordField1.getPassword()).trim();
+        String password = String.valueOf(jPasswordField1.getPassword()).trim();
         
         if(NombreUsuario.equals("user1") && password.equals("123"))
         {

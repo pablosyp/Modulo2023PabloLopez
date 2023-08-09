@@ -1,0 +1,10 @@
+Nombre:pablo
+Telefono:1234
+Nombre:
+Telefono:
+Nombre:pablo
+Telefono:1234
+Nombre:marina
+Telefono:34567
+Nombre:lopez
+Telefono:asd
