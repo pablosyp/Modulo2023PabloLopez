@@ -106,8 +106,8 @@ public class login0408v2 extends javax.swing.JFrame {
                 .addComponent(usuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField_username, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(jLabel1)
+                    .addComponent(jTextField_username, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
@@ -123,23 +123,35 @@ public class login0408v2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String username = jTextField_username.getText().trim();
+        String NombreUsuario = jTextField_username.getText().trim();
         String password = String.valueOf(jPasswordField1.getPassword()).trim();
         
-        if(username.equals("user1") && password.equals("123"))
+        if(NombreUsuario.equals("user1") && password.equals("123"))
         {
                 System.out.println("Acceso concedido bienvenido");
+                this.setVisible(false);
+                GestorHeladeria GH = new GestorHeladeria ();
+                GH.setVisible(true);
+                GH.setExtendedState(MAXIMIZED_BOTH);
         }else
         
-            if(username.equals("user2") && password.equals("456")) 
+            if(NombreUsuario.equals("user2") && password.equals("456")) 
             {
                 System.out.println("Acceso concedido bienvenido");
+                this.setVisible(false);
+                GestorHeladeria GH = new GestorHeladeria ();
+                GH.setVisible(true);
+                GH.setExtendedState(MAXIMIZED_BOTH);
             }
         else 
         {
-            if(username.equals("user3") && password.equals("789"))
+            if(NombreUsuario.equals("user3") && password.equals("789"))
             {
                 System.out.println("Acceso concedido bienvenido");
+                this.setVisible(false);
+                GestorHeladeria GH = new GestorHeladeria ();
+                GH.setVisible(true);
+                GH.setExtendedState(MAXIMIZED_BOTH);
             }
         else
             {
