@@ -30,8 +30,10 @@ public class formu extends javax.swing.JFrame {
     }
     
     private void Limpiar(){
-        text1.setText("");
-        text2.setText("");
+        textN.setText("");
+        textA.setText("");
+        textT.setText("");
+        textM.setText("");
     }
     
     private void Imprimir(){
@@ -59,8 +61,14 @@ public class formu extends javax.swing.JFrame {
             try {
                 //Escribimos el archivo
                 FileWriter escribir = new FileWriter(archivo,true);
-                escribir.write("Nombre:"+ text1.getText() + "\r\n" + "Telefono:"+ text2.getText()+ "\r\n");
-                escribir.close();
+                escribir.write("Nombre:"+ textN.getText() + "\r\n" + "Apellido:"+ textA.getText() + "\r\n" + "Telefono:"+ textT.getText()+ "\r\n" +"Direccion de Mail:"+ textM.getText() + "\r\n");
+                //escribir.close();
+                JOptionPane.showOptionDialog(null,
+                "NombreN :"+textN.getText() +"\n ApellidoA :"+textA.getText() +"\n TelefonoT :"+textT.getText()+"\n Direccion de mail :"+textM.getText(),
+                "Datos de Usuario",
+                JOptionPane.YES_NO_CANCEL_OPTION,
+                JOptionPane.QUESTION_MESSAGE,null,
+                new Object[]{""},"");
                 
             } catch (IOException ex) {
                 System.out.println(ex);
@@ -84,20 +92,31 @@ public class formu extends javax.swing.JFrame {
     private void initComponents() {
 
         narchivo = new javax.swing.JTextField();
-        text1 = new javax.swing.JTextField();
-        text2 = new javax.swing.JTextField();
+        textN = new javax.swing.JTextField();
+        textT = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         guardar = new javax.swing.JButton();
         imprimir = new javax.swing.JButton();
         salir = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        textA = new javax.swing.JTextField();
+        textM = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        narchivo.setText("Datos_Usuario");
         narchivo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 narchivoActionPerformed(evt);
+            }
+        });
+
+        textN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textNActionPerformed(evt);
             }
         });
 
@@ -129,31 +148,50 @@ public class formu extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setText("Apellido");
+
+        jLabel5.setText("Direccion de Mail");
+
+        textA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textAActionPerformed(evt);
+            }
+        });
+
+        textM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textMActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(guardar)
                         .addGap(32, 32, 32)
                         .addComponent(imprimir)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(salir)
                         .addGap(39, 39, 39))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(95, 95, 95)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(narchivo, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
-                            .addComponent(text1)
-                            .addComponent(text2))
+                            .addComponent(textN)
+                            .addComponent(textT)
+                            .addComponent(textA)
+                            .addComponent(textM))
                         .addGap(6, 6, 6))))
         );
         layout.setVerticalGroup(
@@ -165,12 +203,20 @@ public class formu extends javax.swing.JFrame {
                     .addComponent(jLabel1))
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addGap(62, 62, 62)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(jLabel4)
+                    .addComponent(textA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(textT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(textM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(guardar)
@@ -200,6 +246,18 @@ public class formu extends javax.swing.JFrame {
         Crear();
         Limpiar();
     }//GEN-LAST:event_guardarActionPerformed
+
+    private void textAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textAActionPerformed
+
+    private void textMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textMActionPerformed
+
+    private void textNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textNActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -242,9 +300,13 @@ public class formu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField narchivo;
     private javax.swing.JButton salir;
-    private javax.swing.JTextField text1;
-    private javax.swing.JTextField text2;
+    private javax.swing.JTextField textA;
+    private javax.swing.JTextField textM;
+    private javax.swing.JTextField textN;
+    private javax.swing.JTextField textT;
     // End of variables declaration//GEN-END:variables
 }
