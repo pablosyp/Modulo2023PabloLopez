@@ -25,6 +25,7 @@ public class login0408v2 extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        cambio = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio de sesion");
@@ -61,27 +62,43 @@ public class login0408v2 extends javax.swing.JFrame {
             }
         });
 
+        cambio.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        cambio.setText("Cambio de contraseña");
+        cambio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambioActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(259, 259, 259)
-                .addComponent(fotos, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(usuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
-                            .addComponent(jButton2))
-                        .addGap(48, 48, 48)
-                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton2)
+                        .addGap(205, 205, 205)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(86, 86, 86))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(259, 259, 259)
+                        .addComponent(fotos, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(146, 146, 146)
+                        .addComponent(jLabel2)
+                        .addGap(55, 55, 55)
+                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(cambio)
+                .addGap(183, 183, 183))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,15 +107,17 @@ public class login0408v2 extends javax.swing.JFrame {
                 .addComponent(fotos, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(usuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(128, 128, 128)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(44, 44, 44)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
                     .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(58, 58, 58)
+                .addGap(53, 53, 53)
+                .addComponent(cambio)
+                .addGap(69, 69, 69)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -112,18 +131,18 @@ public class login0408v2 extends javax.swing.JFrame {
         {
                 System.out.println("Acceso concedido bienvenido");
                 this.setVisible(false);
-                GestorHeladeria GH = new GestorHeladeria ();
+                accesook GH = new accesook ();
                 GH.setVisible(true);
-                GH.setExtendedState(MAXIMIZED_BOTH);
+                
         }else
         
             if(NombreUsuario.equals("user2") && password.equals("456")) 
             {
                 System.out.println("Acceso concedido bienvenido");
                 this.setVisible(false);
-                GestorHeladeria GH = new GestorHeladeria ();
+                accesook GH = new accesook ();
                 GH.setVisible(true);
-                GH.setExtendedState(MAXIMIZED_BOTH);
+                
             }
         else 
         {
@@ -131,13 +150,17 @@ public class login0408v2 extends javax.swing.JFrame {
             {
                 System.out.println("Acceso concedido bienvenido");
                 this.setVisible(false);
-                GestorHeladeria GH = new GestorHeladeria ();
+                accesook GH = new accesook ();
                 GH.setVisible(true);
-                GH.setExtendedState(MAXIMIZED_BOTH);
+                
             }
         else
             {
                 System.out.println("No puede acceder al Sistema");
+                this.setVisible(false);
+                accesono GH = new accesono ();
+                GH.setVisible(true);
+                
                 
             }
         }              
@@ -175,6 +198,18 @@ public class login0408v2 extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void cambioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambioActionPerformed
+        boolean selected = cambio.isSelected();
+        if (selected){
+        cambio.setSelected(true);
+        envio GH = new envio ();
+        GH.setVisible(true);
+        } else {
+        cambio.setSelected(false);
+        }
+        
+    }//GEN-LAST:event_cambioActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -201,9 +236,6 @@ public class login0408v2 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(login0408v2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -214,6 +246,7 @@ public class login0408v2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox cambio;
     private javax.swing.JLabel fotos;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
