@@ -611,7 +611,6 @@ public class Pedidos extends javax.swing.JFrame {
         genpedido.c4p.setText("");
         genpedido.c5p.setText("");
         genpedido.c6p.setText("");
-        
     }//GEN-LAST:event_limpiarActionPerformed
 
     private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
