@@ -1,20 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 
-/**
- *
- * @author F4121
- */
+import java.util.Calendar;
+
+
+
 public class Pedidos extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Pedidos
-     */
     public Pedidos() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setVisible(false);
+        genpedido GP = new genpedido ();
+        GP.setVisible(true);
+        
     }
 
     /**
@@ -42,8 +39,8 @@ public class Pedidos extends javax.swing.JFrame {
         carnesimple = new javax.swing.JRadioButton();
         carnedoble = new javax.swing.JRadioButton();
         carnetriple = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        salir = new javax.swing.JButton();
+        pedir = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         pepino = new javax.swing.JCheckBox();
         lechuga = new javax.swing.JCheckBox();
@@ -60,21 +57,18 @@ public class Pedidos extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         gaseosachica = new javax.swing.JRadioButton();
         gaseosagrande = new javax.swing.JRadioButton();
-        jButton3 = new javax.swing.JButton();
-        fecha = new javax.swing.JTextField();
+        limpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/kfc.png"))); // NOI18N
 
-        nombre.setText("jTextField1");
         nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreActionPerformed(evt);
             }
         });
 
-        telefono.setText("jTextField2");
         telefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 telefonoActionPerformed(evt);
@@ -118,24 +112,34 @@ public class Pedidos extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(nombre))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
                     .addComponent(telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Papas", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("SansSerif", 0, 18))); // NOI18N
 
         papaschicas.setSelected(true);
         papaschicas.setText("Chicas");
+        papaschicas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                papaschicasActionPerformed(evt);
+            }
+        });
 
         papasgrandes.setText("Grandes");
+        papasgrandes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                papasgrandesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -164,6 +168,11 @@ public class Pedidos extends javax.swing.JFrame {
 
         carnesimple.setSelected(true);
         carnesimple.setText("Simple");
+        carnesimple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                carnesimpleActionPerformed(evt);
+            }
+        });
 
         carnedoble.setText("Doble");
         carnedoble.addActionListener(new java.awt.event.ActionListener() {
@@ -203,19 +212,19 @@ public class Pedidos extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jButton1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        jButton1.setText("SALIR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        salir.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        salir.setText("SALIR");
+        salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                salirActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        jButton2.setText("PEDIR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        pedir.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        pedir.setText("PEDIR");
+        pedir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                pedirActionPerformed(evt);
             }
         });
 
@@ -369,12 +378,10 @@ public class Pedidos extends javax.swing.JFrame {
                 .addGap(36, 36, 36))
         );
 
-        jButton3.setText("LIMPIAR PANTALLA");
-
-        fecha.setText("jTextField4");
-        fecha.addActionListener(new java.awt.event.ActionListener() {
+        limpiar.setText("LIMPIAR PANTALLA");
+        limpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fechaActionPerformed(evt);
+                limpiarActionPerformed(evt);
             }
         });
 
@@ -383,36 +390,33 @@ public class Pedidos extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(pedir)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                                .addComponent(salir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(13, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(jButton3)
+                        .addGap(51, 51, 51)
+                        .addComponent(limpiar)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -421,8 +425,7 @@ public class Pedidos extends javax.swing.JFrame {
                 .addGap(11, 11, 11)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(22, 22, 22)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -435,11 +438,11 @@ public class Pedidos extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(limpiar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(pedir, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(salir, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
@@ -464,71 +467,91 @@ public class Pedidos extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void carnetripleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carnetripleActionPerformed
-        // TODO add your handling code here:
+        if (carnetriple.isSelected()){
+        carnedoble.setSelected(false);
+        carnesimple.setSelected(false);
+        }
     }//GEN-LAST:event_carnetripleActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_salirActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void pedirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pedirActionPerformed
         //Datos del cliente
-        String Nombre = nombre.getText();
-        String Telefono = telefono.getText();
+        //String Nombre = nombre.getText();
+        //String Telefono = telefono.getText();
         //Tipo de hamburguesa
         String tipohamburguesa;
         if (carnesimple.isSelected()){
             tipohamburguesa = carnesimple.getText();
+            genpedido.tipohamburguesap.setText(carnesimple.getText());
             
         }else if(carnedoble.isSelected()){
             tipohamburguesa = carnedoble.getText();
+            genpedido.tipohamburguesap.setText(carnedoble.getText());
         }else {
             tipohamburguesa = carnetriple.getText();
+            genpedido.tipohamburguesap.setText(carnetriple.getText());
         }
         //Bebidas
         String bebida;
         if (gaseosachica.isSelected()){
             bebida = gaseosachica.getText();
+            genpedido.bebidap.setText(gaseosachica.getText());
         }else {
             bebida =gaseosagrande.getText();
+            genpedido.bebidap.setText(gaseosagrande.getText());
         }
         //Papasfritas   
         String fritas;
         if (papaschicas.isSelected()){
             fritas = papaschicas.getText();
+            genpedido.fritasp.setText(papaschicas.getText());
         }else {
             fritas = papasgrandes.getText();
+            genpedido.fritasp.setText(papasgrandes.getText());
         }
         //Condimentos
         String condimentos [] = new String[6];
         if (lechuga.isSelected()){
         condimentos[0]=lechuga.getText();
+        genpedido.c1p.setText(lechuga.getText());
         }
         if (pepino.isSelected()){
         condimentos[1]=pepino.getText();
+        genpedido.c2p.setText(pepino.getText());
         }
         if (chedar.isSelected()){
         condimentos[2]=chedar.getText();
+        genpedido.c3p.setText(chedar.getText());
         }
         if (tomate.isSelected()){
         condimentos[3]=tomate.getText();
+        genpedido.c4p.setText(tomate.getText());
         }
         if (huevo.isSelected()){
         condimentos[4]=huevo.getText();
+        genpedido.c5p.setText(huevo.getText());
         }
         if (guacamole.isSelected()){
         condimentos[5]=guacamole.getText();
+        genpedido.c6p.setText(guacamole.getText());
         }
         //Mostrar informacion
-        Datos genpedido = new genpedido(Nombre,Telefono);
+        genpedido.nombrep.setText(nombre.getText());
+        genpedido.telefonop.setText(telefono.getText());
         
         
         
         
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_pedirActionPerformed
 
     private void carnedobleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carnedobleActionPerformed
-        // TODO add your handling code here:
+        if (carnedoble.isSelected()){
+        carnesimple.setSelected(false);
+        carnetriple.setSelected(false);
+        }
     }//GEN-LAST:event_carnedobleActionPerformed
 
     private void telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefonoActionPerformed
@@ -536,20 +559,16 @@ public class Pedidos extends javax.swing.JFrame {
     }//GEN-LAST:event_telefonoActionPerformed
 
     private void gaseosachicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gaseosachicaActionPerformed
-        gaseosachica.setSelected(true);
+        if (gaseosachica.isSelected()){
+        gaseosagrande.setSelected(false);
+        }
     }//GEN-LAST:event_gaseosachicaActionPerformed
 
     private void gaseosagrandeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gaseosagrandeActionPerformed
-        gaseosagrande.setSelected(true);
+        if (gaseosagrande.isSelected()){
+        gaseosachica.setSelected(false);
+        }
     }//GEN-LAST:event_gaseosagrandeActionPerformed
-
-    private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombreActionPerformed
-
-    private void fechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fechaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fechaActionPerformed
 
     private void chedarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chedarActionPerformed
         // TODO add your handling code here:
@@ -558,6 +577,46 @@ public class Pedidos extends javax.swing.JFrame {
     private void guacamoleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guacamoleActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_guacamoleActionPerformed
+
+    private void carnesimpleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carnesimpleActionPerformed
+        if (carnesimple.isSelected()){
+        carnedoble.setSelected(false);
+        carnetriple.setSelected(false);
+        }
+    }//GEN-LAST:event_carnesimpleActionPerformed
+
+    private void papaschicasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_papaschicasActionPerformed
+        if (papaschicas.isSelected()){
+        papasgrandes.setSelected(false);
+        }
+    }//GEN-LAST:event_papaschicasActionPerformed
+
+    private void papasgrandesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_papasgrandesActionPerformed
+        if (papasgrandes.isSelected()){
+        papaschicas.setSelected(false);
+        }
+    }//GEN-LAST:event_papasgrandesActionPerformed
+
+    private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
+        genpedido.nombrep.setText("");
+        genpedido.telefonop.setText("");
+        this.nombre.setText("");
+        this.telefono.setText("");
+        genpedido.tipohamburguesap.setText("");
+        genpedido.bebidap.setText("");
+        genpedido.fritasp.setText("");
+        genpedido.c1p.setText("");
+        genpedido.c2p.setText("");
+        genpedido.c3p.setText("");
+        genpedido.c4p.setText("");
+        genpedido.c5p.setText("");
+        genpedido.c6p.setText("");
+        
+    }//GEN-LAST:event_limpiarActionPerformed
+
+    private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -600,14 +659,10 @@ public class Pedidos extends javax.swing.JFrame {
     private javax.swing.JRadioButton carnesimple;
     private javax.swing.JRadioButton carnetriple;
     private javax.swing.JCheckBox chedar;
-    private javax.swing.JTextField fecha;
     private javax.swing.JRadioButton gaseosachica;
     private javax.swing.JRadioButton gaseosagrande;
     private javax.swing.JCheckBox guacamole;
     private javax.swing.JCheckBox huevo;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -625,11 +680,14 @@ public class Pedidos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JCheckBox lechuga;
-    private javax.swing.JTextField nombre;
+    private javax.swing.JButton limpiar;
+    public static javax.swing.JTextField nombre;
     private javax.swing.JRadioButton papaschicas;
     private javax.swing.JRadioButton papasgrandes;
+    private javax.swing.JButton pedir;
     private javax.swing.JCheckBox pepino;
-    private javax.swing.JTextField telefono;
+    private javax.swing.JButton salir;
+    public static javax.swing.JTextField telefono;
     private javax.swing.JCheckBox tomate;
     // End of variables declaration//GEN-END:variables
 }
