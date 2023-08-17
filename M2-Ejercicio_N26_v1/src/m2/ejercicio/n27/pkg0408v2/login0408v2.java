@@ -4,7 +4,7 @@ package m2.ejercicio.n27.pkg0408v2;
 public class login0408v2 extends javax.swing.JFrame {
 
     String NombreUsuario;
-    
+
     public login0408v2() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -124,7 +124,6 @@ public class login0408v2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
         String password = String.valueOf(jPasswordField1.getPassword()).trim();
         
         if(NombreUsuario.equals("user1") && password.equals("123"))
@@ -145,7 +144,7 @@ public class login0408v2 extends javax.swing.JFrame {
                 
             }
         else 
-        {
+        
             if(NombreUsuario.equals("user3") && password.equals("789"))
             {
                 System.out.println("Acceso concedido bienvenido");
@@ -160,10 +159,8 @@ public class login0408v2 extends javax.swing.JFrame {
                 this.setVisible(false);
                 accesono GH = new accesono ();
                 GH.setVisible(true);
-                
-                
-            }
-        }              
+  
+            }     
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void usuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuariosActionPerformed
@@ -182,8 +179,7 @@ public class login0408v2 extends javax.swing.JFrame {
                 fotos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/user3.png")));
                 NombreUsuario = (String) usuarios.getSelectedItem();
                 break;
-            
-            
+   
         }
         {
             System.out.println(NombreUsuario);
