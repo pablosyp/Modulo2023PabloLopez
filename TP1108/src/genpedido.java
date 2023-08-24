@@ -66,13 +66,6 @@ public class genpedido extends javax.swing.JFrame {
     
     }
 
-    
-    
-    
-    
-    
-
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -104,8 +97,10 @@ public class genpedido extends javax.swing.JFrame {
         hora = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         imprimir = new javax.swing.JButton();
+        limpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Generar Pedido");
 
         nombrep.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,14 +157,21 @@ public class genpedido extends javax.swing.JFrame {
             }
         });
 
+        limpiar.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        limpiar.setText("LIMPIAR PANTALLA");
+        limpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limpiarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(imprimir)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -192,14 +194,18 @@ public class genpedido extends javax.swing.JFrame {
                             .addComponent(c3p)
                             .addComponent(c4p)
                             .addComponent(c5p)
-                            .addComponent(c6p))))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(c6p))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel7))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(43, 43, 43)
+                                .addComponent(jLabel8))))
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel7))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(jLabel8)))
+                        .addComponent(limpiar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(imprimir)))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -251,7 +257,9 @@ public class genpedido extends javax.swing.JFrame {
                         .addComponent(c6p, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addComponent(imprimir)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(imprimir)
+                    .addComponent(limpiar))
                 .addGap(21, 21, 21))
         );
 
@@ -277,11 +285,28 @@ public class genpedido extends javax.swing.JFrame {
     private void imprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_imprimirActionPerformed
         Crear();
         Pedidos();
+        this.setVisible(false);
     }//GEN-LAST:event_imprimirActionPerformed
 
     private void nombrepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombrepActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nombrepActionPerformed
+
+    private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
+        genpedido.nombrep.setText("");
+        genpedido.telefonop.setText("");
+        genpedido.tipohamburguesap.setText("");
+        genpedido.bebidap.setText("");
+        genpedido.fritasp.setText("");
+        genpedido.c1p.setText("");
+        genpedido.c2p.setText("");
+        genpedido.c3p.setText("");
+        genpedido.c4p.setText("");
+        genpedido.c5p.setText("");
+        genpedido.c6p.setText("");
+        fecha.setText("");
+        hora.setText("");
+    }//GEN-LAST:event_limpiarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -338,6 +363,7 @@ public class genpedido extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JButton limpiar;
     public static javax.swing.JTextField nombrep;
     public static javax.swing.JTextField telefonop;
     public static javax.swing.JTextField tipohamburguesap;

@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import java.util.Calendar;
 
 
@@ -8,10 +9,8 @@ public class Pedidos extends javax.swing.JFrame {
     public Pedidos() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.setVisible(false);
-        genpedido GP = new genpedido ();
-        GP.setVisible(true);
-        
+        //this.setVisible(false);
+
     }
 
     /**
@@ -60,6 +59,7 @@ public class Pedidos extends javax.swing.JFrame {
         limpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menu de Pedidos");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/kfc.png"))); // NOI18N
 
@@ -397,7 +397,7 @@ public class Pedidos extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGap(0, 1, Short.MAX_VALUE)
                                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -413,7 +413,7 @@ public class Pedidos extends javax.swing.JFrame {
                                 .addComponent(pedir)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                                 .addComponent(salir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(13, Short.MAX_VALUE))
+                        .addContainerGap(12, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(51, 51, 51)
                         .addComponent(limpiar)
@@ -422,7 +422,7 @@ public class Pedidos extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(11, 11, 11)
+                .addContainerGap(23, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
@@ -442,8 +442,7 @@ public class Pedidos extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(pedir, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(salir, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(12, Short.MAX_VALUE))
+                            .addComponent(salir, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -454,9 +453,7 @@ public class Pedidos extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -478,6 +475,8 @@ public class Pedidos extends javax.swing.JFrame {
     }//GEN-LAST:event_salirActionPerformed
 
     private void pedirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pedirActionPerformed
+        genpedido GP = new genpedido ();
+        GP.setVisible(true);
         //Datos del cliente
         String Nombre = nombre.getText();
         String Telefono = telefono.getText();
@@ -597,19 +596,22 @@ public class Pedidos extends javax.swing.JFrame {
     }//GEN-LAST:event_papasgrandesActionPerformed
 
     private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
-        genpedido.nombrep.setText("");
-        genpedido.telefonop.setText("");
-        this.nombre.setText("");
-        this.telefono.setText("");
-        genpedido.tipohamburguesap.setText("");
-        genpedido.bebidap.setText("");
-        genpedido.fritasp.setText("");
-        genpedido.c1p.setText("");
-        genpedido.c2p.setText("");
-        genpedido.c3p.setText("");
-        genpedido.c4p.setText("");
-        genpedido.c5p.setText("");
-        genpedido.c6p.setText("");
+        nombre.setText("");
+        telefono.setText("");
+        carnesimple.setSelected(false);
+        carnedoble.setSelected(false);
+        carnetriple.setSelected(false);
+        gaseosachica.setSelected(false);
+        gaseosagrande.setSelected(false);
+        papaschicas.setSelected(false);
+        papasgrandes.setSelected(false);
+        lechuga.setSelected(false);
+        pepino.setSelected(false);
+        chedar.setSelected(false);
+        tomate.setSelected(false);
+        huevo.setSelected(false);
+        guacamole.setSelected(false);      
+        
     }//GEN-LAST:event_limpiarActionPerformed
 
     private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed

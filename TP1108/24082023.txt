@@ -1,0 +1,11 @@
+Nombre:p
+Telefono:1
+Tipo de Hamburguesa:Doble
+Tipo de Papas:Chicas
+Tipo de Gaseosa:Grande
+Condimentos:
+Condimentos:
+Condimentos:
+Condimentos:Tomate
+Condimentos:
+Condimentos:
