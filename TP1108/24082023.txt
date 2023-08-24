@@ -1,11 +1,11 @@
-Nombre:p
-Telefono:1
-Tipo de Hamburguesa:Doble
-Tipo de Papas:Chicas
+Nombre:Marce
+Telefono:7777777777
+Tipo de Hamburguesa:Triple
+Tipo de Papas:Grandes
 Tipo de Gaseosa:Grande
 Condimentos:
+Condimentos:Pepino
+Condimentos:Chedar
 Condimentos:
-Condimentos:
-Condimentos:Tomate
-Condimentos:
-Condimentos:
+Condimentos:Huevo
+Condimentos:Guacamole
