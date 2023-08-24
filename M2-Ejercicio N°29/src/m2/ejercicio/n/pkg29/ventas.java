@@ -7,6 +7,7 @@ package m2.ejercicio.n.pkg29;
 //import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -34,8 +35,7 @@ public class ventas extends javax.swing.JFrame {
     int F=1;
     int G=1;
     int H=1;
-    int I=1;
-    
+    int I=1; 
     
     public void limpiar(){
         nombre.setText("");
@@ -489,14 +489,10 @@ public class ventas extends javax.swing.JFrame {
     }//GEN-LAST:event_fechaActionPerformed
 
     private void GAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GAActionPerformed
-        if (!GA.isSelected() && (cono.isSelected())) {
-            limite = 1;
-        }else  if (GA.isSelected() && (cuarto.isSelected())){
-            limite = 2;
-        }else  if (GA.isSelected() && (medio.isSelected())){
-            limite = 3;
-        }else  if (GA.isSelected() && (kilo.isSelected())){
-            limite = 4;
+        if (cono.isSelected()) {
+        }else  if (cuarto.isSelected()){
+        }else  if (medio.isSelected()){
+        }else  if (kilo.isSelected()){
         }
     }//GEN-LAST:event_GAActionPerformed
 
@@ -600,5 +596,6 @@ public class ventas extends javax.swing.JFrame {
     private javax.swing.JRadioButton medio;
     private javax.swing.JTextField nombre;
     // End of variables declaration//GEN-END:variables
+
 
 }
