@@ -55,7 +55,9 @@ public class genpedido extends javax.swing.JFrame {
         try{
             try ( //escribir el archivo
                     FileWriter escribir = new FileWriter(archivo,true)) {
-                escribir.write("Nombre:"+ nombrep.getText()+ "\r\n" + "Telefono:"+ telefonop.getText() + "\r\n" + "Tipo de Hamburguesa:"+ tipohamburguesap.getText()+ "\r\n" +"Tipo de Papas:"+ fritasp.getText()+ "\r\n" +"Tipo de Gaseosa:"+ bebidap.getText());
+                escribir.write("Nombre:"+ nombrep.getText()+ "\r\n" + "Telefono:"+ telefonop.getText() + "\r\n" + "Tipo de Hamburguesa:"+ tipohamburguesap.getText()+ "\r\n" +"Tipo de Papas:"+ fritasp.getText()
+                + "\r\n" +"Tipo de Gaseosa:"+ bebidap.getText()+ "\r\n" +"Condimentos:"+ c1p.getText()+ "\r\n" +"Condimentos:"+ c2p.getText()+ "\r\n" +"Condimentos:"+ c3p.getText()+ "\r\n" +"Condimentos:"+ c4p.getText()
+                + "\r\n" +"Condimentos:"+ c5p.getText()+ "\r\n" +"Condimentos:"+ c6p.getText());
             }
         }catch(IOException e){
             System.out.println(e);
