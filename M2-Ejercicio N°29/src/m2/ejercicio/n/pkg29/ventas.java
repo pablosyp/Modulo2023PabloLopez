@@ -37,10 +37,10 @@ public class ventas extends javax.swing.JFrame {
         C.setSelected(false);
         D.setSelected(false);
         E.setSelected(false);
-        F.setSelected(true);
-        G.setSelected(true);
-        H.setSelected(true);
-        I.setSelected(true);
+        F.setSelected(false);
+        G.setSelected(false);
+        H.setSelected(false);
+        I.setSelected(false);
     
     }
 
