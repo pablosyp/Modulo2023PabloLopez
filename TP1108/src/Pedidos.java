@@ -479,8 +479,8 @@ public class Pedidos extends javax.swing.JFrame {
 
     private void pedirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pedirActionPerformed
         //Datos del cliente
-        //String Nombre = nombre.getText();
-        //String Telefono = telefono.getText();
+        String Nombre = nombre.getText();
+        String Telefono = telefono.getText();
         //Tipo de hamburguesa
         String tipohamburguesa;
         if (carnesimple.isSelected()){
@@ -543,8 +543,7 @@ public class Pedidos extends javax.swing.JFrame {
         genpedido.telefonop.setText(telefono.getText());
         
         
-        
-        
+
     }//GEN-LAST:event_pedirActionPerformed
 
     private void carnedobleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carnedobleActionPerformed

@@ -50,7 +50,7 @@ public class formu extends javax.swing.JFrame {
         }
         
     }
-    private void Crear(){
+    public void Crear(){
         //Metodo para crear el archivo
         String archivo = narchivo.getText() + ".txt";
         

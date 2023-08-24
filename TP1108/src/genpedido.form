@@ -25,29 +25,34 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel6" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="fecha" min="-2" pref="71" max="-2" attributes="0"/>
-                  <Component id="hora" min="-2" pref="71" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="tipohamburguesap" alignment="0" pref="150" max="32767" attributes="0"/>
-                  <Component id="telefonop" alignment="0" max="32767" attributes="0"/>
-                  <Component id="nombrep" alignment="0" max="32767" attributes="0"/>
-                  <Component id="bebidap" alignment="0" max="32767" attributes="0"/>
-                  <Component id="fritasp" alignment="0" max="32767" attributes="0"/>
-                  <Component id="c1p" max="32767" attributes="0"/>
-                  <Component id="c2p" alignment="0" max="32767" attributes="0"/>
-                  <Component id="c3p" alignment="0" max="32767" attributes="0"/>
-                  <Component id="c4p" alignment="0" max="32767" attributes="0"/>
-                  <Component id="c5p" alignment="0" max="32767" attributes="0"/>
-                  <Component id="c6p" alignment="0" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="imprimir" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel6" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="fecha" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="hora" min="-2" pref="71" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="tipohamburguesap" alignment="0" pref="150" max="32767" attributes="0"/>
+                          <Component id="telefonop" alignment="0" max="32767" attributes="0"/>
+                          <Component id="nombrep" alignment="0" max="32767" attributes="0"/>
+                          <Component id="bebidap" alignment="0" max="32767" attributes="0"/>
+                          <Component id="fritasp" alignment="0" max="32767" attributes="0"/>
+                          <Component id="c1p" max="32767" attributes="0"/>
+                          <Component id="c2p" alignment="0" max="32767" attributes="0"/>
+                          <Component id="c3p" alignment="0" max="32767" attributes="0"/>
+                          <Component id="c4p" alignment="0" max="32767" attributes="0"/>
+                          <Component id="c5p" alignment="0" max="32767" attributes="0"/>
+                          <Component id="c6p" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
@@ -59,7 +64,7 @@
                       <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="35" max="32767" attributes="0"/>
+              <EmptySpace pref="42" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -123,13 +128,18 @@
                   </Group>
                   <Component id="jLabel7" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="0" pref="8" max="32767" attributes="0"/>
+              <EmptySpace pref="31" max="32767" attributes="0"/>
+              <Component id="imprimir" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JTextField" name="nombrep">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nombrepActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
       </AuxValues>
@@ -250,6 +260,20 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Este es su Ticket"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="imprimir">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="SansSerif" size="18" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="IMPRIMIR"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="imprimirActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

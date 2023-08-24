@@ -14,7 +14,7 @@ public class EjercicioN7MultiplicarX2 {
         int resultado;
         Scanner lector = new Scanner(System.in);
         
-        System.out.println("Ingredar numero ");
+        System.out.println("Ingresar numero: ");
         num= lector.nextInt();
         resultado = num * 2;
         System.out.println("Multiplicado x 2 : " + resultado);
