@@ -7,7 +7,6 @@ package m2.ejercicio.n.pkg29;
 //import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -26,16 +25,8 @@ public class ventas extends javax.swing.JFrame {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         fecha.setText(sdf.format(fecha1));
     }
-    int limite;
-    int A=1;
-    int B=1;
-    int C=1;
-    int D=1;
-    int E=1;
-    int F=1;
-    int G=1;
-    int H=1;
-    int I=1; 
+    int Saborescontar;
+    int Saborespote;
     
     public void limpiar(){
         nombre.setText("");
@@ -317,7 +308,7 @@ public class ventas extends javax.swing.JFrame {
         });
 
         jButton3.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jButton3.setText("IMPRIMIR");
+        jButton3.setText("GENERAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -361,24 +352,24 @@ public class ventas extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(155, 155, 155)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                        .addComponent(jButton2)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(45, 45, 45))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -406,12 +397,11 @@ public class ventas extends javax.swing.JFrame {
                             .addComponent(jLabel3))
                         .addGap(18, 18, 18)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(265, 265, 265)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jButton2)
-                        .addGap(44, 44, 44)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton1)))
                 .addContainerGap(72, Short.MAX_VALUE))
         );
@@ -424,8 +414,9 @@ public class ventas extends javax.swing.JFrame {
         cono.setSelected(false);
         kilo.setSelected(false);
         if (cuarto.isSelected()) {
-            limite = 3;
-            String cant = Integer.toString(limite);
+            Saborescontar = 3;
+            Saborespote = 3;
+            String cant = Integer.toString(Saborescontar);
             gusto.setText(cant);
         }
     }//GEN-LAST:event_cuartoActionPerformed
@@ -452,8 +443,9 @@ public class ventas extends javax.swing.JFrame {
         cuarto.setSelected(false);
         kilo.setSelected(false);
         if (cono.isSelected()) {
-            limite = 1;
-            String cant = Integer.toString(limite);
+            Saborescontar = 1;
+            Saborespote = 1;
+            String cant = Integer.toString(Saborescontar);
             gusto.setText(cant);
         }
     }//GEN-LAST:event_conoActionPerformed
@@ -463,8 +455,9 @@ public class ventas extends javax.swing.JFrame {
         kilo.setSelected(false);
         cono.setSelected(false);
         if (medio.isSelected()) {
-            limite = 2;
-            String cant = Integer.toString(limite);
+            Saborescontar = 2;
+            Saborespote = 2;
+            String cant = Integer.toString(Saborescontar);
             gusto.setText(cant);
         }
     }//GEN-LAST:event_medioActionPerformed
@@ -474,8 +467,9 @@ public class ventas extends javax.swing.JFrame {
         cono.setSelected(false);
         medio.setSelected(false);
         if (kilo.isSelected()) {
-            limite = 4;
-            String cant = Integer.toString(limite);
+            Saborescontar = 4;
+            Saborespote = 4;
+            String cant = Integer.toString(Saborescontar);
             gusto.setText(cant);
         }
     }//GEN-LAST:event_kiloActionPerformed
@@ -489,15 +483,32 @@ public class ventas extends javax.swing.JFrame {
     }//GEN-LAST:event_fechaActionPerformed
 
     private void GAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GAActionPerformed
-        if (cono.isSelected()) {
-        }else  if (cuarto.isSelected()){
-        }else  if (medio.isSelected()){
-        }else  if (kilo.isSelected()){
-        }
+        Saborescontar ++;
+        if (Saborescontar>=Saborespote){
+        GB.setEnabled(false);
+        GC.setEnabled(false);
+        GD.setEnabled(false);
+        GE.setEnabled(false);
+        GF.setEnabled(false);
+        GG.setEnabled(false);
+        GH.setEnabled(false);
+        GI.setEnabled(false);
+          
+    }
     }//GEN-LAST:event_GAActionPerformed
 
     private void GBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GBActionPerformed
-        // TODO add your handling code here:
+        Saborescontar ++;
+        if (Saborescontar>=Saborespote){
+        GA.setEnabled(false);
+        GC.setEnabled(false);
+        GD.setEnabled(false);
+        GE.setEnabled(false);
+        GF.setEnabled(false);
+        GG.setEnabled(false);
+        GH.setEnabled(false);
+        GI.setEnabled(false);
+        }
     }//GEN-LAST:event_GBActionPerformed
 
     private void GCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GCActionPerformed
