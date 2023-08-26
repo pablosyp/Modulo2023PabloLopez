@@ -35,7 +35,7 @@ public class inicio extends javax.swing.JFrame {
         setTitle("Heladeria");
 
         jButton1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        jButton1.setText("Acceso");
+        jButton1.setText("ACCESO");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

@@ -1,0 +1,11 @@
+Nombre:
+Telefono:
+Tipo de Hamburguesa:Simple
+Tipo de Papas:Chicas
+Tipo de Gaseosa:Chica
+Condimentos:
+Condimentos:
+Condimentos:
+Condimentos:
+Condimentos:Huevo
+Condimentos:

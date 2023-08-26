@@ -126,6 +126,12 @@ public class genpedido extends javax.swing.JFrame {
 
         jLabel3.setText("Condimentos");
 
+        c1p.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c1pActionPerformed(evt);
+            }
+        });
+
         c3p.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 c3pActionPerformed(evt);
@@ -307,6 +313,10 @@ public class genpedido extends javax.swing.JFrame {
         fecha.setText("");
         hora.setText("");
     }//GEN-LAST:event_limpiarActionPerformed
+
+    private void c1pActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c1pActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_c1pActionPerformed
 
     /**
      * @param args the command line arguments

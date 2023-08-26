@@ -17,6 +17,7 @@ public class gestor extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setExtendedState(MAXIMIZED_BOTH);
+        
     }
 
     /**
@@ -61,7 +62,7 @@ public class gestor extends javax.swing.JFrame {
         );
 
         jMenu1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jMenu1.setText("Nuevo");
+        jMenu1.setText("NUEVO");
         jMenu1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
 
         jRadioButtonMenuItem1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
@@ -87,12 +88,12 @@ public class gestor extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jMenu5.setText("Informes");
+        jMenu5.setText("INFORMES");
         jMenu5.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jMenuBar1.add(jMenu5);
 
         jMenu2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jMenu2.setText("Salir");
+        jMenu2.setText("SALIR");
         jMenu2.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
 
         salir.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
