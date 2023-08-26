@@ -275,7 +275,7 @@ public class ventas extends javax.swing.JInternalFrame {
             }
         });
 
-        medio.setText("Pote de 1/2");
+        medio.setText("Pote de 1/2 Kilo");
         medio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 medioActionPerformed(evt);

@@ -452,7 +452,7 @@
             </Component>
             <Component class="javax.swing.JRadioButton" name="medio">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Pote de 1/2"/>
+                <Property name="text" type="java.lang.String" value="Pote de 1/2 Kilo"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="medioActionPerformed"/>
