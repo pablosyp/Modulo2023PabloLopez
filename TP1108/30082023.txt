@@ -1,0 +1,31 @@
+Nombre:Pablo
+Telefono:asd
+Tipo de Hamburguesa:Simple
+Tipo de Papas:Chicas
+Tipo de Gaseosa:Chica
+Condimentos:
+Condimentos:
+Condimentos:
+Condimentos:
+Condimentos:
+Condimentos:Nombre:Pablo
+Telefono:asd
+Tipo de Hamburguesa:Simple
+Tipo de Papas:Chicas
+Tipo de Gaseosa:Chica
+Condimentos:
+Condimentos:
+Condimentos:
+Condimentos:
+Condimentos:
+Condimentos:Nombre:
+Telefono:
+Tipo de Hamburguesa:Simple
+Tipo de Papas:Chicas
+Tipo de Gaseosa:Chica
+Condimentos:
+Condimentos:
+Condimentos:
+Condimentos:
+Condimentos:
+Condimentos:

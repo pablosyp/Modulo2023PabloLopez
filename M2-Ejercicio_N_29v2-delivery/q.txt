@@ -1,0 +1,6 @@
+Nombre:q
+Telefono:1
+Direccion:a
+Localidad:a
+Entre Calles:a
+Comentario:a
