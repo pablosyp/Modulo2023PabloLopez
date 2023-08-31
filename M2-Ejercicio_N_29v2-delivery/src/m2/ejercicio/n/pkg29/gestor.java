@@ -33,11 +33,16 @@ public class gestor extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
         fondo = new javax.swing.JPanel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jRadioButton3 = new javax.swing.JRadioButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
         jRadioButtonMenuItem2 = new javax.swing.JRadioButtonMenuItem();
         jMenu5 = new javax.swing.JMenu();
+        jRadioButtonMenuItem3 = new javax.swing.JRadioButtonMenuItem();
         jMenu2 = new javax.swing.JMenu();
         salir = new javax.swing.JRadioButtonMenuItem();
 
@@ -60,6 +65,14 @@ public class gestor extends javax.swing.JFrame {
             fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 543, Short.MAX_VALUE)
         );
+
+        jRadioButton1.setText("jRadioButton1");
+
+        jRadioButton2.setText("jRadioButton2");
+
+        jCheckBox1.setText("jCheckBox1");
+
+        jRadioButton3.setText("jRadioButton3");
 
         jMenu1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenu1.setText("NUEVO");
@@ -90,6 +103,17 @@ public class gestor extends javax.swing.JFrame {
         jMenu5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jMenu5.setText("INFORMES");
         jMenu5.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+
+        jRadioButtonMenuItem3.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        jRadioButtonMenuItem3.setSelected(true);
+        jRadioButtonMenuItem3.setText("Delivery");
+        jRadioButtonMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jRadioButtonMenuItem3);
+
         jMenuBar1.add(jMenu5);
 
         jMenu2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -136,9 +160,13 @@ public class gestor extends javax.swing.JFrame {
         ventas V = new ventas ();
         fondo.add(V);
         V.show();
-        //this.setVisible(false);
-        //V.setVisible(true);
     }//GEN-LAST:event_jRadioButtonMenuItem2ActionPerformed
+
+    private void jRadioButtonMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMenuItem3ActionPerformed
+        envios D = new envios ();
+        fondo.add(D);
+        D.show();
+    }//GEN-LAST:event_jRadioButtonMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,6 +205,7 @@ public class gestor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel fondo;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -184,8 +213,12 @@ public class gestor extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem2;
+    private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem3;
     private javax.swing.JRadioButtonMenuItem salir;
     // End of variables declaration//GEN-END:variables
 }

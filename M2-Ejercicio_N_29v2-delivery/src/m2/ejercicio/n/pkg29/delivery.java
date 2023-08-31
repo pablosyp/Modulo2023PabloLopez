@@ -27,7 +27,7 @@ public class delivery extends javax.swing.JFrame {
         String dato = "";
         
         try{
-        FileReader leer = new FileReader(dnombre.getText()+".txt");
+        FileReader leer = new FileReader("Delivery.txt");
         BufferedReader contenedor = new BufferedReader(leer);
         while ((dato = (contenedor.readLine())) !=null){
             System.out.println(dato);
@@ -38,7 +38,7 @@ public class delivery extends javax.swing.JFrame {
         
     }
     public void Crear(){
-        String archivo = dnombre.getText() + ".txt";
+        String archivo = "Delivery.txt";
         
         String nombre = dnombre.getText();
         String telefono = dtelefono.getText();
@@ -53,8 +53,8 @@ public class delivery extends javax.swing.JFrame {
             try {
                 try ( //Escribimos el archivo
                         FileWriter escribir = new FileWriter(archivo,true)) {
-                    escribir.write("Nombre:"+ dnombre.getText() + "\r\n" + "Telefono:"+ dtelefono.getText()+ "\r\n"+ "Direccion:"+ ddireccion.getText()+ "\r\n"
-                    + "Localidad:"+ dlocalidad.getText()+ "\r\n"+ "Entre Calles:"+ dentrecalles.getText()+ "\r\n"+ "Comentario:"+ dcomentario.getText()+ "\r\n");
+                    escribir.write(dnombre.getText() + ";" + dtelefono.getText()+ ";"+ ddireccion.getText()+ ";"
+                    + dlocalidad.getText()+ ";"+ dentrecalles.getText()+ ";"+ dcomentario.getText()+ ";"+ "\r\n");
                 }
                 
             } catch (IOException ex) {

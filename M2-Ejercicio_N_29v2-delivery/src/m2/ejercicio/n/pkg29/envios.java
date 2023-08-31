@@ -5,6 +5,7 @@
 package m2.ejercicio.n.pkg29;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import javax.swing.table.DefaultTableModel;
@@ -20,44 +21,46 @@ public class envios extends javax.swing.JInternalFrame {
      */
     public envios() {
         initComponents();
+        cargarTabla();    
+               
     }
-    private void cargartabla(){
-        try{
+    private void cargarTabla(){
+        try {
             modelo.addColumn("Nombre");
             modelo.addColumn("Telefono");
-            modelo.addColumn("Direccion");
+            modelo.addColumn("Dirección");
             modelo.addColumn("Localidad");
             modelo.addColumn("Entre Calles");
-            modelo.addColumn("Comentario");
-            tabla.setModel(modelo);
-            cargararchivo();
-        }   catch (IOException ex) {
-                System.out.println(ex);
+            modelo.addColumn("Comentarios");
+            Tabla.setModel(modelo);
+            
+            cargarArchivo();
+        }   catch(IOException e){
+            System.out.println(e);
         }
-        
-        
-    }
-    private void cargararchivo() throws FileNotFoundExection, IOException{
-        String fila [];
-        try{
-            //Abrir archivo
-            FileReader archivo =new FileReader("Delivery.txt");
-            BufferedReader leer = new BufferedReader (archivo);
-            
-            String linea =leer.readLine();
-            
-            while (linea !=null){
-                fila = linea.split(";");
-                modelo.addRow(fila);
-                linea = leer.readLine();
-                
-            } //catch (IOException ex) {
-                //System.out.println(ex);  
-        
-        
-    }
-    }
+       }
     
+     private void cargarArchivo() throws IOException {
+            String fila [];
+       
+       try {
+           FileReader archivo = new FileReader("Delivery.txt");
+           BufferedReader leer = new BufferedReader(archivo);
+       
+           String linea = leer.readLine();
+           
+           while(linea != null){
+               fila = linea.split(";");
+               modelo.addRow(fila);
+               linea = leer.readLine();
+           }
+        
+       }    catch(FileNotFoundException e){
+            System.out.println(e);
+       
+       }
+
+     }
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -70,31 +73,31 @@ public class envios extends javax.swing.JInternalFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tabla = new javax.swing.JTable();
+        Tabla = new javax.swing.JTable();
 
         setTitle("Envios Realizados");
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLabel1.setText("Envios realizados por el delivery");
 
-        tabla.setModel(new javax.swing.table.DefaultTableModel(
+        Tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Nombre", "Telefono", "Direccion", "Localidad", "Entre Calles", "Comentario"
             }
         ));
-        jScrollPane1.setViewportView(tabla);
+        jScrollPane1.setViewportView(Tabla);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 669, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(177, 177, 177)
                 .addComponent(jLabel1)
@@ -115,16 +118,9 @@ public class envios extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable Tabla;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tabla;
     // End of variables declaration//GEN-END:variables
-
-    private static class FileNotFoundExection extends Exception {
-
-        public FileNotFoundExection() {
-        }
-    }
-
 
 }
