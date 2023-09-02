@@ -38,13 +38,13 @@ public void Crear(){
             
             ArrayList tcobertura = new ArrayList();
             if (TCI.isEnabled()) {
-            tcobertura.add("Tipo de Cobertura: " + TCI.getModel()+ "\n ");
+            tcobertura.add("Tipo de Cobertura Incendio: " + TCI.getSelectedItem()+ "\n ");
             }
             if (TCR.isEnabled()) {
-            tcobertura.add("Tipo de Cobertura: " + TCR.getModel()+ "\n ");
+            tcobertura.add("Tipo de Cobertura Robo: " + TCR.getSelectedItem()+ "\n ");
             }
             if (TCIN.isEnabled()) {
-            tcobertura.add("Tipo de Cobertura: " + TCIN.getModel()+ "\n ");
+            tcobertura.add("Tipo de Cobertura Inundacion: " + TCIN.getSelectedItem()+ "\n ");
             }
             
 
@@ -55,7 +55,7 @@ public void Crear(){
                     try ( //Escribimos el archivo
                         FileWriter escribir = new FileWriter(archivo,true)) {
                         escribir.write("CUIL/CUIT:"+ dcuil.getText()+ "\r\n" +"Nombre y Apellido:"+ dnombre.getText()+ "\r\n" + "Telefono:"+ dtelefono.getText() + "\r\n" + "Email:"+ demail.getText()+ 
-                        "\r\n" + cobertura+ "-" + tcobertura + "\r\n");
+                        "\r\n" + cobertura+ "\r\n" + tcobertura + "\r\n");
                     }
 
                 } catch (IOException ex) {
@@ -366,6 +366,7 @@ public void Crear(){
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Taunus", "Toro", "Logan" }));
 
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "10000", "20000", "30000" }));
+        jComboBox6.setEnabled(false);
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
