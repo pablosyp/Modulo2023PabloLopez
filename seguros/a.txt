@@ -1,0 +1,12 @@
+CUIL/CUIT:a
+Nombre y Apellido:
+Telefono:
+Email:
+[Cobertura seleccionada: IncendioTipo de Cobertura : Total
+ , Cobertura seleccionada: InundacionTipo de Cobertura : Parcial
+ ]
+[Tipo de Cobertura Incendio: Total
+ , Tipo de Cobertura Robo: 
+ , Tipo de Cobertura Inundacion: Parcial
+ ]
+[]

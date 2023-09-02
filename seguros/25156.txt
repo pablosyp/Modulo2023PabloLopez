@@ -1,0 +1,41 @@
+CUIL/CUIT:25156
+Nombre y Apellido:Pablo Lopez
+Telefono:2343212
+Email:a@a
+[Cobertura seleccionada: Incendio
+ , Cobertura seleccionada: Robo
+ ]
+[Tipo de Cobertura Incendio: Total
+ , Tipo de Cobertura Robo: Total
+ , Tipo de Cobertura Inundacion: 
+ ]
+[Elemento acegurado: Heladera
+ , Elemento acegurado: Lavarropas
+ , Elemento acegurado: Notebook -Cant: 1
+ , Elemento acegurado: Televisor -Cant: 2
+ ]
+CUIL/CUIT:25156
+Nombre y Apellido:Pablo Lopez
+Telefono:2343212
+Email:a@a
+[Dominio: asd123
+ , Marca: Renault
+ , Modelo: Logan
+ , Franquicia: 20000
+ ]
+[Tipo de Cobertura Responsabilidad Civil: Responsabilidad Civil
+ , Tipo de Cobertura Todo Riezgo con Franquicia: Todo Riezgo con Franquicia
+ , Tipo de Cobertura Granzo: Granizo
+ ]
+CUIL/CUIT:25156
+Nombre y Apellido:Pablo Lopez
+Telefono:2343212
+Email:a@a
+[Tipo de Cobertura Muerte Natural: Muerte natural
+ , Tipo de Cobertura Internacion: Internacion -Dias de Internacion: 30
+ ]
+[Dominio: lalalal -Porcentaje: 40%
+ , Dominio: lololo -Porcentaje: 60%
+ , Dominio:  -Porcentajen: 
+ , Dominio:  -Porcentaje: 
+ ]
