@@ -242,6 +242,11 @@ public class Pedidos extends javax.swing.JFrame {
         });
 
         tomate.setText("Tomate");
+        tomate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tomateActionPerformed(evt);
+            }
+        });
 
         huevo.setText("Huevo");
 
@@ -617,6 +622,10 @@ public class Pedidos extends javax.swing.JFrame {
     private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nombreActionPerformed
+
+    private void tomateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tomateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tomateActionPerformed
 
     /**
      * @param args the command line arguments

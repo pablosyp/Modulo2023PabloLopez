@@ -1,0 +1,11 @@
+Nombre:pablo
+Telefono:www
+Tipo de Hamburguesa:Simple
+Tipo de Papas:Grandes
+Tipo de Gaseosa:Chica
+Condimentos:
+Condimentos:
+Condimentos:
+Condimentos:Tomate
+Condimentos:Huevo
+Condimentos:

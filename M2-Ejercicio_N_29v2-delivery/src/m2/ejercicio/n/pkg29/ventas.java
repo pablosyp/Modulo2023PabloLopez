@@ -342,6 +342,7 @@ public class ventas extends javax.swing.JInternalFrame {
         delivery.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         delivery.setText("DELIVERY");
         delivery.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        delivery.setEnabled(false);
         delivery.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deliveryActionPerformed(evt);
@@ -462,6 +463,7 @@ public class ventas extends javax.swing.JInternalFrame {
         pedido P = new pedido ();
         this.setVisible(true);
         P.setVisible(true);
+        delivery.setEnabled(true);
         String Nombre = nombre.getText();
         String Correo = correo.getText();
         pedido.nombrep.setText(nombre.getText());

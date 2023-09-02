@@ -1,0 +1,19 @@
+CUIL/CUIT:123
+Nombre y Apellido:pab
+Telefono:
+Email:
+[Cobertura seleccionada: Incendio
+ , Cobertura seleccionada: Robo
+ ]-[Tipo de Cobertura: null
+ , Tipo de Cobertura: null
+ , Tipo de Cobertura: null
+ ]
+CUIL/CUIT:123
+Nombre y Apellido:a
+Telefono:
+Email:
+[Cobertura seleccionada: Inundacion
+ ]-[Tipo de Cobertura: javax.swing.DefaultComboBoxModel@66ade87
+ , Tipo de Cobertura: javax.swing.DefaultComboBoxModel@8ec3eb9
+ , Tipo de Cobertura: javax.swing.DefaultComboBoxModel@350d1923
+ ]
