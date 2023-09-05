@@ -604,12 +604,12 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="42" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="CG" min="-2" pref="171" max="-2" attributes="0"/>
-                              <Component id="CTRCF" min="-2" max="-2" attributes="0"/>
-                              <Component id="CTRSF" min="-2" pref="171" max="-2" attributes="0"/>
-                              <Component id="CRC" min="-2" pref="171" max="-2" attributes="0"/>
-                              <Component id="CTC" min="-2" pref="171" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="CG" max="32767" attributes="0"/>
+                              <Component id="CTRSF" max="32767" attributes="0"/>
+                              <Component id="CRC" max="32767" attributes="0"/>
+                              <Component id="CTC" max="32767" attributes="0"/>
+                              <Component id="CTRCF" alignment="1" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       </Group>
@@ -626,7 +626,7 @@
                           <Component id="CTRSF" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="CTRCF" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Component id="CG" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="17" max="32767" attributes="0"/>
                       </Group>
@@ -782,7 +782,7 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="CP" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="32" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -848,21 +848,27 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="VNA" alignment="0" pref="170" max="32767" attributes="0"/>
-                              <Component id="VNB" alignment="0" max="32767" attributes="0"/>
-                              <Component id="VNC" alignment="0" max="32767" attributes="0"/>
-                              <Component id="VND" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="116" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="PA" min="-2" max="-2" attributes="0"/>
-                              <Component id="PB" min="-2" max="-2" attributes="0"/>
-                              <Component id="PC" min="-2" max="-2" attributes="0"/>
-                              <Component id="PD" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel14" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                              <Component id="jLabel15" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                              <Component id="jLabel17" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
+                              <Component id="jLabel18" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="VND" pref="192" max="32767" attributes="0"/>
+                              <Component id="VNC" max="32767" attributes="0"/>
+                              <Component id="VNB" max="32767" attributes="0"/>
+                              <Component id="VNA" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="PA" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="PB" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="PC" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="PD" alignment="1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -873,23 +879,27 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="VNA" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="PA" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="VNB" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="PB" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="VNC" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="PC" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="VND" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="PD" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="13" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -973,6 +983,26 @@
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel14">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Nombre y Apellido"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel15">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Nombre y Apellido"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel17">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Nombre y Apellido"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel18">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Nombre y Apellido"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
