@@ -20,6 +20,7 @@ public class gestor extends javax.swing.JFrame {
      */
     public gestor() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 public void Crearh(){
         String archivo = dcuil.getText()+ ".txt";
