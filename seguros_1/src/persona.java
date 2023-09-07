@@ -19,14 +19,62 @@ public class persona {
     String veneficiario;
     
     //Segurohogar
-    public persona(String cuil,String nombre,String telefono,String email,String TSEG,String CI){
-        this.dcuil = cuil;
-        this.dnombre = nombre;
-        this.dtelefono = telefono;
-        this.demail = email;
+    public persona(String TSEG,String dcuil,String dnombre,String dtelefono,String demail){
+        this.dcuil = dcuil;
+        this.dnombre = dnombre;
+        this.dtelefono = dtelefono;
+        this.demail = demail;
         this.TSEG = TSEG;
-        this.CI = CI;
+       
         
+    }
+
+    public String getDcuil() {
+        return dcuil;
+    }
+
+    public String getDnombre() {
+        return dnombre;
+    }
+
+    public String getDtelefono() {
+        return dtelefono;
+    }
+
+    public String getDemail() {
+        return demail;
+    }
+
+    public String getTSEG() {
+        return TSEG;
+    }
+
+    public String getCI() {
+        return CI;
+    }
+
+    public String getCobertura() {
+        return cobertura;
+    }
+
+    public String getElementos() {
+        return elementos;
+    }
+
+    public String getDatovehiculo() {
+        return datovehiculo;
+    }
+
+    public String getCoberturavehiulo() {
+        return coberturavehiulo;
+    }
+
+    public String getCoberturavida() {
+        return coberturavida;
+    }
+
+    public String getVeneficiario() {
+        return veneficiario;
     }
 
     
@@ -34,6 +82,6 @@ public class persona {
     
     //Segurovida
 
-    
+   
 }
 

@@ -2,6 +2,8 @@
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /*
@@ -884,8 +886,27 @@ public void Crearvi(){
     }//GEN-LAST:event_ECGActionPerformed
 
     private void contratarhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contratarhActionPerformed
-        Crearh();
-        this.setVisible(true);
+        try {
+            //Crearh();
+            //this.setVisible(true);
+            //Objeto archivo
+            archivo archi = new archivo();
+            //crear archivo
+            archi.crearArchivo();
+            //armado del getter para el archivo
+            String Cuil = dcuil.getText();
+            String Nombre = dnombre.getText();
+            String Telefono = dtelefono.getText();
+            String Email = demail.getText();
+            
+            //mensajero
+            persona per = persona (Cuil,Nombre,Telefono,Email);
+            archi.escribirEnarchivo(per);
+            
+        } catch (IOException ex) {
+            Logger.getLogger(gestor.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_contratarhActionPerformed
 
     private void ANActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ANActionPerformed
@@ -1026,4 +1047,8 @@ public void Crearvi(){
     private javax.swing.JPanel jPanel9;
     private javax.swing.JTabbedPane jTabbedPane5;
     // End of variables declaration//GEN-END:variables
+
+    private persona persona(String Cuil, String Nombre, String Telefono, String Email) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

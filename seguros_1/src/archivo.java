@@ -10,7 +10,7 @@ public class archivo {
 
     public void crearArchivo() throws IOException{
         try{
-            archivo = new File("Seguros Segurola");
+            archivo = new File("SegurosSegurola.txt");
             if (archivo.createNewFile()){
                 JOptionPane.showMessageDialog(null,"El archivo fue creado con exito");
             }    
@@ -19,12 +19,28 @@ public class archivo {
                     
         }
     }
-    public void escribirArchivo() throws IOException{
+    public void escribirEnarchivo(persona persona){
         try{
             FileWriter escribir = new FileWriter(archivo,true);
-            switch (persona.setTSEG()){
-                
+            switch (persona.getTSEG()){
+                case "Seguro Hogar":
+                    escribir.write(persona.getTSEG() + "," + persona.getDcuil()+ "," 
+                            + persona.getDtelefono() + "," + persona.getDemail());
+                    break;
+                case "Seguro Vehiculo":
+                    escribir.write(persona.getTSEG() + "," + persona.getDcuil()+ "," 
+                            + persona.getDtelefono() + "," + persona.getDemail()+ ","
+                            + persona.getCI());
+                    break;
+                case "Seguro Vida":
+                    escribir.write(persona.getTSEG() + "," + persona.getDcuil()+ "," 
+                            + persona.getDtelefono() + "," + persona.getDemail()+ ","
+                            + persona.getCI());
+                    break;
             }
+            escribir.close();
+        }catch(IOException e){
+            System.out.println(e);
         }
         
     
