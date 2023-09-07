@@ -29,6 +29,10 @@ public class persona {
         
     }
 
+    //Segurovehivulo
+    
+    //Segurovida
+
     public String getDcuil() {
         return dcuil;
     }
@@ -76,11 +80,6 @@ public class persona {
     public String getVeneficiario() {
         return veneficiario;
     }
-
-    
-    //Segurovehivulo
-    
-    //Segurovida
 
    
 }

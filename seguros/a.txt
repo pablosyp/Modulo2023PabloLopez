@@ -1,0 +1,3 @@
+Seguro Hogar,CUIL/CUIT:a,Nombre y Apellido:aaa,Telefono:aaaaaa,Email:aaaaaaaaaaaaaa,[Cobertura seleccionada: Robo / Tipo de Cobertura : Parcial
+ ],[Elemento asegurado: Notebook / Cant: 2
+ ],

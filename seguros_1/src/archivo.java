@@ -43,8 +43,6 @@ public class archivo {
             System.out.println(e);
         }
         
-    
-        
     }
 }
 

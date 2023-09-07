@@ -886,13 +886,12 @@ public void Crearvi(){
     }//GEN-LAST:event_ECGActionPerformed
 
     private void contratarhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contratarhActionPerformed
-        try {
             //Crearh();
             //this.setVisible(true);
             //Objeto archivo
             archivo archi = new archivo();
             //crear archivo
-            archi.crearArchivo();
+            //archi.crearArchivo();
             //armado del getter para el archivo
             String Cuil = dcuil.getText();
             String Nombre = dnombre.getText();
@@ -900,12 +899,10 @@ public void Crearvi(){
             String Email = demail.getText();
             
             //mensajero
-            persona per = persona (Cuil,Nombre,Telefono,Email);
-            archi.escribirEnarchivo(per);
-            
-        } catch (IOException ex) {
-            Logger.getLogger(gestor.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            persona persona = persona (Cuil,Nombre,Telefono,Email);
+            archi.escribirEnarchivo(persona);
+
+
         
     }//GEN-LAST:event_contratarhActionPerformed
 

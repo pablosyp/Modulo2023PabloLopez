@@ -62,11 +62,11 @@ public void Crearh(){
                 try {
                     try ( //Escribimos el archivo
                         FileWriter escribir = new FileWriter(archivo,true)) {
-                        escribir.write("CUIL/CUIT:"+ dcuil.getText()+ "\r\n" +
+                        escribir.write("Seguro Hogar"+","+"CUIL/CUIT:"+ dcuil.getText()+ "\r\n" +
                                 "Nombre y Apellido:"+ dnombre.getText()+ "\r\n" +
                                     "Telefono:"+ dtelefono.getText() + "\r\n" +
                                         "Email:"+ demail.getText()+ "\r\n" +
-                                cobertura+ "\r\n" + elementos + "\r\n");
+                                cobertura+ "," + elementos + "\r\n");
                     }
 
                 } catch (IOException ex) {
@@ -115,7 +115,7 @@ public void Crearv(){
                 try {
                     try ( //Escribimos el archivo
                         FileWriter escribir = new FileWriter(archivo,true)) {
-                        escribir.write("CUIL/CUIT:"+ dcuil.getText()+ "\r\n" +
+                        escribir.write("Seguro Vehiculo"+","+"CUIL/CUIT:"+ dcuil.getText()+ "\r\n" +
                                 "Nombre y Apellido:"+ dnombre.getText()+ "\r\n" +
                                         "Telefono:"+ dtelefono.getText() + "\r\n" +
                                             "Email:"+ demail.getText()+ "\r\n" +
@@ -166,7 +166,7 @@ public void Crearvi(){
                 try {
                     try ( //Escribimos el archivo
                         FileWriter escribir = new FileWriter(archivo,true)) {
-                        escribir.write("CUIL/CUIT:"+ dcuil.getText()+ "\r\n" +
+                        escribir.write("Seguro Vida"+","+"CUIL/CUIT:"+ dcuil.getText()+ "\r\n" +
                                 "Nombre y Apellido:"+ dnombre.getText()+ "\r\n" +
                                         "Telefono:"+ dtelefono.getText() + "\r\n" +
                                             "Email:"+ demail.getText()+ "\r\n" +
@@ -848,6 +848,11 @@ public void Crearvi(){
 
         jButton4.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jButton4.setText("Salir");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -913,6 +918,10 @@ public void Crearvi(){
     private void CDIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CDIActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CDIActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
