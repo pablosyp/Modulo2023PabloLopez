@@ -19,7 +19,7 @@ public class persona {
     String veneficiario;
     
     //Segurohogar
-    public persona(String TSEG,String dcuil,String dnombre,String dtelefono,String demail){
+    public persona(String dcuil,String dnombre,String dtelefono,String demail){
         this.dcuil = dcuil;
         this.dnombre = dnombre;
         this.dtelefono = dtelefono;
