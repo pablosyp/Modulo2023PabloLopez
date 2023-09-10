@@ -1,0 +1,10 @@
+Seguro Hogar,CUIL/CUIT:2516
+Nombre y Apellido:Pablo
+Telefono:123
+Email:a@a
+[Cobertura seleccionada: Incendio / Tipo de Cobertura : Parcial
+ , Cobertura seleccionada: Inundacion / Tipo de Cobertura : Total
+ ],[Elemento asegurado: Lavarropas
+ , Elemento asegurado: Notebook / Cant: 7
+ , Elemento asegurado: Televisor / Cant: 2
+ ]

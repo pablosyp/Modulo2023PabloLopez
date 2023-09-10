@@ -10,6 +10,13 @@ public class persona {
     String dtelefono;
     String demail;
     String TSEG;
+    String CI;
+    String cobertura;
+    String elementos;
+    String datovehiculo;
+    String coberturavehiulo;
+    String coberturavida;
+    String veneficiario;
     
     //Segurohogar
     public persona(String dcuil,String dnombre,String dtelefono,String demail,String TSEG){
@@ -18,7 +25,7 @@ public class persona {
         this.dtelefono = dtelefono;
         this.demail = demail;
         this.TSEG = TSEG;
-        
+       
         
     }
 
@@ -46,9 +53,33 @@ public class persona {
         return TSEG;
     }
 
+    public String getCI() {
+        return CI;
+    }
 
+    public String getCobertura() {
+        return cobertura;
+    }
 
-    
+    public String getElementos() {
+        return elementos;
+    }
+
+    public String getDatovehiculo() {
+        return datovehiculo;
+    }
+
+    public String getCoberturavehiulo() {
+        return coberturavehiulo;
+    }
+
+    public String getCoberturavida() {
+        return coberturavida;
+    }
+
+    public String getVeneficiario() {
+        return veneficiario;
+    }
 
    
 }

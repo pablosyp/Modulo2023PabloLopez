@@ -8,37 +8,36 @@ public class archivo {
     File archivo;
     gestor S = new gestor();
 
- public void crearArchivo(){
+    public void crearArchivo() throws IOException{
         try{
-            //crear el archivo
             archivo = new File("SegurosSegurola.txt");
             if (archivo.createNewFile()){
-              JOptionPane.showMessageDialog(null,"El archivo fue creado con exito");
-              }
-        } catch (IOException e){
-           System.out.println(e);
+                JOptionPane.showMessageDialog(null,"El archivo fue creado con exito");
+            }    
+            }catch (IOException e){
+                    System.out.println(e);
+                    
         }
     }
     public void escribirEnarchivo(persona persona){
-        gestor S = new gestor();
+        gestor s = new gestor();
         
         try{
             FileWriter escribir = new FileWriter(archivo,true);
             switch (persona.getTSEG()){
                 case "Seguro Hogar":
-                    escribir.write(persona.getTSEG()+ "," + persona.getDcuil()+ "," 
-                            + persona.getDnombre()+ "," + persona.getDtelefono() + "," 
-                            + persona.getDemail()+ "\r\n");
+                    escribir.write(persona.getTSEG() + "," + persona.getDcuil()+ "," 
+                            + persona.getDtelefono() + "," + persona.getDemail());
                     break;
                 case "Seguro Vehiculo":
                     escribir.write(persona.getTSEG() + "," + persona.getDcuil()+ "," 
-                            + persona.getDnombre()+ "," + persona.getDtelefono() + "," 
-                            + persona.getDemail() +"\r\n");
+                            + persona.getDtelefono() + "," + persona.getDemail()+ ","
+                            + persona.getCI());
                     break;
                 case "Seguro Vida":
                     escribir.write(persona.getTSEG() + "," + persona.getDcuil()+ "," 
-                            + persona.getDnombre()+ "," + persona.getDtelefono() + "," 
-                            + persona.getDemail() +"\r\n");
+                            + persona.getDtelefono() + "," + persona.getDemail()+ ","
+                            + persona.getCI());
                     break;
             }
             escribir.close();
@@ -47,7 +46,5 @@ public class archivo {
         }
         
     }
-
 }
-
 

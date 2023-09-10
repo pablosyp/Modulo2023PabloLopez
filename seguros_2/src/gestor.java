@@ -1,46 +1,85 @@
 
-public class gestor extends javax.swing.JFrame {
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
+
+public class gestor extends javax.swing.JFrame {
 
     /**
      * Creates new form gestor
      */
+    boolean arroba = false;
+    boolean punto = false;
+    int paso = 0;
+    String mail;
+    
     public gestor() {
         initComponents();
         this.setLocationRelativeTo(null);
+        //this.setExtendedState(this.MAXIMIZED_BOTH);
     }
-/*public void Crearh(){
-        String archivo = dcuil.getText()+ ".txt";
+    public void validararroba(){
+        mail = this.demail.getText();
+        
+         for (int i = 0; i<mail.length(); i++) {
+
+        for (int j = 0; j<mail.length(); j++) {
+
+            if(mail.charAt(i)=='@' && mail.charAt(j)=='.') {
+
+                arroba = true;
+                punto = true;
+            }
+
+        }
+
+    }
+
+    if (arroba == true && punto == true) {
+        paso = 1;
+        System.out.println("El mail ingresado es correcto");
+    }
+    else {
+        System.out.println("El mail ingresado es incorrecto");
+        }
+
+    }
+          
+   
+public void Crearh(){
+        String archivo = "SegurosSegurola.txt";
         
             ArrayList cobertura = new ArrayList();
             if (CI.isSelected()) {
-            cobertura.add("Cobertura seleccionada: " + CI.getText()+ " / Tipo de Cobertura : " + TCI.getSelectedItem()+ "\n ");
+            cobertura.add(CI.getText()+"-"+ TCI.getSelectedItem()+",");
             }
             if (CR.isSelected()) {
-            cobertura.add("Cobertura seleccionada: " + CR.getText()+ " / Tipo de Cobertura : " + TCR.getSelectedItem()+ "\n ");
+            cobertura.add(CR.getText()+"-"+ TCR.getSelectedItem()+",");
             }
             if (CIN.isSelected()) {
-            cobertura.add("Cobertura seleccionada: " + CIN.getText()+ " / Tipo de Cobertura : " + TCIN.getSelectedItem()+ "\n ");
+            cobertura.add(CIN.getText()+"-"+ TCIN.getSelectedItem()+",");
             }
             
             ArrayList elementos = new ArrayList();
             if (EH.isSelected()) {
-            elementos.add("Elemento asegurado: " + EH.getText()+ "\n ");
+            elementos.add(EH.getText()+",");
             }
             if (EL.isSelected()) {
-            elementos.add("Elemento asegurado: " + EL.getText()+ "\n ");
+            elementos.add(EL.getText()+",");
             }
             if (EC.isSelected()) {
-            elementos.add("Elemento asegurado: " + EC.getText()+ "\n ");
+            elementos.add(EC.getText()+",");
             }
             if (EN.isSelected()) {
-            elementos.add("Elemento asegurado: " + EN.getText()+ " / Cant: " + ENC.getText()+ "\n ");
+            elementos.add(EN.getText()+"-"+ ENC.getText()+",");
             }
             if (ECG.isSelected()) {
-            elementos.add("Elemento asegurado: " + ECG.getText()+ "\n ");
+            elementos.add(ECG.getText()+",");
             }
             if (ET.isSelected()) {
-            elementos.add("Elemento asegurado: " + ET.getText()+ " / Cant: " + ETC.getText()+ "\n ");
+            elementos.add(ET.getText()+"-"+ ETC.getText()+",");
             }
             //Hogar
             if(dcuil.getText().equals("")){
@@ -49,11 +88,12 @@ public class gestor extends javax.swing.JFrame {
                 try {
                     try ( //Escribimos el archivo
                         FileWriter escribir = new FileWriter(archivo,true)) {
-                        escribir.write("CUIL/CUIT:"+ dcuil.getText()+ "\r\n" +
-                                "Nombre y Apellido:"+ dnombre.getText()+ "\r\n" +
-                                    "Telefono:"+ dtelefono.getText() + "\r\n" +
-                                        "Email:"+ demail.getText()+ "\r\n" +
-                                cobertura+ "\r\n" + elementos + "\r\n");
+                        escribir.write("Seguro Hogar"+","+ dcuil.getText()+ "," +
+                                dnombre.getText()+ "," +
+                                dtelefono.getText() + "," +
+                                demail.getText()+ "," +
+                                cobertura+ "," + 
+                                elementos + "\r\n");
                     }
 
                 } catch (IOException ex) {
@@ -63,37 +103,37 @@ public class gestor extends javax.swing.JFrame {
             }
 }
 public void Crearv(){ 
-    String archivo = dcuil.getText()+ ".txt";
+    String archivo = "SegurosSegurola.txt";
     
             ArrayList datovehiculo = new ArrayList();
             if (DD.isVisible()) {
-            datovehiculo.add("Dominio: " + DD.getText()+ "\n ");
+            datovehiculo.add(DD.getText()+",");
             }
             if (DM.isEnabled()) {
-            datovehiculo.add("Marca: " + DM.getSelectedItem()+ "\n ");
+            datovehiculo.add(DM.getSelectedItem()+",");
             }
             if (DMO.isEnabled()) {
-            datovehiculo.add("Modelo: " + DMO.getSelectedItem()+ "\n ");
+            datovehiculo.add(DMO.getSelectedItem()+",");
             }
             if (DF.isEnabled()) {
-            datovehiculo.add("Franquicia: " + DF.getSelectedItem()+ "\n ");
+            datovehiculo.add(DF.getSelectedItem()+",");
             }
             
             ArrayList coberturavehiulo = new ArrayList();
             if (CTC.isSelected()) {
-            coberturavehiulo.add("Tipo de Cobertura del Vehiculo: " + CTC.getText()+ "\n ");
+            coberturavehiulo.add(CTC.getText()+",");
             }
             if (CRC.isSelected()) {
-            coberturavehiulo.add("Tipo de Cobertura del Vehiculo: " + CRC.getText()+ "\n ");
+            coberturavehiulo.add(CRC.getText()+",");
             }
             if (CTRSF.isSelected()) {
-            coberturavehiulo.add("Tipo de Cobertura del Vehiculo: " + CTRSF.getText()+ "\n ");
+            coberturavehiulo.add(CTRSF.getText()+",");
             }
             if (CTRCF.isSelected()) {
-            coberturavehiulo.add("Tipo de Cobertura del Vehiculo: " + CTRCF.getText()+ "\n ");
+            coberturavehiulo.add(CTRCF.getText()+",");
             }
             if (CG.isSelected()) {
-            coberturavehiulo.add("Tipo de Cobertura del Vehiculo: " + CG.getText()+ "\n ");
+            coberturavehiulo.add(CG.getText()+",");
             }
             //Vehiculo
             if(dcuil.getText().equals("")){
@@ -102,11 +142,12 @@ public void Crearv(){
                 try {
                     try ( //Escribimos el archivo
                         FileWriter escribir = new FileWriter(archivo,true)) {
-                        escribir.write("CUIL/CUIT:"+ dcuil.getText()+ "\r\n" +
-                                "Nombre y Apellido:"+ dnombre.getText()+ "\r\n" +
-                                        "Telefono:"+ dtelefono.getText() + "\r\n" +
-                                            "Email:"+ demail.getText()+ "\r\n" +
-                                    datovehiculo+ "\r\n" + coberturavehiulo + "\r\n");
+                        escribir.write("Seguro Vehiculo"+","+dcuil.getText()+ "," +
+                                dnombre.getText()+ "," +
+                                dtelefono.getText() + "," +
+                                demail.getText()+ "," +
+                                datovehiculo+ "," + 
+                                coberturavehiulo + "\r\n");
                     }
 
                 } catch (IOException ex) {
@@ -116,34 +157,34 @@ public void Crearv(){
             }
         }
 public void Crearvi(){ 
-    String archivo = dcuil.getText()+ ".txt";
+    String archivo = "SegurosSegurola.txt";
     
             ArrayList coberturavida = new ArrayList();
             if (CMN.isSelected()) {
-            coberturavida.add("Tipo de Cobertura : " + CMN.getText()+ "\n ");
+            coberturavida.add(CMN.getText()+",");
             }
             if (CMA.isSelected()) {
-            coberturavida.add("Tipo de Cobertura : " + CMA.getText()+ "\n ");
+            coberturavida.add(CMA.getText()+",");
             }
             if (CINT.isSelected()) {
-            coberturavida.add("Tipo de Cobertura : " + CINT.getText()+ "  / Dias de Internacion: " + CDI.getSelectedItem()+ "\n ");
+            coberturavida.add(CINT.getText()+"-"+ CDI.getSelectedItem()+",");
             }
             if (CP.isSelected()) {
-            coberturavida.add("Tipo de Cobertura : " + CP.getText()+ "\n ");
+            coberturavida.add(CP.getText()+",");
             }
             
             ArrayList veneficiario = new ArrayList();
             if (VNA.isVisible()) {
-            veneficiario.add("Venificiario: " + VNA.getText()+  " / Porcentaje: " + PA.getSelectedItem()+ "\n ");
+            veneficiario.add(VNA.getText()+","+ PA.getSelectedItem()+",");
             }
             if (VNB.isVisible()) {
-            veneficiario.add("Venificiario: " + VNB.getText()+  " / Porcentaje: " + PB.getSelectedItem()+ "\n ");
+            veneficiario.add(VNB.getText()+","+ PB.getSelectedItem()+",");
             }
             if (VNC.isVisible()) {
-            veneficiario.add("Venificiario: " + VNC.getText()+  " / Porcentajen: " + PC.getSelectedItem()+ "\n ");
+            veneficiario.add(VNC.getText()+","+ PC.getSelectedItem()+",");
             }
             if (VND.isVisible()) {
-            veneficiario.add("Venificiario: " + VND.getText()+  " / Porcentaje: " + PD.getSelectedItem()+ "\n ");
+            veneficiario.add(VND.getText()+","+ PD.getSelectedItem()+",");
             }
     
             //Vida
@@ -153,11 +194,12 @@ public void Crearvi(){
                 try {
                     try ( //Escribimos el archivo
                         FileWriter escribir = new FileWriter(archivo,true)) {
-                        escribir.write("CUIL/CUIT:"+ dcuil.getText()+ "\r\n" +
-                                "Nombre y Apellido:"+ dnombre.getText()+ "\r\n" +
-                                        "Telefono:"+ dtelefono.getText() + "\r\n" +
-                                            "Email:"+ demail.getText()+ "\r\n" +
-                                    coberturavida+ "\r\n" + veneficiario + "\r\n");
+                        escribir.write("Seguro Vida"+","+dcuil.getText()+ "," +
+                                dnombre.getText()+ "," +
+                                dtelefono.getText() + "," +
+                                demail.getText()+ "," +
+                                coberturavida+ "," + 
+                                veneficiario + ",");
                     }
 
                 } catch (IOException ex) {
@@ -166,7 +208,7 @@ public void Crearvi(){
             this.setVisible(false);
             }
         }
-*/
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -198,6 +240,7 @@ public void Crearvi(){
         ETC = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         contratarv = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
@@ -217,6 +260,7 @@ public void Crearvi(){
         CG = new javax.swing.JCheckBox();
         jLabel9 = new javax.swing.JLabel();
         AN = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         contratarvi = new javax.swing.JButton();
         jPanel10 = new javax.swing.JPanel();
@@ -239,6 +283,7 @@ public void Crearvi(){
         jLabel15 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -404,6 +449,13 @@ public void Crearvi(){
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jButton1.setText("Contrataciones");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -415,9 +467,11 @@ public void Crearvi(){
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(74, 74, 74)
                 .addComponent(contratarh)
                 .addGap(29, 29, 29))
         );
@@ -430,11 +484,13 @@ public void Crearvi(){
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(contratarh)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(contratarh)
+                    .addComponent(jButton1))
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
-        jTabbedPane5.addTab("Seguro Hogar", jPanel1);
+        jTabbedPane5.addTab("Hogar", jPanel1);
 
         jPanel2.setBackground(new java.awt.Color(255, 102, 102));
 
@@ -563,18 +619,31 @@ public void Crearvi(){
             }
         });
 
+        jButton2.setText("Contrataciones");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2)
+                        .addGap(66, 66, 66)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(contratarv)
                     .addComponent(AN, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -595,10 +664,12 @@ public void Crearvi(){
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton2)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        jTabbedPane5.addTab("Seguro Vehiculo", jPanel2);
+        jTabbedPane5.addTab("Vehiculo", jPanel2);
 
         jPanel3.setBackground(new java.awt.Color(153, 255, 153));
 
@@ -736,6 +807,13 @@ public void Crearvi(){
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jButton3.setText("Contrataciones");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -748,6 +826,8 @@ public void Crearvi(){
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(53, 53, 53)
                 .addComponent(contratarvi)
                 .addGap(32, 32, 32))
         );
@@ -759,11 +839,13 @@ public void Crearvi(){
                     .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(contratarvi)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(contratarvi)
+                    .addComponent(jButton3))
                 .addContainerGap(52, Short.MAX_VALUE))
         );
 
-        jTabbedPane5.addTab("Seguro Vida", jPanel3);
+        jTabbedPane5.addTab("Vida", jPanel3);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagen/seguro.png"))); // NOI18N
 
@@ -777,6 +859,30 @@ public void Crearvi(){
 
         jLabel6.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLabel6.setText("Seguros Segurola");
+
+        dcuil.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                dcuilKeyTyped(evt);
+            }
+        });
+
+        dnombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                dnombreKeyTyped(evt);
+            }
+        });
+
+        dtelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                dtelefonoKeyTyped(evt);
+            }
+        });
+
+        demail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                demailActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -852,7 +958,7 @@ public void Crearvi(){
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTabbedPane5)
+                    .addComponent(jTabbedPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -862,7 +968,7 @@ public void Crearvi(){
                 .addContainerGap()
                 .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton4)
                 .addContainerGap())
@@ -871,50 +977,51 @@ public void Crearvi(){
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ECGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ECGActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ECGActionPerformed
-
-    private void contratarhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contratarhActionPerformed
-        //objeto de archivo
-        archivo archi = new archivo();
-        //crear archivo
-        archi.crearArchivo();
-        //getter campos
-        String cuit = dcuil.getText();
-        String nombre = dnombre.getText();
-        String telefono = dtelefono.getText();
-        String mail = demail.getText();
+    private void dcuilKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dcuilKeyTyped
+        int key = evt.getKeyChar();
+        boolean numeros = key >=48 && key <= 57;
         
-        String Incendio = (String) CI.getText();
-        String Robo = (String) CR.getText();
-        String Inundacion = (String) CIN.getText();
+        if(!numeros){
+            evt.consume();
+        }
+        if(dcuil.getText().length()>=11){
+            evt.consume();
+        }
+    }//GEN-LAST:event_dcuilKeyTyped
+
+    private void dnombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dnombreKeyTyped
+        int key = evt.getKeyChar();
+        boolean min = key >= 97 && key <= 122;
+        boolean espacio = key == 32;
+        boolean may = key >= 65 && key <= 90;
         
-        String TSEG = jPanel1.getName();
-                
-        persona persona = new persona (cuit,nombre,telefono,mail,TSEG);
-        archi.escribirEnarchivo(persona);
+        if (!(min||espacio||may)){
+            evt.consume();
+        }
+        if(dnombre.getText().length()>=50){
+            evt.consume();
+        }
+    }//GEN-LAST:event_dnombreKeyTyped
 
+    private void dtelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_dtelefonoKeyTyped
+        int key = evt.getKeyChar();
+        boolean numeros = key >=48 && key <= 57;
+        
+        if(!numeros){
+            evt.consume();
+        }
+        if(dtelefono.getText().length()>=8){
+            evt.consume();
+        }
+    }//GEN-LAST:event_dtelefonoKeyTyped
 
-    }//GEN-LAST:event_contratarhActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void ANActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ANActionPerformed
+    private void demailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_demailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ANActionPerformed
-
-    private void contratarvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contratarvActionPerformed
-        //Crearv();
-        //this.setVisible(true);
-    }//GEN-LAST:event_contratarvActionPerformed
-
-    private void contratarviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contratarviActionPerformed
-        //Crearvi();
-        //this.setVisible(true);
-    }//GEN-LAST:event_contratarviActionPerformed
-
-    private void CTRCFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CTRCFActionPerformed
-        //DF.setEnabled(true);
-    }//GEN-LAST:event_CTRCFActionPerformed
+    }//GEN-LAST:event_demailActionPerformed
 
     private void VNCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VNCActionPerformed
         // TODO add your handling code here:
@@ -924,9 +1031,53 @@ public void Crearvi(){
         // TODO add your handling code here:
     }//GEN-LAST:event_CDIActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void contratarviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contratarviActionPerformed
+        Crearvi();
+        this.setVisible(true);
+    }//GEN-LAST:event_contratarviActionPerformed
+
+    private void ANActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ANActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ANActionPerformed
+
+    private void CTRCFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CTRCFActionPerformed
+        DF.setEnabled(true);
+    }//GEN-LAST:event_CTRCFActionPerformed
+
+    private void contratarvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contratarvActionPerformed
+        Crearv();
+        this.setVisible(true);
+    }//GEN-LAST:event_contratarvActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        datos D = new datos ();
+        jTabbedPane5.add(D);
+        D.show();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void ECGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ECGActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ECGActionPerformed
+
+    private void contratarhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contratarhActionPerformed
+        validararroba();
+        if(paso == 1){
+            Crearh();
+            this.setVisible(true);
+        }
+    }//GEN-LAST:event_contratarhActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        datos D = new datos ();
+        jTabbedPane5.add(D);
+        D.show();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        datos D = new datos ();
+        jTabbedPane5.add(D);
+        D.show();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1008,6 +1159,9 @@ public void Crearvi(){
     private javax.swing.JTextField demail;
     private javax.swing.JTextField dnombre;
     private javax.swing.JTextField dtelefono;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
