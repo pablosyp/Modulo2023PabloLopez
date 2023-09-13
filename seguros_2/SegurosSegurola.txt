@@ -1,2 +1,1 @@
-Seguro Hogar,20,pa,222,pa@com.ar,[],[]
-Seguro Vehiculo,20,pa,222,pa@com.ar,[,, ,, ,],[]
+Seguro Hogar,30303,pablo,9876,pablo@com.ar,[],[]
