@@ -1163,11 +1163,13 @@
         </Component>
         <Component class="javax.swing.JTextField" name="dcuil">
           <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dcuilActionPerformed"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="dcuilKeyTyped"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="dnombre">
           <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dnombreActionPerformed"/>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="dnombreKeyTyped"/>
           </Events>
         </Component>

@@ -860,12 +860,22 @@ public void Crearvi(){
         jLabel6.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLabel6.setText("Seguros Segurola");
 
+        dcuil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dcuilActionPerformed(evt);
+            }
+        });
         dcuil.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 dcuilKeyTyped(evt);
             }
         });
 
+        dnombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dnombreActionPerformed(evt);
+            }
+        });
         dnombre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 dnombreKeyTyped(evt);
@@ -1078,6 +1088,14 @@ public void Crearvi(){
         jTabbedPane5.add(D);
         D.show();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void dcuilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dcuilActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dcuilActionPerformed
+
+    private void dnombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dnombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dnombreActionPerformed
 
     /**
      * @param args the command line arguments
