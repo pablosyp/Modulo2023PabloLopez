@@ -44,7 +44,7 @@ public class envios extends javax.swing.JInternalFrame {
             String fila [];
        
        try {
-           FileReader archivo = new FileReader("Delivery.txt");
+           FileReader archivo = new FileReader("SegurosSegurola.txt");
            BufferedReader leer = new BufferedReader(archivo);
        
            String linea = leer.readLine();

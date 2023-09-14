@@ -70,10 +70,10 @@ public class cliente extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null,"El campo de Nombre esta vacio");
             }
         if(capellido.getText().equals("")){
-                JOptionPane.showMessageDialog(null,"El campo apellido esta vacio");
+                JOptionPane.showMessageDialog(null,"El campo Apellido esta vacio");
             }
         if(cfechanac.getText().equals("")){
-                JOptionPane.showMessageDialog(null,"El campo fecha esta vacio");
+                JOptionPane.showMessageDialog(null,"El campo Fecha de Nacimiento esta vacio");
             }else {
             JOptionPane.showMessageDialog(null, "NOMBRE :"+cnombre.getText()+"\n APELLIDO :"+capellido.getText()+"\n FECHA DE NACIMIENTO :"+cfechanac.getText()+
                     "\n GENERO :"+cgenero.getSelectedItem()+"\n CUIT/CUIL :"+ccuit.getText()+"\n DOMICILIO :"+cdomicilio.getText()+"\n LOCALIDAD :"+clocalidad.getText()+
