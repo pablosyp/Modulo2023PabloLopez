@@ -180,6 +180,11 @@ public class cliente extends javax.swing.JFrame {
             }
         });
 
+        cmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmailActionPerformed(evt);
+            }
+        });
         cmail.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 cmailKeyTyped(evt);
@@ -401,6 +406,10 @@ public class cliente extends javax.swing.JFrame {
     private void cmailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmailKeyTyped
         // TODO add your handling code here:
     }//GEN-LAST:event_cmailKeyTyped
+
+    private void cmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmailActionPerformed
 
     /**
      * @param args the command line arguments

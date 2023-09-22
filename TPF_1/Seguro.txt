@@ -1,0 +1,6 @@
+Seguro Hogar,11111111111,pablo,11111111,palo@com.ar
+Seguro Hogar,11111111111,pppp,11111111,Admin
+Seguro Hogar,00000000000,chcilo,111,Pepe
+Seguro Vehiculo,77777777777,nono,67676767,Pepe
+Seguro Vida,87878787878,raquel diaz,33333333,Cholo
+Seguro Vida,87878787878,raquel diaz,33333333,Cholo
