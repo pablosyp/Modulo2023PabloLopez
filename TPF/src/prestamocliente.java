@@ -27,10 +27,11 @@ public class prestamocliente extends javax.swing.JInternalFrame {
 private void cargarTabla(){
         try {
             modelo.addColumn("CUIT");
-            modelo.addColumn("NOMBRE");
-            modelo.addColumn("APELLIDO");
-            modelo.addColumn("FECHA DE NACIMIENTO");
-            modelo.addColumn("DIRECCION");
+            modelo.addColumn("CAPITAL");
+            modelo.addColumn("TIEMPO");
+            modelo.addColumn("TOTAL");
+            modelo.addColumn("CUOTAS");
+            modelo.addColumn("VENDEDOR");
             cformulario.setModel(modelo);
             
             cargarArchivo();
@@ -49,7 +50,7 @@ private void cargarTabla(){
            String linea = leer.readLine();
            
            while(linea != null){
-               fila = linea.split(",");
+               fila = linea.split("-");
                modelo.addRow(fila);
                linea = leer.readLine();
            }
@@ -81,13 +82,13 @@ private void cargarTabla(){
 
         cformulario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "CUIT", "NOMBRE", "APELLIDO", "FECHA DE NACIMIENTO", "DIRECCION"
+                "CUIT", "CAPITAL", "TIEMPO", "TOTAL", "CUOTA", "VENDEDOR"
             }
         ));
         jScrollPane1.setViewportView(cformulario);

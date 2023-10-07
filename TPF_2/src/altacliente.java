@@ -32,7 +32,6 @@ private void cargarTabla(){
             modelo.addColumn("APELLIDO");
             modelo.addColumn("FECHA DE NACIMIENTO");
             modelo.addColumn("DIRECCION");
-            modelo.addColumn("VENDEDOR");
             cformulario.setModel(modelo);
             
             cargarArchivo();
@@ -82,13 +81,13 @@ private void cargarTabla(){
 
         cformulario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "CUIT", "NOMBRE", "APELLIDO", "FECHA DE NACIMIENTO", "DIRECCION", "VENDEDOR"
+                "CUIT", "NOMBRE", "APELLIDO", "FECHA DE NACIMIENTO", "DIRECCION"
             }
         ));
         jScrollPane1.setViewportView(cformulario);

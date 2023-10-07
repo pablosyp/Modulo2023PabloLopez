@@ -12,23 +12,21 @@ import javax.swing.JOptionPane;
  *
  * @author F4121
  */
-public class formularioalta extends javax.swing.JInternalFrame {
-
+public class formularioprestamo extends javax.swing.JInternalFrame {
+    
     boolean arroba = false;
     boolean punto = false;
     int paso = 0;
     String mail;
     /**
-     * Creates new form alta
+     * Creates new form formularioprestamo
      */
-    public formularioalta() {
+    public formularioprestamo() {
         initComponents();
-        
     }
-
 public void Crear(){
  
-        String archivo = "Cliente.txt";
+        String archivo = "Prestamo.txt";
         
         String cuit = acuit.getText();
         //String genero = (String) agenero.getSelectedItem();
@@ -44,7 +42,7 @@ public void Crear(){
                 try ( //Escribimos el archivo
                         FileWriter escribir = new FileWriter(archivo,true)) {
                     escribir.write(acuit.getText()+ "," + anombre.getText()+ ","
-                    + aapellido.getText()+ ","+ afechan.getText()+ ","+ adomicilio.getText()+ "," + login.lusuarios.getSelectedItem()+ ","+ "\r\n");
+                    + aapellido.getText()+ ","+ afechan.getText()+ ","+ adomicilio.getText()+ ","+ "\r\n");
                 }
                 
             } catch (IOException ex) {
@@ -54,8 +52,7 @@ public void Crear(){
 
         
     }
-        
-    }
+           }
 public void validamail(){
         mail = this.amail.getText();
         
@@ -107,41 +104,35 @@ public void limpiar(){
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        acuit = new javax.swing.JTextField();
-        agenero = new javax.swing.JComboBox<>();
-        anombre = new javax.swing.JTextField();
-        aapellido = new javax.swing.JTextField();
-        afechan = new javax.swing.JTextField();
         adomicilio = new javax.swing.JTextField();
-        alocalidad = new javax.swing.JTextField();
-        aprovincia = new javax.swing.JComboBox<>();
-        aestado = new javax.swing.JComboBox<>();
-        ahijos = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        amail = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        afechan = new javax.swing.JTextField();
+        amail = new javax.swing.JTextField();
+        aapellido = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        anombre = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
+        agenero = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        acuit = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        ahijos = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        aestado = new javax.swing.JComboBox<>();
+        jLabel7 = new javax.swing.JLabel();
+        aprovincia = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        alocalidad = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
 
         setClosable(true);
-        setTitle("FORMULARIO CLIENTE");
+        setTitle("FORMULARIO PRESTAMO");
 
-        acuit.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                acuitKeyTyped(evt);
-            }
-        });
-
-        agenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Femenino", "Masculino" }));
+        jLabel4.setText("APELLIDO");
 
         afechan.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -149,27 +140,7 @@ public void limpiar(){
             }
         });
 
-        aprovincia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Ciudad Autonoma de BA", "Buenos Aires", "Catamarca", "Chaco", "Chubut", "Cordoba", "Corrientes", "Entre Rios", "Formosa", "Jujuy", "La Pampa", "La Rioja", "Mendoza", "Misiones", "Neuquen", "Rio Negro", "Salta", "San Juan", "San Luis", "Santa Cruz", "Santa Fe", "Santiago del Estero", "Tierra del Fuego", "Tucuman" }));
-
-        aestado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Soltero/a", "Casado/a" }));
-
-        ahijos.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                ahijosKeyTyped(evt);
-            }
-        });
-
-        jLabel1.setText("CUIT/CUIL");
-
-        jButton1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jButton1.setText("CREAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setText("GENERO");
+        jLabel3.setText("NOMBRE");
 
         jButton3.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
         jButton3.setText("LIMPIAR");
@@ -179,21 +150,47 @@ public void limpiar(){
             }
         });
 
-        jLabel3.setText("NOMBRE");
+        agenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Femenino", "Masculino" }));
 
-        jLabel4.setText("APELLIDO");
+        jLabel2.setText("GENERO");
 
-        jLabel5.setText("FECHA DE NACIMIENTO (DD-MM-AAAA)");
+        jButton1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        jButton1.setText("CREAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-        jLabel6.setText("DOMICILIO");
+        acuit.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                acuitKeyTyped(evt);
+            }
+        });
 
-        jLabel7.setText("LOCALIDAD");
+        jLabel10.setText("ESTADO CIVIL");
 
-        jLabel8.setText("PROVINCIA");
+        jLabel1.setText("CUIT/CUIL");
 
         jLabel9.setText("CORREO ELECTRONICO");
 
-        jLabel10.setText("ESTADO CIVIL");
+        ahijos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                ahijosKeyTyped(evt);
+            }
+        });
+
+        jLabel8.setText("PROVINCIA");
+
+        aestado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Soltero", "Casado" }));
+
+        jLabel7.setText("LOCALIDAD");
+
+        aprovincia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Ciudad Autonoma de BA", "Buenos Aires", "Catamarca", "Chaco", "Chubut", "Cordoba", "Corrientes", "Entre Rios", "Formosa", "Jujuy", "La Pampa", "La Rioja", "Mendoza", "Misiones", "Neuquen", "Rio Negro", "Salta", "San Juan", "San Luis", "Santa Cruz", "Santa Fe", "Santiago del Estero", "Tierra del Fuego", "Tucuman" }));
+
+        jLabel6.setText("DOMICILIO");
+
+        jLabel5.setText("FECHA DE NACIMIENTO (DD-MM-AAAA)");
 
         jLabel11.setText("HIJOS");
 
@@ -202,9 +199,15 @@ public void limpiar(){
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(155, 155, 155)
+                        .addComponent(jButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(128, 128, 128))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2)
@@ -214,44 +217,31 @@ public void limpiar(){
                             .addComponent(jLabel6)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jLabel9)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel10))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(anombre)
-                                .addComponent(acuit)
-                                .addComponent(aapellido)
-                                .addComponent(agenero, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(aestado, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(ahijos, javax.swing.GroupLayout.Alignment.TRAILING))
-                            .addComponent(adomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(alocalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(aprovincia, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(16, 16, 16))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(amail, javax.swing.GroupLayout.PREFERRED_SIZE, 395, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(afechan, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(169, 169, 169)
-                .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(138, 138, 138))
+                                .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(jLabel9)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(jLabel10))
+                            .addComponent(jLabel11))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(anombre)
+                            .addComponent(agenero, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(acuit)
+                            .addComponent(aapellido)
+                            .addComponent(afechan)
+                            .addComponent(adomicilio)
+                            .addComponent(alocalidad)
+                            .addComponent(aprovincia, 0, 400, Short.MAX_VALUE)
+                            .addComponent(amail)
+                            .addComponent(aestado, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ahijos))
+                        .addGap(18, 18, 18))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(acuit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -293,29 +283,17 @@ public void limpiar(){
                     .addComponent(aestado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(ahijos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ahijos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void acuitKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_acuitKeyTyped
-        int key = evt.getKeyChar();
-        boolean numeros = key >=48 && key <= 57;
-
-        if(!numeros){
-            evt.consume();
-        }
-        if(acuit.getText().length()>=11){
-            evt.consume();
-        }
-    }//GEN-LAST:event_acuitKeyTyped
 
     private void afechanKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_afechanKeyTyped
         int key = evt.getKeyChar();
@@ -329,6 +307,30 @@ public void limpiar(){
         }
     }//GEN-LAST:event_afechanKeyTyped
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        limpiar();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        validamail();
+        if(paso == 1){
+            Crear();
+            this.setVisible(true);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void acuitKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_acuitKeyTyped
+        int key = evt.getKeyChar();
+        boolean numeros = key >=48 && key <= 57;
+
+        if(!numeros){
+            evt.consume();
+        }
+        if(acuit.getText().length()>=11){
+            evt.consume();
+        }
+    }//GEN-LAST:event_acuitKeyTyped
+
     private void ahijosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ahijosKeyTyped
         int key = evt.getKeyChar();
         boolean numeros = key >=48 && key <= 57;
@@ -340,18 +342,6 @@ public void limpiar(){
             evt.consume();
         }
     }//GEN-LAST:event_ahijosKeyTyped
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        validamail();
-        if(paso == 1){
-            Crear();
-            this.setVisible(true);
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        limpiar();
-    }//GEN-LAST:event_jButton3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

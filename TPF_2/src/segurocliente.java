@@ -14,24 +14,22 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author F4121
  */
-public class altacliente extends javax.swing.JInternalFrame {
+public class segurocliente extends javax.swing.JInternalFrame {
     DefaultTableModel modelo= new DefaultTableModel();
 
-
     /**
-     * Creates new form cliente
+     * Creates new form segurocliente
      */
-    public altacliente() {
+    public segurocliente() {
         initComponents();
         cargarTabla();
     }
 private void cargarTabla(){
         try {
+            modelo.addColumn("SEGURO");
             modelo.addColumn("CUIT");
             modelo.addColumn("NOMBRE");
-            modelo.addColumn("APELLIDO");
-            modelo.addColumn("FECHA DE NACIMIENTO");
-            modelo.addColumn("DIRECCION");
+            modelo.addColumn("TELEFONO");
             modelo.addColumn("VENDEDOR");
             cformulario.setModel(modelo);
             
@@ -45,7 +43,7 @@ private void cargarTabla(){
             String fila [];
        
        try {
-           FileReader archivo = new FileReader("Cliente.txt");
+           FileReader archivo = new FileReader("Seguro.txt");
            BufferedReader leer = new BufferedReader(archivo);
        
            String linea = leer.readLine();
@@ -62,7 +60,6 @@ private void cargarTabla(){
        }
 
      }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -72,62 +69,49 @@ private void cargarTabla(){
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         cformulario = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
-        setTitle("FORMULARIO");
-
-        cformulario.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "CUIT", "NOMBRE", "APELLIDO", "FECHA DE NACIMIENTO", "DIRECCION", "VENDEDOR"
-            }
-        ));
-        jScrollPane1.setViewportView(cformulario);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 498, Short.MAX_VALUE))
-        );
+        setTitle("FORMULARIO SEGURO");
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jLabel1.setText("DATOS DEL CLIENTE");
+
+        cformulario.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "SEGURO", "CUIT", "NOMBRE", "TELEFONO", "VENDEDOR"
+            }
+        ));
+        jScrollPane1.setViewportView(cformulario);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(301, 301, 301)
+                .addGap(384, 384, 384)
                 .addComponent(jLabel1)
-                .addContainerGap(353, Short.MAX_VALUE))
+                .addContainerGap(424, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -137,7 +121,6 @@ private void cargarTabla(){
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable cformulario;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

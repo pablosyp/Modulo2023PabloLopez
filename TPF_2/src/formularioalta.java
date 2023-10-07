@@ -44,7 +44,7 @@ public void Crear(){
                 try ( //Escribimos el archivo
                         FileWriter escribir = new FileWriter(archivo,true)) {
                     escribir.write(acuit.getText()+ "," + anombre.getText()+ ","
-                    + aapellido.getText()+ ","+ afechan.getText()+ ","+ adomicilio.getText()+ "," + login.lusuarios.getSelectedItem()+ ","+ "\r\n");
+                    + aapellido.getText()+ ","+ afechan.getText()+ ","+ adomicilio.getText()+ ","+ "\r\n");
                 }
                 
             } catch (IOException ex) {
@@ -135,6 +135,11 @@ public void limpiar(){
         setClosable(true);
         setTitle("FORMULARIO CLIENTE");
 
+        acuit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                acuitActionPerformed(evt);
+            }
+        });
         acuit.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 acuitKeyTyped(evt);
@@ -142,6 +147,11 @@ public void limpiar(){
         });
 
         agenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Femenino", "Masculino" }));
+        agenero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ageneroActionPerformed(evt);
+            }
+        });
 
         afechan.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -352,6 +362,14 @@ public void limpiar(){
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         limpiar();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void ageneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ageneroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ageneroActionPerformed
+
+    private void acuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acuitActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_acuitActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
