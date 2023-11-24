@@ -5,4 +5,3 @@ Seguro Vehiculo,77777777777,nono,67676767,Pepe
 Seguro Vida,87878787878,raquel diaz,33333333,Cholo
 Seguro Vida,87878787878,raquel diaz,33333333,Cholo
 Seguro Hogar,44444444444,pablo,33333,Admin
-Seguro Hogar,99999999999,sol,17866366,Cholo
