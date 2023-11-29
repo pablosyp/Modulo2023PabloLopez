@@ -6,3 +6,4 @@ Seguro Vida,87878787878,raquel diaz,33333333,Cholo
 Seguro Vida,87878787878,raquel diaz,33333333,Cholo
 Seguro Hogar,44444444444,pablo,33333,Admin
 Seguro Hogar,12312344444,pablo lopez,22222111,Pepe
+Seguro Hogar,67483764529,Sofia Perez,84762774,Admin
